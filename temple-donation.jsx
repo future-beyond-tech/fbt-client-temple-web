@@ -1,0 +1,1283 @@
+import { useState, useEffect, useRef } from "react";
+
+const translations = {
+  en: {
+    nav: "Sri Durga Amma Devi Temple",
+    tagline: "Divine Reconstruction • Sacred Renewal",
+    heroTitle: "Rebuild the Abode of",
+    heroHighlight: "Maa Durga",
+    heroSub: "Join us in the sacred mission to reconstruct and restore the divine temple of Sri Durga Amma Devi. Every contribution brings us closer to creating a magnificent spiritual sanctuary for generations to come.",
+    donateNow: "Donate Now",
+    viewDonors: "View Donors",
+    aboutTitle: "About the Reconstruction",
+    aboutP1: "For centuries, the Sri Durga Amma Devi Temple has been a beacon of spiritual light and devotion. The temple, originally built over 200 years ago, has served as a sacred sanctuary for millions of devotees seeking the divine blessings of Maa Durga.",
+    aboutP2: "Due to natural wear and the passage of time, the temple structure requires significant restoration and reconstruction. Our vision is to rebuild this divine abode into a magnificent spiritual complex that honors the ancient traditions while providing modern facilities for devotees.",
+    aboutP3: "The reconstruction project includes restoration of the main sanctum, construction of new prayer halls, renovation of the temple gopuram, landscaping of the temple premises, and installation of proper drainage and lighting systems.",
+    oldTemple: "Current Temple",
+    oldTempleDesc: "The existing temple structure showing signs of age and wear, requiring urgent restoration to preserve its sacred heritage.",
+    newTemple: "Proposed New Temple",
+    newTempleDesc: "The envisioned magnificently reconstructed temple — a divine masterpiece blending ancient architecture with modern amenities.",
+    donateTitle: "Make a Sacred Offering",
+    donateSub: "Scan the QR code below to make your divine contribution. Every offering, big or small, brings us closer to realizing this sacred vision.",
+    scanQR: "Scan to Donate",
+    qrNote: "Scan this QR code with any UPI app (Google Pay, PhonePe, Paytm) to make your sacred offering",
+    bankDetails: "Bank Transfer Details",
+    bankName: "Bank Name: State Bank of India",
+    accName: "Account Name: Sri Durga Amma Devi Temple Trust",
+    accNo: "Account No: XXXX XXXX XXXX 1234",
+    ifsc: "IFSC Code: SBIN0001234",
+    afterPayment: "After Making Your Offering",
+    afterPaymentDesc: "After completing your donation, please send a screenshot of the payment confirmation along with your full name, phone number, and address via WhatsApp to the number below:",
+    whatsappNumber: "+91 98765 43210",
+    whatsappNote: "Our temple committee will acknowledge your donation and add your name to our sacred donor records within 24 hours.",
+    donorsTitle: "Sacred Donor Records",
+    donorsSub: "We maintain complete transparency. View the full list of all devotees who have contributed to this divine cause.",
+    viewSheet: "View Donation Records (Excel)",
+    donorsNote: "This sheet is updated regularly with all verified donations. Your name will appear within 24 hours of verification.",
+    totalRaised: "Total Raised",
+    totalGoal: "Goal Amount",
+    totalDonors: "Blessed Donors",
+    daysLeft: "Days Remaining",
+    trustTitle: "Why Trust Us?",
+    trust1Title: "Registered Trust",
+    trust1Desc: "Registered under the Indian Trusts Act with full government recognition and 80G tax exemption benefits.",
+    trust2Title: "Complete Transparency",
+    trust2Desc: "Every donation is recorded and publicly available. Regular audits ensure your contributions are used as intended.",
+    trust3Title: "Temple Committee",
+    trust3Desc: "Managed by a dedicated committee of respected community elders and spiritual leaders with decades of service.",
+    trust4Title: "Regular Updates",
+    trust4Desc: "Donors receive monthly progress reports with photos and financial statements of the reconstruction work.",
+    committeeTitle: "Temple Committee Members",
+    member1: "Sri Ramesh Sharma",
+    member1Role: "Committee Chairman",
+    member2: "Smt. Lakshmi Devi",
+    member2Role: "Treasurer",
+    member3: "Sri Venkat Rao",
+    member3Role: "Secretary",
+    footerText: "Sri Durga Amma Devi Temple Reconstruction Trust",
+    footerReg: "Registration No: XXXXX/2024 | 80G Certified",
+    footerAddress: "Temple Road, Sacred Village, District, State - 500001",
+    footerRights: "© 2024 All Rights Reserved. Built with devotion.",
+    langLabel: "Language",
+    progressLabel: "Reconstruction Progress",
+  },
+  hi: {
+    nav: "श्री दुर्गा अम्मा देवी मंदिर",
+    tagline: "दिव्य पुनर्निर्माण • पवित्र नवीनीकरण",
+    heroTitle: "का धाम पुनर्निर्माण करें",
+    heroHighlight: "माँ दुर्गा",
+    heroSub: "श्री दुर्गा अम्मा देवी के दिव्य मंदिर के पुनर्निर्माण और जीर्णोद्धार के पवित्र मिशन में हमारे साथ जुड़ें। हर योगदान आने वाली पीढ़ियों के लिए एक भव्य आध्यात्मिक अभयारण्य बनाने के करीब लाता है।",
+    donateNow: "अभी दान करें",
+    viewDonors: "दाताओं को देखें",
+    aboutTitle: "पुनर्निर्माण के बारे में",
+    aboutP1: "सदियों से, श्री दुर्गा अम्मा देवी मंदिर आध्यात्मिक प्रकाश और भक्ति का प्रतीक रहा है। 200 से अधिक वर्ष पहले निर्मित यह मंदिर माँ दुर्गा के दिव्य आशीर्वाद की कामना करने वाले लाखों भक्तों के लिए एक पवित्र अभयारण्य रहा है।",
+    aboutP2: "प्राकृतिक क्षरण और समय बीतने के कारण, मंदिर संरचना को महत्वपूर्ण जीर्णोद्धार और पुनर्निर्माण की आवश्यकता है। हमारी दृष्टि इस दिव्य धाम को एक भव्य आध्यात्मिक परिसर में पुनर्निर्मित करना है।",
+    aboutP3: "पुनर्निर्माण परियोजना में मुख्य गर्भगृह की बहाली, नए प्रार्थना हॉल का निर्माण, मंदिर गोपुरम का नवीनीकरण, और आधुनिक सुविधाओं की स्थापना शामिल है।",
+    oldTemple: "वर्तमान मंदिर",
+    oldTempleDesc: "मौजूदा मंदिर संरचना जो समय के साथ जीर्ण हो गई है, इसकी पवित्र विरासत को संरक्षित करने के लिए तत्काल जीर्णोद्धार की आवश्यकता है।",
+    newTemple: "प्रस्तावित नया मंदिर",
+    newTempleDesc: "कल्पित भव्य पुनर्निर्मित मंदिर — प्राचीन वास्तुकला और आधुनिक सुविधाओं का दिव्य मिश्रण।",
+    donateTitle: "पवित्र दान करें",
+    donateSub: "अपना दिव्य योगदान देने के लिए नीचे दिए गए QR कोड को स्कैन करें। हर चढ़ावा इस पवित्र दृष्टि को साकार करने के करीब लाता है।",
+    scanQR: "दान के लिए स्कैन करें",
+    qrNote: "अपना पवित्र चढ़ावा देने के लिए किसी भी UPI ऐप से इस QR कोड को स्कैन करें",
+    bankDetails: "बैंक हस्तांतरण विवरण",
+    bankName: "बैंक का नाम: भारतीय स्टेट बैंक",
+    accName: "खाता नाम: श्री दुर्गा अम्मा देवी मंदिर ट्रस्ट",
+    accNo: "खाता संख्या: XXXX XXXX XXXX 1234",
+    ifsc: "IFSC कोड: SBIN0001234",
+    afterPayment: "दान करने के बाद",
+    afterPaymentDesc: "दान पूरा करने के बाद, कृपया भुगतान पुष्टि का स्क्रीनशॉट अपने पूरे नाम, फोन नंबर और पते के साथ नीचे दिए गए नंबर पर व्हाट्सएप करें:",
+    whatsappNumber: "+91 98765 43210",
+    whatsappNote: "हमारी मंदिर समिति 24 घंटे के भीतर आपके दान की पुष्टि करेगी और आपका नाम पवित्र दाता रिकॉर्ड में जोड़ेगी।",
+    donorsTitle: "पवित्र दाता रिकॉर्ड",
+    donorsSub: "हम पूर्ण पारदर्शिता बनाए रखते हैं। इस दिव्य कार्य में योगदान देने वाले सभी भक्तों की पूरी सूची देखें।",
+    viewSheet: "दान रिकॉर्ड देखें (Excel)",
+    donorsNote: "यह शीट सभी सत्यापित दानों के साथ नियमित रूप से अपडेट की जाती है।",
+    totalRaised: "कुल एकत्रित",
+    totalGoal: "लक्ष्य राशि",
+    totalDonors: "आशीर्वादित दाता",
+    daysLeft: "शेष दिन",
+    trustTitle: "हम पर भरोसा क्यों करें?",
+    trust1Title: "पंजीकृत ट्रस्ट",
+    trust1Desc: "भारतीय ट्रस्ट अधिनियम के तहत पंजीकृत, सरकारी मान्यता और 80G कर छूट लाभ सहित।",
+    trust2Title: "पूर्ण पारदर्शिता",
+    trust2Desc: "हर दान दर्ज किया जाता है और सार्वजनिक रूप से उपलब्ध है। नियमित ऑडिट सुनिश्चित करते हैं।",
+    trust3Title: "मंदिर समिति",
+    trust3Desc: "सम्मानित सामुदायिक बुजुर्गों और आध्यात्मिक नेताओं की समर्पित समिति द्वारा प्रबंधित।",
+    trust4Title: "नियमित अपडेट",
+    trust4Desc: "दाताओं को फोटो और वित्तीय विवरण के साथ मासिक प्रगति रिपोर्ट प्राप्त होती है।",
+    committeeTitle: "मंदिर समिति सदस्य",
+    member1: "श्री रमेश शर्मा",
+    member1Role: "समिति अध्यक्ष",
+    member2: "श्रीमती लक्ष्मी देवी",
+    member2Role: "कोषाध्यक्ष",
+    member3: "श्री वेंकट राव",
+    member3Role: "सचिव",
+    footerText: "श्री दुर्गा अम्मा देवी मंदिर पुनर्निर्माण ट्रस्ट",
+    footerReg: "पंजीकरण संख्या: XXXXX/2024 | 80G प्रमाणित",
+    footerAddress: "मंदिर मार्ग, पवित्र ग्राम, जिला, राज्य - 500001",
+    footerRights: "© 2024 सर्वाधिकार सुरक्षित। भक्ति से निर्मित।",
+    langLabel: "भाषा",
+    progressLabel: "पुनर्निर्माण प्रगति",
+  },
+  te: {
+    nav: "శ్రీ దుర్గా అమ్మ దేవి ఆలయం",
+    tagline: "దివ్య పునర్నిర్మాణం • పవిత్ర నవీకరణ",
+    heroTitle: "యొక్క నివాసాన్ని పునర్నిర్మించండి",
+    heroHighlight: "అమ్మవారు దుర్గా",
+    heroSub: "శ్రీ దుర్గా అమ్మ దేవి యొక్క దివ్య ఆలయాన్ని పునర్నిర్మించే పవిత్ర మిషన్‌లో మాతో చేరండి. ప్రతి సహకారం రాబోయే తరాలకు ఒక అద్భుతమైన ఆధ్యాత్మిక ఆశ్రయాన్ని సృష్టించడానికి మనల్ని దగ్గరగా తీసుకువస్తుంది.",
+    donateNow: "ఇప్పుడు దానం చేయండి",
+    viewDonors: "దాతలను చూడండి",
+    aboutTitle: "పునర్నిర్మాణం గురించి",
+    aboutP1: "శతాబ్దాలుగా, శ్రీ దుర్గా అమ్మ దేవి ఆలయం ఆధ్యాత్మిక వెలుగు మరియు భక్తి యొక్క దీపస్తంభంగా ఉంది. 200 సంవత్సరాల కిందట నిర్మించబడిన ఈ ఆలయం లక్షలాది భక్తులకు పవిత్ర ఆశ్రయంగా ఉంది.",
+    aboutP2: "సహజ క్షీణత మరియు కాలం గడవడం వలన, ఆలయ నిర్మాణానికి గణనీయమైన పునరుద్ధరణ అవసరం. ఈ దివ్య నివాసాన్ని అద్భుతమైన ఆధ్యాత్మిక సముదాయంగా పునర్నిర్మించడం మా దృష్టి.",
+    aboutP3: "పునర్నిర్మాణ ప్రాజెక్ట్‌లో ప్రధాన గర్భగృహ పునరుద్ధరణ, కొత్త ప్రార్థనా మందిరాల నిర్మాణం, ఆలయ గోపురం నవీకరణ మరియు ఆధునిక సౌకర్యాల ఏర్పాటు ఉన్నాయి.",
+    oldTemple: "ప్రస్తుత ఆలయం",
+    oldTempleDesc: "కాలం గడవడంతో శిథిలమైన ఆలయ నిర్మాణం, దాని పవిత్ర వారసత్వాన్ని సంరక్షించడానికి తక్షణ పునరుద్ధరణ అవసరం.",
+    newTemple: "ప్రతిపాదిత కొత్త ఆలయం",
+    newTempleDesc: "ఊహించిన అద్భుతమైన పునర్నిర్మిత ఆలయం — ప్రాచీన వాస్తుశిల్పం మరియు ఆధునిక సౌకర్యాల దివ్య మిశ్రమం.",
+    donateTitle: "పవిత్ర అర్పణ చేయండి",
+    donateSub: "మీ దివ్య సహకారం అందించడానికి క్రింది QR కోడ్‌ను స్కాన్ చేయండి. ప్రతి అర్పణ ఈ పవిత్ర దృష్టిని సాకారం చేయడానికి మనల్ని దగ్గరగా తీసుకువస్తుంది.",
+    scanQR: "దానం కోసం స్కాన్ చేయండి",
+    qrNote: "మీ పవిత్ర అర్పణ చేయడానికి ఏదైనా UPI యాప్‌తో ఈ QR కోడ్‌ను స్కాన్ చేయండి",
+    bankDetails: "బ్యాంక్ బదిలీ వివరాలు",
+    bankName: "బ్యాంక్ పేరు: స్టేట్ బ్యాంక్ ఆఫ్ ఇండియా",
+    accName: "ఖాతా పేరు: శ్రీ దుర్గా అమ్మ దేవి ఆలయ ట్రస్ట్",
+    accNo: "ఖాతా నంబర్: XXXX XXXX XXXX 1234",
+    ifsc: "IFSC కోడ్: SBIN0001234",
+    afterPayment: "మీ అర్పణ చేసిన తర్వాత",
+    afterPaymentDesc: "దానం పూర్తి చేసిన తర్వాత, దయచేసి చెల్లింపు నిర్ధారణ స్క్రీన్‌షాట్‌ను మీ పూర్తి పేరు, ఫోన్ నంబర్ మరియు చిరునామాతో క్రింది నంబర్‌కు WhatsApp చేయండి:",
+    whatsappNumber: "+91 98765 43210",
+    whatsappNote: "మా ఆలయ కమిటీ 24 గంటల్లో మీ దానాన్ని నిర్ధారిస్తుంది మరియు మీ పేరును పవిత్ర దాత రికార్డులలో చేరుస్తుంది.",
+    donorsTitle: "పవిత్ర దాత రికార్డులు",
+    donorsSub: "మేము పూర్తి పారదర్శకతను కొనసాగిస్తాము. ఈ దివ్య కార్యానికి సహకరించిన భక్తుల పూర్తి జాబితాను చూడండి.",
+    viewSheet: "దాన రికార్డులు చూడండి (Excel)",
+    donorsNote: "ఈ షీట్ అన్ని ధృవీకరించబడిన దానాలతో క్రమం తప్పకుండా అప్‌డేట్ చేయబడుతుంది.",
+    totalRaised: "మొత్తం సేకరించబడింది",
+    totalGoal: "లక్ష్య మొత్తం",
+    totalDonors: "ఆశీర్వదించబడిన దాతలు",
+    daysLeft: "మిగిలిన రోజులు",
+    trustTitle: "మాపై ఎందుకు నమ్మకం?",
+    trust1Title: "నమోదిత ట్రస్ట్",
+    trust1Desc: "భారతీయ ట్రస్ట్‌ల చట్టం కింద నమోదు, ప్రభుత్వ గుర్తింపు మరియు 80G పన్ను మినహాయింపు ప్రయోజనాలతో.",
+    trust2Title: "పూర్తి పారదర్శకత",
+    trust2Desc: "ప్రతి దానం నమోదు చేయబడుతుంది మరియు బహిరంగంగా అందుబాటులో ఉంటుంది. క్రమ ఆడిట్‌లు నిర్ధారిస్తాయి.",
+    trust3Title: "ఆలయ కమిటీ",
+    trust3Desc: "గౌరవనీయ సమాజ పెద్దలు మరియు ఆధ్యాత్మిక నాయకుల అంకితభావ కమిటీ నిర్వహిస్తుంది.",
+    trust4Title: "క్రమ అప్‌డేట్‌లు",
+    trust4Desc: "దాతలు ఫోటోలు మరియు ఆర్థిక వివరాలతో నెలవారీ పురోగతి నివేదికలను అందుకుంటారు.",
+    committeeTitle: "ఆలయ కమిటీ సభ్యులు",
+    member1: "శ్రీ రమేష్ శర్మ",
+    member1Role: "కమిటీ ఛైర్మన్",
+    member2: "శ్రీమతి లక్ష్మీ దేవి",
+    member2Role: "కోశాధికారి",
+    member3: "శ్రీ వెంకట్ రావు",
+    member3Role: "సెక్రటరీ",
+    footerText: "శ్రీ దుర్గా అమ్మ దేవి ఆలయ పునర్నిర్మాణ ట్రస్ట్",
+    footerReg: "రిజిస్ట్రేషన్ నం: XXXXX/2024 | 80G ధృవీకరించబడింది",
+    footerAddress: "ఆలయ రోడ్, పవిత్ర గ్రామం, జిల్లా, రాష్ట్రం - 500001",
+    footerRights: "© 2024 అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి. భక్తితో నిర్మించబడింది.",
+    langLabel: "భాష",
+    progressLabel: "పునర్నిర్మాణ పురోగతి",
+  },
+  mr: {
+    nav: "श्री दुर्गा अम्मा देवी मंदिर",
+    tagline: "दिव्य पुनर्बांधणी • पवित्र नूतनीकरण",
+    heroTitle: "चे धाम पुनर्बांधणी करा",
+    heroHighlight: "माँ दुर्गा",
+    heroSub: "श्री दुर्गा अम्मा देवी यांच्या दिव्य मंदिराच्या पुनर्बांधणीच्या पवित्र मोहिमेत सामील व्हा. प्रत्येक योगदान येणाऱ्या पिढ्यांसाठी एक भव्य आध्यात्मिक अभयारण्य निर्माण करण्याच्या जवळ आणते.",
+    donateNow: "आता दान करा",
+    viewDonors: "दाते पहा",
+    aboutTitle: "पुनर्बांधणीबद्दल",
+    aboutP1: "शतकानुशतके, श्री दुर्गा अम्मा देवी मंदिर हे आध्यात्मिक प्रकाश आणि भक्तीचे प्रतीक आहे. 200 वर्षांपूर्वी बांधलेले हे मंदिर लाखो भक्तांसाठी पवित्र अभयारण्य आहे.",
+    aboutP2: "नैसर्गिक झीज आणि काळाच्या ओघामुळे, मंदिर संरचनेला महत्त्वपूर्ण जीर्णोद्धार आवश्यक आहे.",
+    aboutP3: "पुनर्बांधणी प्रकल्पात मुख्य गर्भगृहाची पुनर्स्थापना, नवीन प्रार्थना सभागृहांचे बांधकाम आणि आधुनिक सुविधांची स्थापना समाविष्ट आहे.",
+    oldTemple: "सध्याचे मंदिर",
+    oldTempleDesc: "काळाच्या ओघात जीर्ण झालेली मंदिर रचना, तिच्या पवित्र वारशाचे जतन करण्यासाठी तातडीने जीर्णोद्धार आवश्यक.",
+    newTemple: "प्रस्तावित नवीन मंदिर",
+    newTempleDesc: "कल्पित भव्य पुनर्निर्मित मंदिर — प्राचीन वास्तुकला आणि आधुनिक सुविधांचे दिव्य मिश्रण.",
+    donateTitle: "पवित्र अर्पण करा",
+    donateSub: "तुमचे दिव्य योगदान देण्यासाठी खालील QR कोड स्कॅन करा.",
+    scanQR: "दानासाठी स्कॅन करा",
+    qrNote: "तुमचे पवित्र अर्पण करण्यासाठी कोणत्याही UPI अॅपने हा QR कोड स्कॅन करा",
+    bankDetails: "बँक हस्तांतरण तपशील",
+    bankName: "बँकेचे नाव: स्टेट बँक ऑफ इंडिया",
+    accName: "खाते नाव: श्री दुर्गा अम्मा देवी मंदिर ट्रस्ट",
+    accNo: "खाते क्र.: XXXX XXXX XXXX 1234",
+    ifsc: "IFSC कोड: SBIN0001234",
+    afterPayment: "दान केल्यानंतर",
+    afterPaymentDesc: "दान पूर्ण केल्यानंतर, कृपया पेमेंट पुष्टीकरणाचा स्क्रीनशॉट तुमचे पूर्ण नाव, फोन नंबर आणि पत्त्यासह खालील नंबरवर WhatsApp करा:",
+    whatsappNumber: "+91 98765 43210",
+    whatsappNote: "आमची मंदिर समिती 24 तासांत तुमच्या दानाची पुष्टी करेल.",
+    donorsTitle: "पवित्र दाता नोंदी",
+    donorsSub: "आम्ही पूर्ण पारदर्शकता राखतो. या दिव्य कार्यात योगदान दिलेल्या सर्व भक्तांची यादी पहा.",
+    viewSheet: "दान नोंदी पहा (Excel)",
+    donorsNote: "ही शीट सर्व सत्यापित दानांसह नियमितपणे अपडेट केली जाते.",
+    totalRaised: "एकूण जमा",
+    totalGoal: "लक्ष्य रक्कम",
+    totalDonors: "आशीर्वादित दाते",
+    daysLeft: "उरलेले दिवस",
+    trustTitle: "आमच्यावर विश्वास का?",
+    trust1Title: "नोंदणीकृत ट्रस्ट",
+    trust1Desc: "भारतीय ट्रस्ट कायद्यांतर्गत नोंदणीकृत, सरकारी मान्यता आणि 80G कर सवलत.",
+    trust2Title: "पूर्ण पारदर्शकता",
+    trust2Desc: "प्रत्येक दान नोंदवले जाते आणि सार्वजनिकरित्या उपलब्ध असते.",
+    trust3Title: "मंदिर समिती",
+    trust3Desc: "सन्माननीय समाज वडील आणि आध्यात्मिक नेत्यांच्या समर्पित समितीद्वारे व्यवस्थापित.",
+    trust4Title: "नियमित अपडेट्स",
+    trust4Desc: "दात्यांना फोटो आणि आर्थिक तपशीलांसह मासिक प्रगती अहवाल मिळतो.",
+    committeeTitle: "मंदिर समिती सदस्य",
+    member1: "श्री रमेश शर्मा",
+    member1Role: "समिती अध्यक्ष",
+    member2: "श्रीमती लक्ष्मी देवी",
+    member2Role: "कोषाध्यक्ष",
+    member3: "श्री वेंकट राव",
+    member3Role: "सचिव",
+    footerText: "श्री दुर्गा अम्मा देवी मंदिर पुनर्बांधणी ट्रस्ट",
+    footerReg: "नोंदणी क्र.: XXXXX/2024 | 80G प्रमाणित",
+    footerAddress: "मंदिर रोड, पवित्र गाव, जिल्हा, राज्य - 500001",
+    footerRights: "© 2024 सर्व हक्क राखीव. भक्तीने निर्मित.",
+    langLabel: "भाषा",
+    progressLabel: "पुनर्बांधणी प्रगती",
+  },
+  bn: {
+    nav: "শ্রী দুর্গা আম্মা দেবী মন্দির",
+    tagline: "দিব্য পুনর্নির্মাণ • পবিত্র নবায়ন",
+    heroTitle: "এর আবাস পুনর্নির্মাণ করুন",
+    heroHighlight: "মা দুর্গা",
+    heroSub: "শ্রী দুর্গা আম্মা দেবীর দিব্য মন্দির পুনর্নির্মাণের পবিত্র মিশনে আমাদের সাথে যোগ দিন। প্রতিটি অবদান আগামী প্রজন্মের জন্য একটি মহিমান্বিত আধ্যাত্মিক অভয়ারণ্য তৈরির কাছাকাছি নিয়ে আসে।",
+    donateNow: "এখনই দান করুন",
+    viewDonors: "দাতাদের দেখুন",
+    aboutTitle: "পুনর্নির্মাণ সম্পর্কে",
+    aboutP1: "শতাব্দী ধরে, শ্রী দুর্গা আম্মা দেবী মন্দির আধ্যাত্মিক আলো এবং ভক্তির প্রতীক। ২০০ বছরেরও বেশি আগে নির্মিত এই মন্দির লক্ষ লক্ষ ভক্তের পবিত্র আশ্রয়স্থল।",
+    aboutP2: "প্রাকৃতিক ক্ষয় এবং সময়ের কারণে, মন্দির কাঠামোর উল্লেখযোগ্য সংস্কার প্রয়োজন।",
+    aboutP3: "পুনর্নির্মাণ প্রকল্পে মূল গর্ভগৃহ পুনরুদ্ধার, নতুন প্রার্থনা হল নির্মাণ এবং আধুনিক সুবিধা স্থাপন অন্তর্ভুক্ত।",
+    oldTemple: "বর্তমান মন্দির",
+    oldTempleDesc: "সময়ের সাথে জীর্ণ মন্দির কাঠামো, এর পবিত্র ঐতিহ্য সংরক্ষণের জন্য জরুরি সংস্কার প্রয়োজন।",
+    newTemple: "প্রস্তাবিত নতুন মন্দির",
+    newTempleDesc: "কল্পিত মহিমান্বিত পুনর্নির্মিত মন্দির — প্রাচীন স্থাপত্য এবং আধুনিক সুবিধার দিব্য মিশ্রণ।",
+    donateTitle: "পবিত্র অর্পণ করুন",
+    donateSub: "আপনার দিব্য অবদান দিতে নীচের QR কোড স্ক্যান করুন।",
+    scanQR: "দানের জন্য স্ক্যান করুন",
+    qrNote: "যেকোনো UPI অ্যাপ দিয়ে এই QR কোড স্ক্যান করুন",
+    bankDetails: "ব্যাংক ট্রান্সফার বিবরণ",
+    bankName: "ব্যাংকের নাম: স্টেট ব্যাংক অফ ইন্ডিয়া",
+    accName: "অ্যাকাউন্ট নাম: শ্রী দুর্গা আম্মা দেবী মন্দির ট্রাস্ট",
+    accNo: "অ্যাকাউন্ট নং: XXXX XXXX XXXX 1234",
+    ifsc: "IFSC কোড: SBIN0001234",
+    afterPayment: "দান করার পরে",
+    afterPaymentDesc: "দান সম্পূর্ণ করার পর, অনুগ্রহ করে পেমেন্ট নিশ্চিতকরণের স্ক্রিনশট আপনার পুরো নাম, ফোন নম্বর এবং ঠিকানা সহ নীচের নম্বরে WhatsApp করুন:",
+    whatsappNumber: "+91 98765 43210",
+    whatsappNote: "আমাদের মন্দির কমিটি ২৪ ঘন্টার মধ্যে আপনার দান নিশ্চিত করবে।",
+    donorsTitle: "পবিত্র দাতা রেকর্ড",
+    donorsSub: "আমরা সম্পূর্ণ স্বচ্ছতা বজায় রাখি। এই দিব্য কাজে অবদানকারী সমস্ত ভক্তদের তালিকা দেখুন।",
+    viewSheet: "দান রেকর্ড দেখুন (Excel)",
+    donorsNote: "এই শীট সমস্ত যাচাইকৃত দান সহ নিয়মিত আপডেট করা হয়।",
+    totalRaised: "মোট সংগৃহীত",
+    totalGoal: "লক্ষ্য পরিমাণ",
+    totalDonors: "আশীর্বাদিত দাতা",
+    daysLeft: "বাকি দিন",
+    trustTitle: "আমাদের কেন বিশ্বাস করবেন?",
+    trust1Title: "নিবন্ধিত ট্রাস্ট",
+    trust1Desc: "ভারতীয় ট্রাস্ট আইনের অধীনে নিবন্ধিত, সরকারি স্বীকৃতি এবং 80G কর ছাড় সুবিধা সহ।",
+    trust2Title: "সম্পূর্ণ স্বচ্ছতা",
+    trust2Desc: "প্রতিটি দান নথিভুক্ত এবং প্রকাশ্যে উপলব্ধ। নিয়মিত অডিট নিশ্চিত করে।",
+    trust3Title: "মন্দির কমিটি",
+    trust3Desc: "সম্মানিত সম্প্রদায়ের প্রবীণ এবং আধ্যাত্মিক নেতাদের নিবেদিত কমিটি দ্বারা পরিচালিত।",
+    trust4Title: "নিয়মিত আপডেট",
+    trust4Desc: "দাতারা ফটো এবং আর্থিক বিবরণ সহ মাসিক অগ্রগতি প্রতিবেদন পান।",
+    committeeTitle: "মন্দির কমিটি সদস্য",
+    member1: "শ্রী রমেশ শর্মা",
+    member1Role: "কমিটি চেয়ারম্যান",
+    member2: "শ্রীমতী লক্ষ্মী দেবী",
+    member2Role: "কোষাধ্যক্ষ",
+    member3: "শ্রী ভেঙ্কট রাও",
+    member3Role: "সচিব",
+    footerText: "শ্রী দুর্গা আম্মা দেবী মন্দির পুনর্নির্মাণ ট্রাস্ট",
+    footerReg: "নিবন্ধন নং: XXXXX/2024 | 80G প্রমাণিত",
+    footerAddress: "মন্দির রোড, পবিত্র গ্রাম, জেলা, রাজ্য - 500001",
+    footerRights: "© 2024 সর্বস্বত্ব সংরক্ষিত। ভক্তি দিয়ে নির্মিত।",
+    langLabel: "ভাষা",
+    progressLabel: "পুনর্নির্মাণ অগ্রগতি",
+  },
+  od: {
+    nav: "ଶ୍ରୀ ଦୁର୍ଗା ଆମ୍ମା ଦେବୀ ମନ୍ଦିର",
+    tagline: "ଦିବ୍ୟ ପୁନର୍ନିର୍ମାଣ • ପବିତ୍ର ନବୀକରଣ",
+    heroTitle: "ଙ୍କ ନିବାସ ପୁନର୍ନିର୍ମାଣ କରନ୍ତୁ",
+    heroHighlight: "ମା ଦୁର୍ଗା",
+    heroSub: "ଶ୍ରୀ ଦୁର୍ଗା ଆମ୍ମା ଦେବୀଙ୍କ ଦିବ୍ୟ ମନ୍ଦିର ପୁନର୍ନିର୍ମାଣର ପବିତ୍ର ମିଶନରେ ଆମ ସହ ଯୋଗ ଦିଅନ୍ତୁ। ପ୍ରତ୍ୟେକ ଅବଦାନ ଆସନ୍ତା ପିଢ଼ି ପାଇଁ ଏକ ମହିମାନ୍ବିତ ଆଧ୍ୟାତ୍ମିକ ଅଭୟାରଣ୍ୟ ସୃଷ୍ଟି କରିବାକୁ ଆମକୁ ନିକଟତର କରେ।",
+    donateNow: "ବର୍ତ୍ତମାନ ଦାନ କରନ୍ତୁ",
+    viewDonors: "ଦାତାମାନଙ୍କୁ ଦେଖନ୍ତୁ",
+    aboutTitle: "ପୁନର୍ନିର୍ମାଣ ବିଷୟରେ",
+    aboutP1: "ଶତାବ୍ଦୀ ଧରି, ଶ୍ରୀ ଦୁର୍ଗା ଆମ୍ମା ଦେବୀ ମନ୍ଦିର ଆଧ୍ୟାତ୍ମିକ ଆଲୋକ ଏବଂ ଭକ୍ତିର ପ୍ରତୀକ। ୨୦୦ ବର୍ଷରୁ ଅଧିକ ପୂର୍ବେ ନିର୍ମିତ ଏହି ମନ୍ଦିର ଲକ୍ଷ ଲକ୍ଷ ଭକ୍ତଙ୍କ ପବିତ୍ର ଆଶ୍ରୟସ୍ଥଳ।",
+    aboutP2: "ପ୍ରାକୃତିକ କ୍ଷୟ ଏବଂ ସମୟ ଯୋଗୁଁ, ମନ୍ଦିର ସଂରଚନାର ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ସଂସ୍କାର ଆବଶ୍ୟକ।",
+    aboutP3: "ପୁନର୍ନିର୍ମାଣ ପ୍ରକଳ୍ପରେ ମୁଖ୍ୟ ଗର୍ଭଗୃହ ପୁନରୁଦ୍ଧାର, ନୂଆ ପ୍ରାର୍ଥନା ହଲ ନିର୍ମାଣ ଏବଂ ଆଧୁନିକ ସୁବିଧା ସ୍ଥାପନ ଅନ୍ତର୍ଭୁକ୍ତ।",
+    oldTemple: "ବର୍ତ୍ତମାନର ମନ୍ଦିର",
+    oldTempleDesc: "ସମୟ ସହ ଜୀର୍ଣ୍ଣ ମନ୍ଦିର, ଏହାର ପବିତ୍ର ଐତିହ୍ୟ ସଂରକ୍ଷଣ ପାଇଁ ତୁରନ୍ତ ସଂସ୍କାର ଆବଶ୍ୟକ।",
+    newTemple: "ପ୍ରସ୍ତାବିତ ନୂଆ ମନ୍ଦିର",
+    newTempleDesc: "କଳ୍ପିତ ମହିମାନ୍ବିତ ପୁନର୍ନିର୍ମିତ ମନ୍ଦିର — ପ୍ରାଚୀନ ସ୍ଥାପତ୍ୟ ଏବଂ ଆଧୁନିକ ସୁବିଧାର ଦିବ୍ୟ ମିଶ୍ରଣ।",
+    donateTitle: "ପବିତ୍ର ଅର୍ପଣ କରନ୍ତୁ",
+    donateSub: "ଆପଣଙ୍କ ଦିବ୍ୟ ଅବଦାନ ଦେବା ପାଇଁ ତଳେ QR କୋଡ୍ ସ୍କାନ କରନ୍ତୁ।",
+    scanQR: "ଦାନ ପାଇଁ ସ୍କାନ କରନ୍ତୁ",
+    qrNote: "ଯେକୌଣସି UPI ଆପ୍ ସହ ଏହି QR କୋଡ୍ ସ୍କାନ କରନ୍ତୁ",
+    bankDetails: "ବ୍ୟାଙ୍କ ଟ୍ରାନ୍ସଫର ବିବରଣୀ",
+    bankName: "ବ୍ୟାଙ୍କ ନାମ: ଷ୍ଟେଟ ବ୍ୟାଙ୍କ ଅଫ ଇଣ୍ଡିଆ",
+    accName: "ଖାତା ନାମ: ଶ୍ରୀ ଦୁର୍ଗା ଆମ୍ମା ଦେବୀ ମନ୍ଦିର ଟ୍ରଷ୍ଟ",
+    accNo: "ଖାତା ନଂ: XXXX XXXX XXXX 1234",
+    ifsc: "IFSC କୋଡ୍: SBIN0001234",
+    afterPayment: "ଦାନ କରିବା ପରେ",
+    afterPaymentDesc: "ଦାନ ସମ୍ପୂର୍ଣ୍ଣ କରିବା ପରେ, ଦୟାକରି ପେମେଣ୍ଟ ନିଶ୍ଚିତକରଣର ସ୍କ୍ରିନସଟ ଆପଣଙ୍କ ସମ୍ପୂର୍ଣ୍ଣ ନାମ, ଫୋନ ନମ୍ବର ଏବଂ ଠିକଣା ସହ ତଳେ ନମ୍ବରରେ WhatsApp କରନ୍ତୁ:",
+    whatsappNumber: "+91 98765 43210",
+    whatsappNote: "ଆମ ମନ୍ଦିର କମିଟି ୨୪ ଘଣ୍ଟା ମଧ୍ୟରେ ଆପଣଙ୍କ ଦାନ ନିଶ୍ଚିତ କରିବ।",
+    donorsTitle: "ପବିତ୍ର ଦାତା ରେକର୍ଡ",
+    donorsSub: "ଆମେ ସମ୍ପୂର୍ଣ୍ଣ ସ୍ୱଚ୍ଛତା ବଜାୟ ରଖୁ। ଏହି ଦିବ୍ୟ କାର୍ଯ୍ୟରେ ଅବଦାନ ଦେଇଥିବା ସମସ୍ତ ଭକ୍ତଙ୍କ ତାଲିକା ଦେଖନ୍ତୁ।",
+    viewSheet: "ଦାନ ରେକର୍ଡ ଦେଖନ୍ତୁ (Excel)",
+    donorsNote: "ଏହି ସିଟ୍ ସମସ୍ତ ଯାଞ୍ଚ ହୋଇଥିବା ଦାନ ସହ ନିୟମିତ ଅପଡେଟ ହୁଏ।",
+    totalRaised: "ମୋଟ ସଂଗ୍ରହ",
+    totalGoal: "ଲକ୍ଷ୍ୟ ପରିମାଣ",
+    totalDonors: "ଆଶୀର୍ବାଦିତ ଦାତା",
+    daysLeft: "ବାକି ଦିନ",
+    trustTitle: "ଆମ ଉପରେ କାହିଁକି ବିଶ୍ୱାସ?",
+    trust1Title: "ନିବନ୍ଧିତ ଟ୍ରଷ୍ଟ",
+    trust1Desc: "ଭାରତୀୟ ଟ୍ରଷ୍ଟ ଆଇନ ଅଧୀନରେ ନିବନ୍ଧିତ, ସରକାରୀ ସ୍ୱୀକୃତି ଏବଂ 80G କର ଛାଡ ସୁବିଧା ସହ।",
+    trust2Title: "ସମ୍ପୂର୍ଣ୍ଣ ସ୍ୱଚ୍ଛତା",
+    trust2Desc: "ପ୍ରତ୍ୟେକ ଦାନ ରେକର୍ଡ ହୁଏ ଏବଂ ସାର୍ବଜନୀନ ଭାବେ ଉପಲବ୍ଧ।",
+    trust3Title: "ମନ୍ଦିର କମିଟି",
+    trust3Desc: "ସମ୍ମାନିତ ସମାଜ ବୟୋଜ୍ୟେଷ୍ଠ ଏବଂ ଆଧ୍ୟାତ୍ମିକ ନେତାଙ୍କ ସମର୍ପିତ କମିଟି ଦ୍ୱାରା ପରିଚାଳିତ।",
+    trust4Title: "ନିୟମିତ ଅପଡେଟ",
+    trust4Desc: "ଦାତାମାନେ ଫଟୋ ଏବଂ ଆର୍ଥିକ ବିବରଣୀ ସହ ମାସିକ ଅଗ୍ରଗତି ରିପୋର୍ଟ ପାଆନ୍ତି।",
+    committeeTitle: "ମନ୍ଦିର କମିଟି ସଦସ୍ୟ",
+    member1: "ଶ୍ରୀ ରମେଶ ଶର୍ମା",
+    member1Role: "କมିଟି ଅଧ୍ୟକ୍ଷ",
+    member2: "ଶ୍ରୀମତୀ ଲକ୍ଷ୍ମୀ ଦେବୀ",
+    member2Role: "କୋଷାଧ୍ୟକ୍ଷ",
+    member3: "ଶ୍ରୀ ଭେଙ୍କଟ ରାଓ",
+    member3Role: "ସଚିବ",
+    footerText: "ଶ୍ରୀ ଦୁର୍ଗା ଆମ୍ମା ଦେବୀ ମନ୍ଦିର ପୁନର୍ନିର୍ମାଣ ଟ୍ରଷ୍ଟ",
+    footerReg: "ନିବନ୍ଧନ ନଂ: XXXXX/2024 | 80G ପ୍ରମାଣିତ",
+    footerAddress: "ମନ୍ଦିର ରୋଡ, ପବିତ୍ର ଗ୍ରାମ, ଜିଲ୍ଲା, ରାଜ୍ୟ - 500001",
+    footerRights: "© 2024 ସମସ୍ତ ଅଧିକାର ସଂରକ୍ଷିତ। ଭକ୍ତି ସହ ନିର୍ମିତ।",
+    langLabel: "ভାষা",
+    progressLabel: "ପୁନର୍ନିର୍ମାଣ ଅଗ୍ରଗତି",
+  },
+};
+
+const langNames = {
+  en: "English",
+  hi: "हिन्दी",
+  te: "తెలుగు",
+  mr: "मराठी",
+  bn: "বাংলা",
+  od: "ଓଡ଼ିଆ",
+};
+
+// OM Symbol SVG
+const OmSymbol = ({ size = 24, color = "#C4922A" }) => (
+  <svg width={size} height={size} viewBox="0 0 100 100" fill={color}>
+    <text x="50" y="75" textAnchor="middle" fontSize="80" fontFamily="serif">ॐ</text>
+  </svg>
+);
+
+// Decorative Divider
+const Divider = () => (
+  <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, margin: "40px 0" }}>
+    <div style={{ height: 1, width: 80, background: "linear-gradient(to right, transparent, #C4922A)" }} />
+    <OmSymbol size={28} />
+    <div style={{ height: 1, width: 80, background: "linear-gradient(to left, transparent, #C4922A)" }} />
+  </div>
+);
+
+// Animated Counter
+const Counter = ({ end, duration = 2000, prefix = "", suffix = "" }) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const started = useRef(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started.current) {
+          started.current = true;
+          const startTime = Date.now();
+          const animate = () => {
+            const elapsed = Date.now() - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            setCount(Math.floor(eased * end));
+            if (progress < 1) requestAnimationFrame(animate);
+          };
+          animate();
+        }
+      },
+      { threshold: 0.5 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [end, duration]);
+
+  return <span ref={ref}>{prefix}{count.toLocaleString()}{suffix}</span>;
+};
+
+export default function TempleDonation() {
+  const [lang, setLang] = useState("en");
+  const [showLangMenu, setShowLangMenu] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const t = translations[lang];
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollTo = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const css = `
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=Noto+Sans+Oriya:wght@300;400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --gold: #C4922A;
+      --gold-light: #E8C56D;
+      --gold-dark: #8B6914;
+      --crimson: #8B1A1A;
+      --crimson-deep: #5C0E0E;
+      --saffron: #FF6F00;
+      --cream: #FFF8E7;
+      --dark: #1A0A0A;
+      --dark-warm: #2D1410;
+      --vermillion: #E23D28;
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', 'Noto Sans Devanagari', 'Noto Sans Telugu', 'Noto Sans Bengali', 'Noto Sans Oriya', serif;
+      background: var(--dark);
+      color: var(--cream);
+      overflow-x: hidden;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--dark); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
+
+    /* Animations */
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    @keyframes glow { 0%,100% { box-shadow: 0 0 20px rgba(196,146,42,0.3); } 50% { box-shadow: 0 0 40px rgba(196,146,42,0.6); } }
+    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    @keyframes fadeUp { from { opacity:0; transform: translateY(30px); } to { opacity:1; transform: translateY(0); } }
+    @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+    @keyframes diyas { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
+    @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+    .fade-up { animation: fadeUp 0.8s ease forwards; }
+    .fade-up-d1 { animation: fadeUp 0.8s ease 0.1s forwards; opacity: 0; }
+    .fade-up-d2 { animation: fadeUp 0.8s ease 0.2s forwards; opacity: 0; }
+    .fade-up-d3 { animation: fadeUp 0.8s ease 0.3s forwards; opacity: 0; }
+    .fade-up-d4 { animation: fadeUp 0.8s ease 0.4s forwards; opacity: 0; }
+
+    /* Mandala Pattern BG */
+    .mandala-bg {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: 0; opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='80' fill='none' stroke='%23C4922A' stroke-width='0.5'/%3E%3Ccircle cx='100' cy='100' r='60' fill='none' stroke='%23C4922A' stroke-width='0.5'/%3E%3Ccircle cx='100' cy='100' r='40' fill='none' stroke='%23C4922A' stroke-width='0.5'/%3E%3Ccircle cx='100' cy='100' r='20' fill='none' stroke='%23C4922A' stroke-width='0.5'/%3E%3Cpath d='M100 20 L100 180 M20 100 L180 100 M35 35 L165 165 M165 35 L35 165' stroke='%23C4922A' stroke-width='0.3'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
+    /* Nav */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 12px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: all 0.3s ease;
+    }
+    .nav-scrolled {
+      background: rgba(26,10,10,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(196,146,42,0.3);
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 12px;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 16px; font-weight: 700; color: var(--gold);
+      letter-spacing: 1px;
+    }
+    .nav-right { display: flex; align-items: center; gap: 20px; }
+    .lang-selector {
+      position: relative;
+    }
+    .lang-btn {
+      background: rgba(196,146,42,0.15);
+      border: 1px solid rgba(196,146,42,0.4);
+      color: var(--gold); padding: 6px 16px;
+      border-radius: 6px; cursor: pointer;
+      font-family: inherit; font-size: 14px;
+      transition: all 0.3s;
+    }
+    .lang-btn:hover { background: rgba(196,146,42,0.3); }
+    .lang-dropdown {
+      position: absolute; top: 100%; right: 0; margin-top: 4px;
+      background: var(--dark-warm);
+      border: 1px solid rgba(196,146,42,0.4);
+      border-radius: 8px; overflow: hidden;
+      min-width: 140px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    .lang-option {
+      display: block; width: 100%; padding: 10px 16px;
+      background: none; border: none; color: var(--cream);
+      font-family: inherit; font-size: 14px; cursor: pointer;
+      text-align: left; transition: all 0.2s;
+    }
+    .lang-option:hover { background: rgba(196,146,42,0.2); }
+    .lang-option.active { background: rgba(196,146,42,0.3); color: var(--gold); }
+    .donate-nav-btn {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: var(--dark); padding: 8px 20px;
+      border: none; border-radius: 6px; cursor: pointer;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 12px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+      transition: all 0.3s;
+    }
+    .donate-nav-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(196,146,42,0.4); }
+
+    /* Hero */
+    .hero {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; overflow: hidden;
+      background: linear-gradient(180deg, var(--dark) 0%, var(--crimson-deep) 50%, var(--dark) 100%);
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, rgba(196,146,42,0.1) 0%, transparent 70%);
+    }
+    .hero-particles {
+      position: absolute; inset: 0; overflow: hidden;
+    }
+    .particle {
+      position: absolute; width: 3px; height: 3px;
+      background: var(--gold); border-radius: 50%;
+      animation: diyas 3s infinite;
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 800px; padding: 0 20px;
+    }
+    .hero-om {
+      font-size: 72px; color: var(--gold);
+      text-shadow: 0 0 30px rgba(196,146,42,0.5);
+      animation: float 4s ease-in-out infinite;
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(24px, 5vw, 48px);
+      color: var(--cream); font-weight: 400;
+      line-height: 1.3; margin-bottom: 8px;
+    }
+    .hero-highlight {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(36px, 7vw, 72px);
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--saffron), var(--gold-light));
+      background-size: 200% auto;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      animation: shimmer 4s linear infinite;
+      line-height: 1.2; margin-bottom: 24px;
+    }
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 20px);
+      color: rgba(255,248,231,0.8);
+      line-height: 1.8; max-width: 650px; margin: 0 auto 40px;
+      font-weight: 300;
+    }
+    .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--saffron));
+      color: var(--dark); padding: 16px 40px;
+      border: none; border-radius: 8px; cursor: pointer;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 14px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      transition: all 0.3s; text-decoration: none;
+      animation: glow 3s infinite;
+    }
+    .btn-primary:hover { transform: translateY(-2px) scale(1.02); }
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid var(--gold);
+      color: var(--gold); padding: 14px 36px;
+      border-radius: 8px; cursor: pointer;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 14px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      transition: all 0.3s; text-decoration: none;
+    }
+    .btn-secondary:hover { background: rgba(196,146,42,0.15); transform: translateY(-2px); }
+
+    /* Sections */
+    .section {
+      position: relative; z-index: 1;
+      padding: 100px 20px;
+      max-width: 1200px; margin: 0 auto;
+    }
+    .section-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(28px, 4vw, 44px);
+      color: var(--gold); text-align: center;
+      margin-bottom: 16px; font-weight: 700;
+    }
+    .section-sub {
+      text-align: center; font-size: 18px;
+      color: rgba(255,248,231,0.7); max-width: 700px;
+      margin: 0 auto 60px; line-height: 1.7; font-weight: 300;
+    }
+
+    /* About */
+    .about-text {
+      max-width: 800px; margin: 0 auto;
+      font-size: 18px; line-height: 2;
+      color: rgba(255,248,231,0.85);
+      font-weight: 300;
+    }
+    .about-text p { margin-bottom: 20px; }
+
+    /* Temple Comparison */
+    .temple-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 40px; margin-top: 60px;
+    }
+    @media (max-width: 768px) { .temple-grid { grid-template-columns: 1fr; } }
+    .temple-card {
+      border-radius: 16px; overflow: hidden;
+      border: 1px solid rgba(196,146,42,0.3);
+      background: rgba(45,20,16,0.6);
+      transition: all 0.5s;
+    }
+    .temple-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 60px rgba(196,146,42,0.15);
+      border-color: rgba(196,146,42,0.6);
+    }
+    .temple-img {
+      width: 100%; height: 300px;
+      object-fit: cover;
+      border-bottom: 2px solid rgba(196,146,42,0.3);
+    }
+    .temple-label {
+      padding: 24px;
+    }
+    .temple-label h3 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 22px; color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .temple-label p {
+      font-size: 16px; line-height: 1.7;
+      color: rgba(255,248,231,0.7);
+    }
+
+    /* Stats */
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 24px; margin: 60px 0;
+    }
+    @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+    .stat-card {
+      text-align: center; padding: 32px 16px;
+      background: linear-gradient(135deg, rgba(45,20,16,0.8), rgba(92,14,14,0.4));
+      border: 1px solid rgba(196,146,42,0.25);
+      border-radius: 16px;
+      transition: all 0.3s;
+    }
+    .stat-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+    .stat-number {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 36px; font-weight: 900;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      font-size: 14px; color: rgba(255,248,231,0.6);
+      text-transform: uppercase; letter-spacing: 2px;
+    }
+
+    /* Progress Bar */
+    .progress-wrap {
+      max-width: 700px; margin: 0 auto 60px;
+      padding: 24px; border-radius: 12px;
+      background: rgba(45,20,16,0.6);
+      border: 1px solid rgba(196,146,42,0.2);
+    }
+    .progress-header {
+      display: flex; justify-content: space-between;
+      margin-bottom: 12px; font-size: 14px;
+      color: rgba(255,248,231,0.7);
+    }
+    .progress-bar {
+      height: 12px; background: rgba(196,146,42,0.15);
+      border-radius: 6px; overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%; border-radius: 6px;
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--saffron));
+      background-size: 200% auto;
+      animation: shimmer 3s linear infinite;
+      transition: width 2s ease;
+    }
+
+    /* Donate Section */
+    .donate-section {
+      background: linear-gradient(180deg, var(--dark) 0%, var(--crimson-deep) 50%, var(--dark) 100%);
+      padding: 100px 20px;
+    }
+    .donate-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 40px; max-width: 1000px; margin: 0 auto;
+    }
+    @media (max-width: 768px) { .donate-grid { grid-template-columns: 1fr; } }
+    .qr-card {
+      background: rgba(255,248,231,0.05);
+      border: 2px solid rgba(196,146,42,0.4);
+      border-radius: 20px; padding: 40px;
+      text-align: center;
+      animation: glow 4s infinite;
+    }
+    .qr-placeholder {
+      width: 220px; height: 220px;
+      margin: 20px auto;
+      background: white; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px;
+    }
+    .qr-img { width: 100%; height: 100%; object-fit: contain; }
+    .qr-label {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 18px; color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .qr-note {
+      font-size: 14px; color: rgba(255,248,231,0.6);
+      line-height: 1.6; margin-top: 16px;
+    }
+    .bank-card {
+      background: rgba(45,20,16,0.8);
+      border: 1px solid rgba(196,146,42,0.3);
+      border-radius: 20px; padding: 40px;
+    }
+    .bank-card h3 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 20px; color: var(--gold);
+      margin-bottom: 24px;
+    }
+    .bank-detail {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(196,146,42,0.1);
+      font-size: 15px; color: rgba(255,248,231,0.8);
+      line-height: 1.6;
+    }
+
+    /* WhatsApp Section */
+    .whatsapp-card {
+      max-width: 700px; margin: 60px auto 0;
+      background: linear-gradient(135deg, rgba(37,211,102,0.1), rgba(37,211,102,0.05));
+      border: 2px solid rgba(37,211,102,0.4);
+      border-radius: 20px; padding: 40px;
+      text-align: center;
+    }
+    .whatsapp-icon {
+      width: 60px; height: 60px;
+      background: #25D366; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 30px; color: white;
+    }
+    .whatsapp-card h3 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 22px; color: #25D366;
+      margin-bottom: 16px;
+    }
+    .whatsapp-card p {
+      font-size: 16px; color: rgba(255,248,231,0.8);
+      line-height: 1.7; margin-bottom: 16px;
+    }
+    .whatsapp-number {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 32px; color: #25D366;
+      margin: 16px 0;
+      letter-spacing: 2px;
+    }
+    .whatsapp-link {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #25D366; color: white;
+      padding: 14px 32px; border-radius: 50px;
+      text-decoration: none; font-size: 16px;
+      font-weight: 600; transition: all 0.3s;
+      margin-top: 16px;
+    }
+    .whatsapp-link:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(37,211,102,0.3); }
+    .whatsapp-note {
+      font-size: 14px !important;
+      color: rgba(255,248,231,0.5) !important;
+      margin-top: 16px;
+    }
+
+    /* Donors */
+    .donors-section { padding: 100px 20px; }
+    .excel-btn {
+      display: inline-flex; align-items: center; gap: 12px;
+      background: linear-gradient(135deg, #217346, #185C37);
+      color: white; padding: 18px 40px;
+      border-radius: 12px; font-size: 16px;
+      font-weight: 600; text-decoration: none;
+      transition: all 0.3s;
+      border: 1px solid rgba(33,115,70,0.5);
+    }
+    .excel-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(33,115,70,0.3); }
+    .excel-icon { font-size: 24px; }
+
+    /* Trust Section */
+    .trust-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 768px) { .trust-grid { grid-template-columns: 1fr; } }
+    .trust-card {
+      padding: 32px;
+      background: rgba(45,20,16,0.6);
+      border: 1px solid rgba(196,146,42,0.2);
+      border-radius: 16px;
+      transition: all 0.4s;
+    }
+    .trust-card:hover {
+      border-color: var(--gold);
+      background: rgba(45,20,16,0.8);
+      transform: translateY(-3px);
+    }
+    .trust-icon {
+      width: 56px; height: 56px;
+      background: linear-gradient(135deg, rgba(196,146,42,0.2), rgba(196,146,42,0.1));
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; margin-bottom: 16px;
+      border: 1px solid rgba(196,146,42,0.3);
+    }
+    .trust-card h3 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 18px; color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .trust-card p {
+      font-size: 15px; color: rgba(255,248,231,0.7);
+      line-height: 1.7;
+    }
+
+    /* Committee */
+    .committee-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px; margin-top: 40px;
+    }
+    @media (max-width: 768px) { .committee-grid { grid-template-columns: 1fr; } }
+    .member-card {
+      text-align: center; padding: 32px;
+      background: rgba(45,20,16,0.6);
+      border: 1px solid rgba(196,146,42,0.2);
+      border-radius: 16px;
+      transition: all 0.4s;
+    }
+    .member-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+    .member-avatar {
+      width: 80px; height: 80px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      border-radius: 50%; margin: 0 auto 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 32px; color: var(--dark);
+      font-family: 'Cinzel Decorative', serif;
+    }
+    .member-card h3 {
+      font-size: 18px; color: var(--cream);
+      margin-bottom: 4px;
+    }
+    .member-card p {
+      font-size: 14px; color: var(--gold);
+      letter-spacing: 1px;
+    }
+
+    /* Footer */
+    .footer {
+      background: linear-gradient(180deg, var(--dark), #0D0505);
+      padding: 60px 20px;
+      text-align: center;
+      border-top: 1px solid rgba(196,146,42,0.2);
+    }
+    .footer-brand {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 20px; color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .footer-reg {
+      font-size: 14px; color: rgba(255,248,231,0.5);
+      margin-bottom: 8px;
+    }
+    .footer-addr {
+      font-size: 14px; color: rgba(255,248,231,0.4);
+      margin-bottom: 24px;
+    }
+    .footer-copy {
+      font-size: 13px; color: rgba(255,248,231,0.3);
+    }
+
+    /* Diya lamp line */
+    .diya-line {
+      display: flex; justify-content: center; gap: 40px;
+      margin: 40px 0;
+    }
+    .diya {
+      width: 6px; height: 6px; background: var(--saffron);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--saffron), 0 0 20px rgba(255,111,0,0.4);
+      animation: diyas 2s infinite;
+    }
+    .diya:nth-child(2) { animation-delay: 0.3s; }
+    .diya:nth-child(3) { animation-delay: 0.6s; }
+    .diya:nth-child(4) { animation-delay: 0.9s; }
+    .diya:nth-child(5) { animation-delay: 1.2s; }
+  `;
+
+  // Generate particles
+  const particles = Array.from({ length: 30 }, (_, i) => ({
+    left: `${Math.random() * 100}%`,
+    top: `${Math.random() * 100}%`,
+    delay: `${Math.random() * 5}s`,
+    size: `${2 + Math.random() * 3}px`,
+  }));
+
+  return (
+    <>
+      <style>{css}</style>
+      <div className="mandala-bg" />
+
+      {/* Navigation */}
+      <nav className={`nav ${scrollY > 50 ? "nav-scrolled" : ""}`}>
+        <div className="nav-brand">
+          <span style={{ fontSize: 28 }}>🙏</span>
+          <span>{t.nav}</span>
+        </div>
+        <div className="nav-right">
+          <div className="lang-selector">
+            <button className="lang-btn" onClick={() => setShowLangMenu(!showLangMenu)}>
+              🌐 {langNames[lang]}
+            </button>
+            {showLangMenu && (
+              <div className="lang-dropdown">
+                {Object.entries(langNames).map(([code, name]) => (
+                  <button
+                    key={code}
+                    className={`lang-option ${lang === code ? "active" : ""}`}
+                    onClick={() => { setLang(code); setShowLangMenu(false); }}
+                  >
+                    {name}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+          <button className="donate-nav-btn" onClick={() => scrollTo("donate")}>
+            {t.donateNow}
+          </button>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="hero-particles">
+          {particles.map((p, i) => (
+            <div key={i} className="particle" style={{
+              left: p.left, top: p.top,
+              animationDelay: p.delay,
+              width: p.size, height: p.size,
+            }} />
+          ))}
+        </div>
+        <div className="hero-content">
+          <div className="hero-om fade-up">ॐ</div>
+          <h1 className="hero-title fade-up-d1">{t.heroTitle}</h1>
+          <div className="hero-highlight fade-up-d2">{t.heroHighlight}</div>
+          <p className="hero-sub fade-up-d3">{t.heroSub}</p>
+          <div className="hero-btns fade-up-d4">
+            <button className="btn-primary" onClick={() => scrollTo("donate")}>{t.donateNow}</button>
+            <button className="btn-secondary" onClick={() => scrollTo("donors")}>{t.viewDonors}</button>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <div style={{ background: "linear-gradient(180deg, var(--dark), rgba(92,14,14,0.2), var(--dark))" }}>
+        <div className="section">
+          <div className="stats-grid">
+            <div className="stat-card">
+              <div className="stat-number"><Counter end={32} prefix="₹" suffix="L" /></div>
+              <div className="stat-label">{t.totalRaised}</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-number"><Counter end={75} prefix="₹" suffix="L" /></div>
+              <div className="stat-label">{t.totalGoal}</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-number"><Counter end={847} /></div>
+              <div className="stat-label">{t.totalDonors}</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-number"><Counter end={142} /></div>
+              <div className="stat-label">{t.daysLeft}</div>
+            </div>
+          </div>
+
+          <div className="progress-wrap">
+            <div className="progress-header">
+              <span>{t.progressLabel}</span>
+              <span>42.6%</span>
+            </div>
+            <div className="progress-bar">
+              <div className="progress-fill" style={{ width: "42.6%" }} />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* About Section */}
+      <div className="section">
+        <h2 className="section-title">{t.aboutTitle}</h2>
+        <Divider />
+        <div className="about-text">
+          <p>{t.aboutP1}</p>
+          <p>{t.aboutP2}</p>
+          <p>{t.aboutP3}</p>
+        </div>
+
+        {/* Temple Comparison */}
+        <div className="temple-grid">
+          <div className="temple-card">
+            <img
+              className="temple-img"
+              src="https://images.unsplash.com/photo-1621427637840-04735b084ef9?w=600&h=400&fit=crop"
+              alt="Current Temple"
+              onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=600&h=400&fit=crop"; }}
+            />
+            <div className="temple-label">
+              <h3>{t.oldTemple}</h3>
+              <p>{t.oldTempleDesc}</p>
+            </div>
+          </div>
+          <div className="temple-card">
+            <img
+              className="temple-img"
+              src="https://images.unsplash.com/photo-1564804955922-3f48a4f90a7c?w=600&h=400&fit=crop"
+              alt="Proposed New Temple"
+              onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1606298855672-3efb63017be8?w=600&h=400&fit=crop"; }}
+            />
+            <div className="temple-label">
+              <h3>{t.newTemple}</h3>
+              <p>{t.newTempleDesc}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="diya-line">
+        <div className="diya" /><div className="diya" /><div className="diya" /><div className="diya" /><div className="diya" />
+      </div>
+
+      {/* Donate Section */}
+      <div className="donate-section" id="donate">
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <h2 className="section-title">{t.donateTitle}</h2>
+          <p className="section-sub">{t.donateSub}</p>
+
+          <div className="donate-grid">
+            <div className="qr-card">
+              <div className="qr-label">{t.scanQR}</div>
+              <div className="qr-placeholder">
+                {/* QR Code placeholder - replace with actual QR */}
+                <svg viewBox="0 0 200 200" className="qr-img">
+                  <rect width="200" height="200" fill="white"/>
+                  {/* Simplified QR pattern */}
+                  <rect x="20" y="20" width="50" height="50" fill="#1A0A0A" rx="4"/>
+                  <rect x="26" y="26" width="38" height="38" fill="white" rx="2"/>
+                  <rect x="32" y="32" width="26" height="26" fill="#1A0A0A" rx="2"/>
+                  <rect x="130" y="20" width="50" height="50" fill="#1A0A0A" rx="4"/>
+                  <rect x="136" y="26" width="38" height="38" fill="white" rx="2"/>
+                  <rect x="142" y="32" width="26" height="26" fill="#1A0A0A" rx="2"/>
+                  <rect x="20" y="130" width="50" height="50" fill="#1A0A0A" rx="4"/>
+                  <rect x="26" y="136" width="38" height="38" fill="white" rx="2"/>
+                  <rect x="32" y="142" width="26" height="26" fill="#1A0A0A" rx="2"/>
+                  {/* Data pattern */}
+                  <rect x="80" y="20" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="100" y="20" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="80" y="40" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="110" y="40" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="80" y="60" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="90" y="60" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="20" y="80" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="40" y="80" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="60" y="80" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="80" y="80" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="110" y="80" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="130" y="80" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="160" y="80" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="20" y="100" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="50" y="100" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="80" y="100" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="100" y="100" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="120" y="100" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="150" y="100" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="170" y="100" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="30" y="110" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="60" y="110" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="90" y="110" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="80" y="130" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="100" y="130" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="130" y="130" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="160" y="130" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="80" y="150" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="110" y="150" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="140" y="150" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="170" y="150" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="80" y="170" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="100" y="170" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="130" y="170" width="10" height="10" fill="#1A0A0A"/>
+                  <rect x="150" y="170" width="10" height="10" fill="#1A0A0A"/>
+                  <text x="100" y="198" textAnchor="middle" fontSize="8" fill="#666" fontFamily="sans-serif">SCAN TO DONATE</text>
+                </svg>
+              </div>
+              <p className="qr-note">{t.qrNote}</p>
+            </div>
+
+            <div className="bank-card">
+              <h3>{t.bankDetails}</h3>
+              <div className="bank-detail">{t.bankName}</div>
+              <div className="bank-detail">{t.accName}</div>
+              <div className="bank-detail">{t.accNo}</div>
+              <div className="bank-detail">{t.ifsc}</div>
+            </div>
+          </div>
+
+          {/* WhatsApp Card */}
+          <div className="whatsapp-card">
+            <div className="whatsapp-icon">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </div>
+            <h3>{t.afterPayment}</h3>
+            <p>{t.afterPaymentDesc}</p>
+            <div className="whatsapp-number">{t.whatsappNumber}</div>
+            <a
+              href={`https://wa.me/919876543210?text=${encodeURIComponent("Jai Mata Di! I have made a donation to Sri Durga Amma Devi Temple Reconstruction. Attaching my payment screenshot.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whatsapp-link"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Send via WhatsApp
+            </a>
+            <p className="whatsapp-note">{t.whatsappNote}</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="diya-line">
+        <div className="diya" /><div className="diya" /><div className="diya" /><div className="diya" /><div className="diya" />
+      </div>
+
+      {/* Donors Section */}
+      <div className="section" id="donors">
+        <h2 className="section-title">{t.donorsTitle}</h2>
+        <p className="section-sub">{t.donorsSub}</p>
+        <div style={{ textAlign: "center" }}>
+          <a
+            href="https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="excel-btn"
+          >
+            <span className="excel-icon">📊</span>
+            {t.viewSheet}
+          </a>
+          <p style={{ marginTop: 20, fontSize: 14, color: "rgba(255,248,231,0.5)" }}>
+            {t.donorsNote}
+          </p>
+        </div>
+      </div>
+
+      {/* Trust Section */}
+      <div style={{ background: "linear-gradient(180deg, var(--dark), rgba(92,14,14,0.15), var(--dark))" }}>
+        <div className="section">
+          <h2 className="section-title">{t.trustTitle}</h2>
+          <Divider />
+          <div className="trust-grid">
+            <div className="trust-card">
+              <div className="trust-icon">🏛️</div>
+              <h3>{t.trust1Title}</h3>
+              <p>{t.trust1Desc}</p>
+            </div>
+            <div className="trust-card">
+              <div className="trust-icon">📋</div>
+              <h3>{t.trust2Title}</h3>
+              <p>{t.trust2Desc}</p>
+            </div>
+            <div className="trust-card">
+              <div className="trust-icon">🙏</div>
+              <h3>{t.trust3Title}</h3>
+              <p>{t.trust3Desc}</p>
+            </div>
+            <div className="trust-card">
+              <div className="trust-icon">📬</div>
+              <h3>{t.trust4Title}</h3>
+              <p>{t.trust4Desc}</p>
+            </div>
+          </div>
+
+          {/* Committee */}
+          <div style={{ marginTop: 80 }}>
+            <h2 className="section-title" style={{ fontSize: 28 }}>{t.committeeTitle}</h2>
+            <div className="committee-grid">
+              <div className="member-card">
+                <div className="member-avatar">R</div>
+                <h3>{t.member1}</h3>
+                <p>{t.member1Role}</p>
+              </div>
+              <div className="member-card">
+                <div className="member-avatar">L</div>
+                <h3>{t.member2}</h3>
+                <p>{t.member2Role}</p>
+              </div>
+              <div className="member-card">
+                <div className="member-avatar">V</div>
+                <h3>{t.member3}</h3>
+                <p>{t.member3Role}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="footer">
+        <div style={{ fontSize: 40, marginBottom: 16 }}>🙏</div>
+        <div className="footer-brand">{t.footerText}</div>
+        <div className="footer-reg">{t.footerReg}</div>
+        <div className="footer-addr">{t.footerAddress}</div>
+        <Divider />
+        <div className="footer-copy">{t.footerRights}</div>
+      </footer>
+    </>
+  );
+}
