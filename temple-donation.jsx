@@ -405,6 +405,72 @@ const OmSymbol = ({ size = 24, color = "#C4922A" }) => (
   </svg>
 );
 
+const TempleBadgeIcon = ({ size = 24 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M4 20h16" />
+    <path d="M7 20v-5m5 5v-5m5 5v-5" />
+    <path d="M5.5 15h13" />
+    <path d="M7 15v-3.6L12 7l5 4.4V15" />
+    <path d="M9.5 11.5h5" />
+    <path d="M12 4.5v1.7" />
+    <circle cx="12" cy="3.25" r="1" fill="currentColor" stroke="none" />
+  </svg>
+);
+
+const GlobeIcon = ({ size = 20 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="9" />
+    <path d="M3 12h18" />
+    <path d="M12 3c2.8 2.5 4.4 5.7 4.4 9S14.8 18.5 12 21c-2.8-2.5-4.4-5.7-4.4-9S9.2 5.5 12 3Z" />
+  </svg>
+);
+
+const ChartIcon = ({ size = 24 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M4 20h16" />
+    <path d="M7 18v-5" />
+    <path d="M12 18V9" />
+    <path d="M17 18V6" />
+    <path d="m6 10 4-3 3 2 5-4" />
+  </svg>
+);
+
+const LandmarkIcon = ({ size = 24 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M4 10h16L12 5 4 10Z" />
+    <path d="M6 10v7m4-7v7m4-7v7m4-7v7" />
+    <path d="M3 20h18" />
+    <path d="M4 17h16" />
+  </svg>
+);
+
+const ClipboardIcon = ({ size = 24 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="6" y="5" width="12" height="15" rx="2" />
+    <path d="M9 5.5V4.5A1.5 1.5 0 0 1 10.5 3h3A1.5 1.5 0 0 1 15 4.5v1" />
+    <path d="M9 10h6M9 13.5h6M9 17h4" />
+  </svg>
+);
+
+const CommitteeIcon = ({ size = 24 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="12" cy="8" r="2.5" />
+    <circle cx="7" cy="10" r="2" />
+    <circle cx="17" cy="10" r="2" />
+    <path d="M8.5 18c.6-2.3 2-3.5 3.5-3.5s2.9 1.2 3.5 3.5" />
+    <path d="M3.8 18c.4-1.7 1.6-2.6 3.2-2.9" />
+    <path d="M20.2 18c-.4-1.7-1.6-2.6-3.2-2.9" />
+  </svg>
+);
+
+const BellIcon = ({ size = 24 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M8 18h8" />
+    <path d="M10 20a2 2 0 0 0 4 0" />
+    <path d="M6 18h12l-1.2-1.8a4 4 0 0 1-.8-2.3V11a4 4 0 1 0-8 0v2.9a4 4 0 0 1-.8 2.3L6 18Z" />
+  </svg>
+);
+
 // Decorative Divider
 const Divider = () => (
   <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, margin: "40px 0" }}>
@@ -532,6 +598,14 @@ export default function TempleDonation() {
       font-size: 16px; font-weight: 700; color: var(--gold);
       letter-spacing: 1px;
     }
+    .nav-brand-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .nav-brand-icon svg { width: 28px; height: 28px; }
     .nav-right { display: flex; align-items: center; gap: 20px; }
     .lang-selector {
       position: relative;
@@ -542,8 +616,16 @@ export default function TempleDonation() {
       color: var(--gold); padding: 6px 16px;
       border-radius: 6px; cursor: pointer;
       font-family: inherit; font-size: 14px;
+      display: inline-flex; align-items: center; gap: 8px;
       transition: all 0.3s;
     }
+    .lang-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .lang-icon svg { width: 16px; height: 16px; }
     .lang-btn:hover { background: rgba(196,146,42,0.3); }
     .lang-dropdown {
       position: absolute; top: 100%; right: 0; margin-top: 4px;
@@ -907,7 +989,13 @@ export default function TempleDonation() {
       border: 1px solid rgba(33,115,70,0.5);
     }
     .excel-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(33,115,70,0.3); }
-    .excel-icon { font-size: 24px; }
+    .excel-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .excel-icon svg { width: 24px; height: 24px; }
 
     /* Trust Section */
     .trust-grid {
@@ -932,9 +1020,11 @@ export default function TempleDonation() {
       background: linear-gradient(135deg, rgba(196,146,42,0.2), rgba(196,146,42,0.1));
       border-radius: 12px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 24px; margin-bottom: 16px;
+      color: var(--gold);
+      margin-bottom: 16px;
       border: 1px solid rgba(196,146,42,0.3);
     }
+    .trust-icon svg { width: 24px; height: 24px; }
     .trust-card h3 {
       font-family: 'Cinzel Decorative', serif;
       font-size: 18px; color: var(--gold);
@@ -1006,6 +1096,14 @@ export default function TempleDonation() {
     .footer-copy {
       font-size: 13px; color: rgba(255,248,231,0.3);
     }
+    .footer-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .footer-icon svg { width: 40px; height: 40px; }
 
     /* Diya lamp line */
     .diya-line {
@@ -1033,7 +1131,7 @@ export default function TempleDonation() {
 
     @media (max-width: 768px) {
       .nav-brand { font-size: 14px; }
-      .nav-brand span:first-child { font-size: 22px !important; }
+      .nav-brand-icon svg { width: 22px; height: 22px; }
       .hero {
         min-height: auto;
         padding: 112px 16px 72px;
@@ -1118,13 +1216,18 @@ export default function TempleDonation() {
       {/* Navigation */}
       <nav className={`nav ${scrollY > 50 ? "nav-scrolled" : ""}`}>
         <div className="nav-brand">
-          <span style={{ fontSize: 28 }}>🙏</span>
+          <span className="nav-brand-icon">
+            <TempleBadgeIcon size={28} />
+          </span>
           <span>{t.nav}</span>
         </div>
         <div className="nav-right">
           <div className="lang-selector">
             <button className="lang-btn" onClick={() => setShowLangMenu(!showLangMenu)}>
-              🌐 {langNames[lang]}
+              <span className="lang-icon">
+                <GlobeIcon size={16} />
+              </span>
+              {langNames[lang]}
             </button>
             {showLangMenu && (
               <div className="lang-dropdown">
@@ -1415,7 +1518,9 @@ export default function TempleDonation() {
             rel="noopener noreferrer"
             className="excel-btn"
           >
-            <span className="excel-icon">📊</span>
+            <span className="excel-icon">
+              <ChartIcon size={24} />
+            </span>
             {t.viewSheet}
           </a>
           <p style={{ marginTop: 20, fontSize: 14, color: "rgba(255,248,231,0.5)" }}>
@@ -1431,22 +1536,30 @@ export default function TempleDonation() {
           <Divider />
           <div className="trust-grid">
             <div className="trust-card">
-              <div className="trust-icon">🏛️</div>
+              <div className="trust-icon">
+                <LandmarkIcon size={24} />
+              </div>
               <h3>{t.trust1Title}</h3>
               <p>{t.trust1Desc}</p>
             </div>
             <div className="trust-card">
-              <div className="trust-icon">📋</div>
+              <div className="trust-icon">
+                <ClipboardIcon size={24} />
+              </div>
               <h3>{t.trust2Title}</h3>
               <p>{t.trust2Desc}</p>
             </div>
             <div className="trust-card">
-              <div className="trust-icon">🙏</div>
+              <div className="trust-icon">
+                <CommitteeIcon size={24} />
+              </div>
               <h3>{t.trust3Title}</h3>
               <p>{t.trust3Desc}</p>
             </div>
             <div className="trust-card">
-              <div className="trust-icon">📬</div>
+              <div className="trust-icon">
+                <BellIcon size={24} />
+              </div>
               <h3>{t.trust4Title}</h3>
               <p>{t.trust4Desc}</p>
             </div>
@@ -1475,7 +1588,9 @@ export default function TempleDonation() {
 
       {/* Footer */}
       <footer className="footer">
-        <div style={{ fontSize: 40, marginBottom: 16 }}>🙏</div>
+        <div className="footer-icon">
+          <TempleBadgeIcon size={40} />
+        </div>
         <div className="footer-brand">{t.footerText}</div>
         <div className="footer-reg">{t.footerReg}</div>
         <div className="footer-addr">{t.footerAddress}</div>

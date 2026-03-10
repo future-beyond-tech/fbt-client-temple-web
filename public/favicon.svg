@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-labelledby="title desc">
+  <title id="title">Jai Maa Kali Mandir</title>
+  <desc id="desc">Temple icon with gold temple silhouette on a crimson background.</desc>
+  <defs>
+    <linearGradient id="bg" x1="18" y1="18" x2="162" y2="162" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2D0A0A"/>
+      <stop offset="1" stop-color="#7B120F"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="52" y1="24" x2="128" y2="148" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3D98A"/>
+      <stop offset="0.55" stop-color="#C4922A"/>
+      <stop offset="1" stop-color="#8B6914"/>
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" rx="42" fill="url(#bg)"/>
+  <circle cx="90" cy="90" r="62" fill="none" stroke="#C4922A" stroke-opacity="0.28" stroke-width="4"/>
+  <path d="M42 132h96" stroke="url(#gold)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M58 132V94m32 38V94m32 38V94" stroke="url(#gold)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M48 94h84" stroke="url(#gold)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M60 94V71L90 47l30 24v23" fill="none" stroke="url(#gold)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M75 73h30" stroke="url(#gold)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M90 27v11" stroke="url(#gold)" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="90" cy="20" r="6" fill="#F3D98A"/>
+</svg>

@@ -1,0 +1,20 @@
+{
+  "name": "Jai Maa Kali Mandir Donation",
+  "short_name": "Jai Maa Kali",
+  "description": "Donation page for the Jai Maa Kali Mandir renovation trust.",
+  "theme_color": "#3a0808",
+  "background_color": "#1a0a0a",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
