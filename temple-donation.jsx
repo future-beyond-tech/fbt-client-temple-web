@@ -947,6 +947,51 @@ export default function TempleDonation() {
     .diya:nth-child(3) { animation-delay: 0.6s; }
     .diya:nth-child(4) { animation-delay: 0.9s; }
     .diya:nth-child(5) { animation-delay: 1.2s; }
+
+    /* Responsive tweaks */
+    @media (max-width: 1024px) {
+      .nav { padding: 10px 24px; }
+      .section { padding: 80px 16px; }
+      .donate-section { padding: 80px 16px; }
+      .footer { padding: 40px 16px; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-brand { font-size: 14px; }
+      .nav-brand span:first-child { font-size: 22px !important; }
+      .hero { min-height: auto; padding: 120px 16px 80px; }
+      .hero-sub { font-size: 15px; }
+      .hero-btns { flex-direction: column; }
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+      .section-sub { font-size: 16px; padding: 0 4px; }
+      .about-text { font-size: 16px; }
+      .qr-card,
+      .bank-card,
+      .whatsapp-card {
+        padding: 24px 20px;
+      }
+      .stats-grid { gap: 16px; }
+      .stat-card { padding: 24px 12px; }
+    }
+
+    @media (max-width: 480px) {
+      .nav { padding: 8px 14px; }
+      .hero-title { font-size: 20px; }
+      .hero-highlight { font-size: 32px; }
+      .section { padding: 70px 12px; }
+      .donate-section { padding: 70px 12px; }
+      .section-title { font-size: 24px; }
+      .whatsapp-number { font-size: 24px; }
+      .excel-btn {
+        width: 100%;
+        justify-content: center;
+        padding-inline: 20px;
+      }
+    }
   `;
 
   // Generate particles
@@ -1203,7 +1248,7 @@ export default function TempleDonation() {
         <p className="section-sub">{t.donorsSub}</p>
         <div style={{ textAlign: "center" }}>
           <a
-            href="https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit?usp=sharing"
+            href="https://docs.google.com/spreadsheets/d/1NYPlaHIUdomegVHvgGYnESoEU0JQf7tZ2i8N2LyNetQ/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="excel-btn"
