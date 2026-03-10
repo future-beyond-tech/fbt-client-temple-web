@@ -4,28 +4,28 @@ import receiptImage from "./Receipt.jpeg";
 
 const translations = {
   en: {
-    nav: "Jai Maa Kali - Sri Durga Amma Devi Temple",
-    tagline: "Divine Reconstruction • Sacred Renewal",
+    nav: "Jai Maa Kali Mandir",
+    tagline: "Divine Renovation • Sacred Renewal",
     heroTitle: "Rebuild the Abode of",
     heroHighlight: "Maa Durga",
-    heroSub: "Join us in the sacred mission to reconstruct and restore the divine temple of Sri Durga Amma Devi. Every contribution brings us closer to creating a magnificent spiritual sanctuary for generations to come.",
+    heroSub: "Join us in the sacred mission to renovate and restore the divine Jai Maa Kali Mandir. Every contribution brings us closer to creating a magnificent spiritual sanctuary for generations to come.",
     donateNow: "Donate Now",
     viewDonors: "View Donors",
-    aboutTitle: "About the Reconstruction",
-    aboutP1: "For centuries, the Sri Durga Amma Devi Temple has been a beacon of spiritual light and devotion. The temple, originally built over 200 years ago, has served as a sacred sanctuary for millions of devotees seeking the divine blessings of Maa Durga.",
-    aboutP2: "Due to natural wear and the passage of time, the temple structure requires significant restoration and reconstruction. Our vision is to rebuild this divine abode into a magnificent spiritual complex that honors the ancient traditions while providing modern facilities for devotees.",
-    aboutP3: "The reconstruction project includes restoration of the main sanctum, construction of new prayer halls, renovation of the temple gopuram, landscaping of the temple premises, and installation of proper drainage and lighting systems.",
+    aboutTitle: "About the Renovation",
+    aboutP1: "For centuries, the Jai Maa Kali Mandir has been a beacon of spiritual light and devotion. The temple, originally built over 200 years ago, has served as a sacred sanctuary for millions of devotees seeking the divine blessings of Maa Durga.",
+    aboutP2: "Due to natural wear and the passage of time, the temple structure requires significant restoration and renovation. Our vision is to renew this divine abode into a magnificent spiritual complex that honors the ancient traditions while providing modern facilities for devotees.",
+    aboutP3: "The renovation project includes restoration of the main sanctum, construction of new prayer halls, renovation of the temple gopuram, landscaping of the temple premises, and installation of proper drainage and lighting systems.",
     oldTemple: "Current Temple",
     oldTempleDesc: "The existing temple structure showing signs of age and wear, requiring urgent restoration to preserve its sacred heritage.",
     newTemple: "Proposed New Temple",
-    newTempleDesc: "The envisioned magnificently reconstructed temple — a divine masterpiece blending ancient architecture with modern amenities.",
+    newTempleDesc: "The envisioned magnificently renovated temple — a divine masterpiece blending ancient architecture with modern amenities.",
     donateTitle: "Make a Sacred Offering",
     donateSub: "Scan the QR code below to make your divine contribution. Every offering, big or small, brings us closer to realizing this sacred vision.",
     scanQR: "Scan to Donate",
     qrNote: "Scan this QR code with any UPI app (Google Pay, PhonePe, Paytm) to make your sacred offering",
     bankDetails: "Bank Transfer Details",
     bankName: "Bank Name: State Bank of India",
-    accName: "Account Name: Sri Durga Amma Devi Temple Trust",
+    accName: "Account Name: Jai Maa Kali Mandir Trust",
     accNo: "Account No: XXXX XXXX XXXX 1234",
     ifsc: "IFSC Code: SBIN0001234",
     afterPayment: "After Making Your Offering",
@@ -53,12 +53,12 @@ const translations = {
     member1: "Shri Arvind Singh",
     member1Role: "कोषाध्यक्ष (Treasurer)",
     blessingLine: "With the blessings of Maa Kali and the generous support of the villagers of Birnia (Post–Jotha, Dhoraiya, Banka, Bihar-813109).",
-    footerText: "Jai Maa Kali - Sri Durga Amma Devi Temple Reconstruction Trust",
+    footerText: "Jai Maa Kali Mandir Renovation Trust",
     footerReg: "Registration No: XXXXX/2024 | 80G Certified",
     footerAddress: "Birnia, Post–Jotha, Dhoraiya, Banka, Bihar - 813109",
     footerRights: "© 2024 All Rights Reserved. Built with devotion.",
     langLabel: "Language",
-    progressLabel: "Reconstruction Progress",
+    progressLabel: "Renovation Progress",
     reasonTitle: "Reason to Donate",
     reasonP1: "The existing Maa Kali Mandir is very old and its structure has weakened over time. During the rainy season, road water enters the temple premises, which creates difficulty for devotees and affects the sanctity of the temple.",
     reasonP2: "Therefore, with the blessings of Maa Kali and the support of all villagers, we are planning to reconstruct and uplift the temple roof with proper pillars so that the temple remains safe, strong, and protected for future generations.",
@@ -68,28 +68,28 @@ const translations = {
     noticeP2: "Once sufficient funds are collected, no further donations will be requested.",
   },
   hi: {
-    nav: "जय माँ काली - श्री दुर्गा अम्मा देवी मंदिर",
-    tagline: "दिव्य पुनर्निर्माण • पवित्र नवीनीकरण",
+    nav: "जय माँ काली मंदिर",
+    tagline: "दिव्य नवीनीकरण • पवित्र नवीनीकरण",
     heroTitle: "का धाम पुनर्निर्माण करें",
     heroHighlight: "माँ दुर्गा",
-    heroSub: "श्री दुर्गा अम्मा देवी के दिव्य मंदिर के पुनर्निर्माण और जीर्णोद्धार के पवित्र मिशन में हमारे साथ जुड़ें। हर योगदान आने वाली पीढ़ियों के लिए एक भव्य आध्यात्मिक अभयारण्य बनाने के करीब लाता है।",
+    heroSub: "जय माँ काली मंदिर के नवीनीकरण और जीर्णोद्धार के पवित्र मिशन में हमारे साथ जुड़ें। हर योगदान आने वाली पीढ़ियों के लिए एक भव्य आध्यात्मिक अभयारण्य बनाने के करीब लाता है।",
     donateNow: "अभी दान करें",
     viewDonors: "दाताओं को देखें",
-    aboutTitle: "पुनर्निर्माण के बारे में",
-    aboutP1: "सदियों से, श्री दुर्गा अम्मा देवी मंदिर आध्यात्मिक प्रकाश और भक्ति का प्रतीक रहा है। 200 से अधिक वर्ष पहले निर्मित यह मंदिर माँ दुर्गा के दिव्य आशीर्वाद की कामना करने वाले लाखों भक्तों के लिए एक पवित्र अभयारण्य रहा है।",
+    aboutTitle: "नवीनीकरण के बारे में",
+    aboutP1: "सदियों से, जय माँ काली मंदिर आध्यात्मिक प्रकाश और भक्ति का प्रतीक रहा है। 200 से अधिक वर्ष पहले निर्मित यह मंदिर माँ काली के दिव्य आशीर्वाद की कामना करने वाले लाखों भक्तों के लिए एक पवित्र अभयारण्य रहा है।",
     aboutP2: "प्राकृतिक क्षरण और समय बीतने के कारण, मंदिर संरचना को महत्वपूर्ण जीर्णोद्धार और पुनर्निर्माण की आवश्यकता है। हमारी दृष्टि इस दिव्य धाम को एक भव्य आध्यात्मिक परिसर में पुनर्निर्मित करना है।",
     aboutP3: "पुनर्निर्माण परियोजना में मुख्य गर्भगृह की बहाली, नए प्रार्थना हॉल का निर्माण, मंदिर गोपुरम का नवीनीकरण, और आधुनिक सुविधाओं की स्थापना शामिल है।",
     oldTemple: "वर्तमान मंदिर",
     oldTempleDesc: "मौजूदा मंदिर संरचना जो समय के साथ जीर्ण हो गई है, इसकी पवित्र विरासत को संरक्षित करने के लिए तत्काल जीर्णोद्धार की आवश्यकता है।",
     newTemple: "प्रस्तावित नया मंदिर",
-    newTempleDesc: "कल्पित भव्य पुनर्निर्मित मंदिर — प्राचीन वास्तुकला और आधुनिक सुविधाओं का दिव्य मिश्रण।",
+    newTempleDesc: "कल्पित भव्य नवीनीकृत मंदिर — प्राचीन वास्तुकला और आधुनिक सुविधाओं का दिव्य मिश्रण।",
     donateTitle: "पवित्र दान करें",
     donateSub: "अपना दिव्य योगदान देने के लिए नीचे दिए गए QR कोड को स्कैन करें। हर चढ़ावा इस पवित्र दृष्टि को साकार करने के करीब लाता है।",
     scanQR: "दान के लिए स्कैन करें",
     qrNote: "अपना पवित्र चढ़ावा देने के लिए किसी भी UPI ऐप से इस QR कोड को स्कैन करें",
     bankDetails: "बैंक हस्तांतरण विवरण",
     bankName: "बैंक का नाम: भारतीय स्टेट बैंक",
-    accName: "खाता नाम: श्री दुर्गा अम्मा देवी मंदिर ट्रस्ट",
+    accName: "खाता नाम: जय माँ काली मंदिर ट्रस्ट",
     accNo: "खाता संख्या: XXXX XXXX XXXX 1234",
     ifsc: "IFSC कोड: SBIN0001234",
     afterPayment: "दान करने के बाद",
@@ -117,12 +117,12 @@ const translations = {
     member1: "श्री अरविंद सिंह",
     member1Role: "कोषाध्यक्ष (Treasurer)",
     blessingLine: "माँ काली की कृपा और बिरनिया ग्राम (पोस्ट–जोत्था, धोरैया, बांका, बिहार-813109) के ग्रामवासियों के उदार सहयोग से।",
-    footerText: "जय माँ काली - श्री दुर्गा अम्मा देवी मंदिर पुनर्निर्माण ट्रस्ट",
+    footerText: "जय माँ काली मंदिर नवीनीकरण ट्रस्ट",
     footerReg: "पंजीकरण संख्या: XXXXX/2024 | 80G प्रमाणित",
     footerAddress: "बिरनिया, पोस्ट–जोत्था, धोरैया, बांका, बिहार - 813109",
     footerRights: "© 2024 सर्वाधिकार सुरक्षित। भक्ति से निर्मित।",
     langLabel: "भाषा",
-    progressLabel: "पुनर्निर्माण प्रगति",
+    progressLabel: "नवीनीकरण प्रगति",
     reasonTitle: "दान करने का कारण",
     reasonP1: "वर्तमान माँ काली मंदिर बहुत पुराना हो चुका है और समय के साथ इसकी संरचना कमजोर हो गई है। बरसात के मौसम में सड़क का पानी मंदिर परिसर में आ जाता है, जिससे भक्तों को परेशानी होती है और मंदिर की पवित्रता पर भी प्रभाव पड़ता है।",
     reasonP2: "इसीलिए माँ काली की कृपा और सभी ग्रामवासियों के सहयोग से हम मंदिर की छत को मज़बूत खंभों के साथ ऊँचा कर पुनर्निर्माण करने की योजना बना रहे हैं, ताकि यह मंदिर आने वाली पीढ़ियों के लिए सुरक्षित, मजबूत और संरक्षित रह सके।",
@@ -132,15 +132,15 @@ const translations = {
     noticeP2: "जब पर्याप्त धनराशि एकत्र हो जाएगी, उसके बाद किसी प्रकार का अतिरिक्त दान नहीं लिया जाएगा।",
   },
   te: {
-    nav: "జై మా కాలి - శ్రీ దుర్గా అమ్మ దేవి ఆలయం",
-    tagline: "దివ్య పునర్నిర్మాణం • పవిత్ర నవీకరణ",
+    nav: "జై మా కాలి ఆలయం",
+    tagline: "దివ్య పునర్వ్యవస్థీకరణ • పవిత్ర నవీకరణ",
     heroTitle: "యొక్క నివాసాన్ని పునర్నిర్మించండి",
     heroHighlight: "అమ్మవారు దుర్గా",
-    heroSub: "శ్రీ దుర్గా అమ్మ దేవి యొక్క దివ్య ఆలయాన్ని పునర్నిర్మించే పవిత్ర మిషన్‌లో మాతో చేరండి. ప్రతి సహకారం రాబోయే తరాలకు ఒక అద్భుతమైన ఆధ్యాత్మిక ఆశ్రయాన్ని సృష్టించడానికి మనల్ని దగ్గరగా తీసుకువస్తుంది.",
+    heroSub: "జై మా కాలి ఆలయాన్ని నూతనీకరించే పవిత్ర మిషన్‌లో మాతో చేరండి. ప్రతి సహకారం రాబోయే తరాలకు ఒక అద్భుతమైన ఆధ్యాత్మిక ఆశ్రయాన్ని సృష్టించడానికి మనల్ని దగ్గరగా తీసుకువస్తుంది.",
     donateNow: "ఇప్పుడు దానం చేయండి",
     viewDonors: "దాతలను చూడండి",
-    aboutTitle: "పునర్నిర్మాణం గురించి",
-    aboutP1: "శతాబ్దాలుగా, శ్రీ దుర్గా అమ్మ దేవి ఆలయం ఆధ్యాత్మిక వెలుగు మరియు భక్తి యొక్క దీపస్తంభంగా ఉంది. 200 సంవత్సరాల కిందట నిర్మించబడిన ఈ ఆలయం లక్షలాది భక్తులకు పవిత్ర ఆశ్రయంగా ఉంది.",
+    aboutTitle: "పునర్వ్యవస్థీకరణ (Renovation) గురించి",
+    aboutP1: "శతాబ్దాలుగా, జై మా కాలి ఆలయం ఆధ్యాత్మిక వెలుగు మరియు భక్తి యొక్క దీపస్తంభంగా ఉంది. 200 సంవత్సరాల కిందట నిర్మించబడిన ఈ ఆలయం లక్షలాది భక్తులకు పవిత్ర ఆశ్రయంగా ఉంది.",
     aboutP2: "సహజ క్షీణత మరియు కాలం గడవడం వలన, ఆలయ నిర్మాణానికి గణనీయమైన పునరుద్ధరణ అవసరం. ఈ దివ్య నివాసాన్ని అద్భుతమైన ఆధ్యాత్మిక సముదాయంగా పునర్నిర్మించడం మా దృష్టి.",
     aboutP3: "పునర్నిర్మాణ ప్రాజెక్ట్‌లో ప్రధాన గర్భగృహ పునరుద్ధరణ, కొత్త ప్రార్థనా మందిరాల నిర్మాణం, ఆలయ గోపురం నవీకరణ మరియు ఆధునిక సౌకర్యాల ఏర్పాటు ఉన్నాయి.",
     oldTemple: "ప్రస్తుత ఆలయం",
@@ -153,7 +153,7 @@ const translations = {
     qrNote: "మీ పవిత్ర అర్పణ చేయడానికి ఏదైనా UPI యాప్‌తో ఈ QR కోడ్‌ను స్కాన్ చేయండి",
     bankDetails: "బ్యాంక్ బదిలీ వివరాలు",
     bankName: "బ్యాంక్ పేరు: స్టేట్ బ్యాంక్ ఆఫ్ ఇండియా",
-    accName: "ఖాతా పేరు: శ్రీ దుర్గా అమ్మ దేవి ఆలయ ట్రస్ట్",
+    accName: "ఖాతా పేరు: జై మా కాలి ఆలయ ట్రస్ట్",
     accNo: "ఖాతా నంబర్: XXXX XXXX XXXX 1234",
     ifsc: "IFSC కోడ్: SBIN0001234",
     afterPayment: "మీ అర్పణ చేసిన తర్వాత",
@@ -181,12 +181,12 @@ const translations = {
     member1: "శ్రీ అర్వింద్ సింగ్",
     member1Role: "ఖజాంచి (Treasurer)",
     blessingLine: "మా కాలీ అమ్మ ఆశీర్వాదంతో మరియు బిర్నియా గ్రామ (పోస్ట్–జోతా, ధొరయ్యా, బాంకా, బీహార్-813109) గ్రామస్తుల ఉదార సహకారంతో.",
-    footerText: "జై మా కాలి - శ్రీ దుర్గా అమ్మ దేవి ఆలయ పునర్నిర్మాణ ట్రస్ట్",
+    footerText: "జై మా కాలి ఆలయ పునర్వ్యవస్థీకరణ ట్రస్ట్",
     footerReg: "రిజిస్ట్రేషన్ నం: XXXXX/2024 | 80G ధృవీకరించబడింది",
     footerAddress: "బిర్నియా, పోస్టు–జోతా, ధొరయ్యా, బాంకా, బీహార్ - 813109",
     footerRights: "© 2024 అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి. భక్తితో నిర్మించబడింది.",
     langLabel: "భాష",
-    progressLabel: "పునర్నిర్మాణ పురోగతి",
+    progressLabel: "పునర్వ్యవస్థీకరణ పురోగతి",
     reasonTitle: "దానం చేయడానికి కారణం",
     reasonP1: "ప్రస్తుతం ఉన్న మా కాళీ అమ్మ ఆలయం చాలా పాతది, కాలక్రమేణా దాని నిర్మాణం బలహీనమైంది. వర్షాకాలంలో రోడ్డు నీరు ఆలయ ప్రాంగణంలోకి వచ్చి, భక్తులకు ఇబ్బంది కలిగిస్తూ ఆలయ పవిత్రతపై ప్రభావం చూపుతోంది.",
     reasonP2: "అందువల్ల మా కాళీ అమ్మ ఆశీర్వాదంతో మరియు సమస్త గ్రామస్థుల సహకారంతో, ఆలయ పైకప్పును బలమైన స్తంభాలతో ఎత్తుగా పునర్నిర్మాణం చేయాలని సంకల్పించాము, తద్వారా ఈ ఆలయం భవిష్యత్ తరాల కోసం సురక్షితంగా, బలంగా మరియు రక్షితంగా ఉండగలదు.",
@@ -196,15 +196,15 @@ const translations = {
     noticeP2: "సరిపడిన నిధులు సేకరించిన తర్వాత, ఇకపై ఏ విధమైన దానం కోరబడదు.",
   },
   mr: {
-    nav: "जय माँ काली - श्री दुर्गा अम्मा देवी मंदिर",
-    tagline: "दिव्य पुनर्बांधणी • पवित्र नूतनीकरण",
+    nav: "जय माँ काली मंदिर",
+    tagline: "दिव्य नूतनीकरण • पवित्र नूतनीकरण",
     heroTitle: "चे धाम पुनर्बांधणी करा",
     heroHighlight: "माँ दुर्गा",
-    heroSub: "श्री दुर्गा अम्मा देवी यांच्या दिव्य मंदिराच्या पुनर्बांधणीच्या पवित्र मोहिमेत सामील व्हा. प्रत्येक योगदान येणाऱ्या पिढ्यांसाठी एक भव्य आध्यात्मिक अभयारण्य निर्माण करण्याच्या जवळ आणते.",
+    heroSub: "जय माँ काली मंदिराच्या नूतनीकरणाच्या पवित्र मोहिमेत सामील व्हा. प्रत्येक योगदान येणाऱ्या पिढ्यांसाठी एक भव्य आध्यात्मिक अभयारण्य निर्माण करण्याच्या जवळ आणते.",
     donateNow: "आता दान करा",
     viewDonors: "दाते पहा",
-    aboutTitle: "पुनर्बांधणीबद्दल",
-    aboutP1: "शतकानुशतके, श्री दुर्गा अम्मा देवी मंदिर हे आध्यात्मिक प्रकाश आणि भक्तीचे प्रतीक आहे. 200 वर्षांपूर्वी बांधलेले हे मंदिर लाखो भक्तांसाठी पवित्र अभयारण्य आहे.",
+    aboutTitle: "नूतनीकरणाबद्दल",
+    aboutP1: "शतकानुशतके, जय माँ काली मंदिर हे आध्यात्मिक प्रकाश आणि भक्तीचे प्रतीक आहे. 200 वर्षांपूर्वी बांधलेले हे मंदिर लाखो भक्तांसाठी पवित्र अभयारण्य आहे.",
     aboutP2: "नैसर्गिक झीज आणि काळाच्या ओघामुळे, मंदिर संरचनेला महत्त्वपूर्ण जीर्णोद्धार आवश्यक आहे.",
     aboutP3: "पुनर्बांधणी प्रकल्पात मुख्य गर्भगृहाची पुनर्स्थापना, नवीन प्रार्थना सभागृहांचे बांधकाम आणि आधुनिक सुविधांची स्थापना समाविष्ट आहे.",
     oldTemple: "सध्याचे मंदिर",
@@ -217,7 +217,7 @@ const translations = {
     qrNote: "तुमचे पवित्र अर्पण करण्यासाठी कोणत्याही UPI अॅपने हा QR कोड स्कॅन करा",
     bankDetails: "बँक हस्तांतरण तपशील",
     bankName: "बँकेचे नाव: स्टेट बँक ऑफ इंडिया",
-    accName: "खाते नाव: श्री दुर्गा अम्मा देवी मंदिर ट्रस्ट",
+    accName: "खाते नाव: जय माँ काली मंदिर ट्रस्ट",
     accNo: "खाते क्र.: XXXX XXXX XXXX 1234",
     ifsc: "IFSC कोड: SBIN0001234",
     afterPayment: "दान केल्यानंतर",
@@ -245,12 +245,12 @@ const translations = {
     member1: "श्री अरविंद सिंह",
     member1Role: "कोषाध्यक्ष (Treasurer)",
     blessingLine: "माँ कालीच्या कृपेने आणि बिरनिया गाव (पोस्ट–जोत्था, धोरैया, बांका, बिहार-813109) येथील ग्रामस्थांच्या उदार सहकार्याने.",
-    footerText: "जय माँ काली - श्री दुर्गा अम्मा देवी मंदिर पुनर्बांधणी ट्रस्ट",
+    footerText: "जय माँ काली मंदिर नूतनीकरण ट्रस्ट",
     footerReg: "नोंदणी क्र.: XXXXX/2024 | 80G प्रमाणित",
     footerAddress: "बिरनिया, पोस्ट–जोत्था, धोरैया, बांका, बिहार - 813109",
     footerRights: "© 2024 सर्व हक्क राखीव. भक्तीने निर्मित.",
     langLabel: "भाषा",
-    progressLabel: "पुनर्बांधणी प्रगती",
+    progressLabel: "नूतनीकरण प्रगती",
     reasonTitle: "दान करण्याचे कारण",
     reasonP1: "सध्या असलेले माँ काली मंदिर अतिशय जुने झाले आहे आणि कालांतराने त्याची रचना कमकुवत झाली आहे. पावसाळ्यात रस्त्याचे पाणी मंदिर परिसरात येते, ज्यामुळे भक्तांना अडचण होते आणि मंदिराची पावित्र्यभावना बाधित होते.",
     reasonP2: "म्हणूनच, माँ कालीच्या कृपेने आणि सर्व ग्रामस्थांच्या सहकार्याने आम्ही योग्य खांबांसह मंदिराची छत उंच करून त्याचे पुनर्बांधकाम करण्याचा संकल्प केला आहे, जेणेकरून हे मंदिर भावी पिढ्यांसाठी सुरक्षित, मजबूत आणि संरक्षित राहील.",
@@ -260,15 +260,15 @@ const translations = {
     noticeP2: "पुरेशी निधी जमा झाल्यानंतर पुढे कोणतेही दान मागितले जाणार नाही.",
   },
   bn: {
-    nav: "জয় মা কালী - শ্রী দুর্গা আম্মা দেবী মন্দির",
-    tagline: "দিব্য পুনর্নির্মাণ • পবিত্র নবায়ন",
+    nav: "জয় মা কালী মন্দির",
+    tagline: "দিব্য সংস্কার (Renovation) • পবিত্র নবায়ন",
     heroTitle: "এর আবাস পুনর্নির্মাণ করুন",
     heroHighlight: "মা দুর্গা",
     heroSub: "শ্রী দুর্গা আম্মা দেবীর দিব্য মন্দির পুনর্নির্মাণের পবিত্র মিশনে আমাদের সাথে যোগ দিন। প্রতিটি অবদান আগামী প্রজন্মের জন্য একটি মহিমান্বিত আধ্যাত্মিক অভয়ারণ্য তৈরির কাছাকাছি নিয়ে আসে।",
     donateNow: "এখনই দান করুন",
     viewDonors: "দাতাদের দেখুন",
-    aboutTitle: "পুনর্নির্মাণ সম্পর্কে",
-    aboutP1: "শতাব্দী ধরে, শ্রী দুর্গা আম্মা দেবী মন্দির আধ্যাত্মিক আলো এবং ভক্তির প্রতীক। ২০০ বছরেরও বেশি আগে নির্মিত এই মন্দির লক্ষ লক্ষ ভক্তের পবিত্র আশ্রয়স্থল।",
+    aboutTitle: "সংস্কার (Renovation) সম্পর্কে",
+    aboutP1: "শতাব্দী ধরে, জয় মা কালী মন্দির আধ্যাত্মিক আলো এবং ভক্তির প্রতীক। ২০০ বছরেরও বেশি আগে নির্মিত এই মন্দির লক্ষ লক্ষ ভক্তের পবিত্র আশ্রয়স্থল।",
     aboutP2: "প্রাকৃতিক ক্ষয় এবং সময়ের কারণে, মন্দির কাঠামোর উল্লেখযোগ্য সংস্কার প্রয়োজন।",
     aboutP3: "পুনর্নির্মাণ প্রকল্পে মূল গর্ভগৃহ পুনরুদ্ধার, নতুন প্রার্থনা হল নির্মাণ এবং আধুনিক সুবিধা স্থাপন অন্তর্ভুক্ত।",
     oldTemple: "বর্তমান মন্দির",
@@ -281,7 +281,7 @@ const translations = {
     qrNote: "যেকোনো UPI অ্যাপ দিয়ে এই QR কোড স্ক্যান করুন",
     bankDetails: "ব্যাংক ট্রান্সফার বিবরণ",
     bankName: "ব্যাংকের নাম: স্টেট ব্যাংক অফ ইন্ডিয়া",
-    accName: "অ্যাকাউন্ট নাম: শ্রী দুর্গা আম্মা দেবী মন্দির ট্রাস্ট",
+    accName: "অ্যাকাউন্ট নাম: জয় মা কালী মন্দির ট্রাস্ট",
     accNo: "অ্যাকাউন্ট নং: XXXX XXXX XXXX 1234",
     ifsc: "IFSC কোড: SBIN0001234",
     afterPayment: "দান করার পরে",
@@ -309,12 +309,12 @@ const translations = {
     member1: "শ্রী অরবিন্দ সিংহ",
     member1Role: "কোষাধ্যক্ষ (Treasurer)",
     blessingLine: "মা কালীের আশীর্বাদ এবং বিরনিয়া গ্রামের (পোস্ট–জোঠা, ধোরাইয়া, বাঙ্কা, বিহার-৮১৩১০৯) গ্রামবাসীদের উদার সহযোগিতায়।",
-    footerText: "জয় মা কালী - শ্রী দুর্গা আম্মা দেবী মন্দির পুনর্নির্মাণ ট্রাস্ট",
+    footerText: "জয় মা কালী মন্দির সংস্কার ট্রাস্ট",
     footerReg: "নিবন্ধন নং: XXXXX/2024 | 80G প্রমাণিত",
     footerAddress: "বিরনিয়া, পোস্ট–জোঠা, ধোরাইয়া, বাঙ্কা, বিহার - ৮১৩১০৯",
     footerRights: "© 2024 সর্বস্বত্ব সংরক্ষিত। ভক্তি দিয়ে নির্মিত।",
     langLabel: "ভাষা",
-    progressLabel: "পুনর্নির্মাণ অগ্রগতি",
+    progressLabel: "সংস্কার অগ্রগতি",
     reasonTitle: "দান করার কারণ",
     reasonP1: "বর্তমান মা কালী মন্দিরটি অনেক পুরনো এবং সময়ের সাথে সাথে এর কাঠামো দুর্বল হয়ে পড়েছে। বর্ষাকালে রাস্তার জল মন্দির প্রাঙ্গণে ঢুকে পড়ে, যার ফলে ভক্তদের অসুবিধা হয় এবং মন্দিরের পবিত্রতাও নষ্ট হয়।",
     reasonP2: "তাই মা কালীের আশীর্বাদে এবং সকল গ্রামবাসীর সহযোগিতায় আমরা মন্দিরের ছাদটি মজবুত স্তম্ভসহ উঁচু করে পুনর্নির্মাণের পরিকল্পনা করছি, যাতে ভবিষ্যৎ প্রজন্মের জন্য মন্দিরটি নিরাপদ, সবল ও সুরক্ষিত থাকে।",
@@ -324,15 +324,15 @@ const translations = {
     noticeP2: "যখন পর্যাপ্ত অর্থ জমা হয়ে যাবে, তখন আর কোনও দান গ্রহণ করা হবে না।",
   },
   od: {
-    nav: "ଜୟ ମା କାଳୀ - ଶ୍ରୀ ଦୁର୍ଗା ଆମ୍ମା ଦେବୀ ମନ୍ଦିର",
-    tagline: "ଦିବ୍ୟ ପୁନର୍ନିର୍ମାଣ • ପବିତ୍ର ନବୀକରଣ",
+    nav: "ଜୟ ମା କାଳୀ ମନ୍ଦିର",
+    tagline: "ଦିବ୍ୟ ପୁନରୁଦ୍ଧାର (Renovation) • ପବିତ୍ର ନବୀକରଣ",
     heroTitle: "ଙ୍କ ନିବାସ ପୁନର୍ନିର୍ମାଣ କରନ୍ତୁ",
     heroHighlight: "ମା ଦୁର୍ଗା",
     heroSub: "ଶ୍ରୀ ଦୁର୍ଗା ଆମ୍ମା ଦେବୀଙ୍କ ଦିବ୍ୟ ମନ୍ଦିର ପୁନର୍ନିର୍ମାଣର ପବିତ୍ର ମିଶନରେ ଆମ ସହ ଯୋଗ ଦିଅନ୍ତୁ। ପ୍ରତ୍ୟେକ ଅବଦାନ ଆସନ୍ତା ପିଢ଼ି ପାଇଁ ଏକ ମହିମାନ୍ବିତ ଆଧ୍ୟାତ୍ମିକ ଅଭୟାରଣ୍ୟ ସୃଷ୍ଟି କରିବାକୁ ଆମକୁ ନିକଟତର କରେ।",
     donateNow: "ବର୍ତ୍ତମାନ ଦାନ କରନ୍ତୁ",
     viewDonors: "ଦାତାମାନଙ୍କୁ ଦେଖନ୍ତୁ",
-    aboutTitle: "ପୁନର୍ନିର୍ମାଣ ବିଷୟରେ",
-    aboutP1: "ଶତାବ୍ଦୀ ଧରି, ଶ୍ରୀ ଦୁର୍ଗା ଆମ୍ମା ଦେବୀ ମନ୍ଦିର ଆଧ୍ୟାତ୍ମିକ ଆଲୋକ ଏବଂ ଭକ୍ତିର ପ୍ରତୀକ। ୨୦୦ ବର୍ଷରୁ ଅଧିକ ପୂର୍ବେ ନିର୍ମିତ ଏହି ମନ୍ଦିର ଲକ୍ଷ ଲକ୍ଷ ଭକ୍ତଙ୍କ ପବିତ୍ର ଆଶ୍ରୟସ୍ଥଳ।",
+    aboutTitle: "ପୁନରୁଦ୍ଧାର (Renovation) ବିଷୟରେ",
+    aboutP1: "ଶତାବ୍ଦୀ ଧରି, ଜୟ ମା କାଳୀ ମନ୍ଦିର ଆଧ୍ୟାତ୍ମିକ ଆଲୋକ ଏବଂ ଭକ୍ତିର ପ୍ରତୀକ। ୨୦୦ ବର୍ଷରୁ ଅଧିକ ପୂର୍ବେ ନିର୍ମିତ ଏହି ମନ୍ଦିର ଲକ୍ଷ ଲକ୍ଷ ଭକ୍ତଙ୍କ ପବିତ୍ର ଆଶ୍ରୟସ୍ଥଳ।",
     aboutP2: "ପ୍ରାକୃତିକ କ୍ଷୟ ଏବଂ ସମୟ ଯୋଗୁଁ, ମନ୍ଦିର ସଂରଚନାର ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ସଂସ୍କାର ଆବଶ୍ୟକ।",
     aboutP3: "ପୁନର୍ନିର୍ମାଣ ପ୍ରକଳ୍ପରେ ମୁଖ୍ୟ ଗର୍ଭଗୃହ ପୁନରୁଦ୍ଧାର, ନୂଆ ପ୍ରାର୍ଥନା ହଲ ନିର୍ମାଣ ଏବଂ ଆଧୁନିକ ସୁବିଧା ସ୍ଥାପନ ଅନ୍ତର୍ଭୁକ୍ତ।",
     oldTemple: "ବର୍ତ୍ତମାନର ମନ୍ଦିର",
@@ -345,7 +345,7 @@ const translations = {
     qrNote: "ଯେକୌଣସି UPI ଆପ୍ ସହ ଏହି QR କୋଡ୍ ସ୍କାନ କରନ୍ତୁ",
     bankDetails: "ବ୍ୟାଙ୍କ ଟ୍ରାନ୍ସଫର ବିବରଣୀ",
     bankName: "ବ୍ୟାଙ୍କ ନାମ: ଷ୍ଟେଟ ବ୍ୟାଙ୍କ ଅଫ ଇଣ୍ଡିଆ",
-    accName: "ଖାତା ନାମ: ଶ୍ରୀ ଦୁର୍ଗା ଆମ୍ମା ଦେବୀ ମନ୍ଦିର ଟ୍ରଷ୍ଟ",
+    accName: "ଖାତା ନାମ: ଜୟ ମା କାଳୀ ମନ୍ଦିର ଟ୍ରଷ୍ଟ",
     accNo: "ଖାତା ନଂ: XXXX XXXX XXXX 1234",
     ifsc: "IFSC କୋଡ୍: SBIN0001234",
     afterPayment: "ଦାନ କରିବା ପରେ",
@@ -373,12 +373,12 @@ const translations = {
     member1: "ଶ୍ରୀ ଅରବିନ୍ଦ ସିଂହ",
     member1Role: "କୋଷାଧ୍ୟକ୍ଷ (Treasurer)",
     blessingLine: "ମା କାଳୀଙ୍କ କୃପା ଏବଂ ବିରନିଆ ଗ୍ରାମ (ପୋଷ୍ଟ–ଜୋଥା, ଧୋରାଇୟା, ବାଙ୍କା, ବିହାର-813109) ଗ୍ରାମବାସୀଙ୍କ ଉଦାର ସହଯୋଗରେ।",
-    footerText: "ଜୟ ମା କାଳୀ - ଶ୍ରୀ ଦୁର୍ଗା ଆମ୍ମା ଦେବୀ ମନ୍ଦିର ପୁନର୍ନିର୍ମାଣ ଟ୍ରଷ୍ଟ",
+    footerText: "ଜୟ ମା କାଳୀ ମନ୍ଦିର ପୁନରୁଦ୍ଧାର ଟ୍ରଷ୍ଟ",
     footerReg: "ନିବନ୍ଧନ ନଂ: XXXXX/2024 | 80G ପ୍ରମାଣିତ",
     footerAddress: "ବିରନିଆ, ପୋଷ୍ଟ–ଜୋଥା, ଧୋରାଇୟା, ବାଙ୍କା, ବିହାର - 813109",
     footerRights: "© 2024 ସମସ୍ତ ଅଧିକାର ସଂରକ୍ଷିତ। ଭକ୍ତି ସହ ନିର୍ମିତ।",
     langLabel: "ভାষা",
-    progressLabel: "ପୁନର୍ନିର୍ମାଣ ଅଗ୍ରଗତି",
+    progressLabel: "ପୁନରୁଦ୍ଧାର ଅଗ୍ରଗତି",
     reasonTitle: "ଦାନ କରିବାର କାରଣ",
     reasonP1: "ବର୍ତ୍ତମାନର ମା କାଳୀ ମନ୍ଦିର ଅତ୍ୟନ୍ତ ପୁରୁଣା ଏବଂ ସମୟ ସହ ଏହାର ସଂରଚନା ଦୁର୍ବଳ ହୋଇଯାଇଛି। ବର୍ଷା ଋତୁରେ ରାସ୍ତାର ପାଣି ମନ୍ଦିର ପ୍ରାଙ୍ଗଣଭିତରକୁ ପ୍ରବେଶ କରେ, ଯାହାର ଫଳରେ ଭକ୍ତମାନଙ୍କୁ ଅସୁବିଧା ହୁଏ ଏବଂ ମନ୍ଦିରର ପବିତ୍ରତା ଉପରେ ପ୍ରଭାବ ପଡ଼େ।",
     reasonP2: "ସେହିକାରଣେ ମା କାଳୀଙ୍କ କୃପା ଏବଂ ସମସ୍ତ ଗ୍ରାମବାସୀଙ୍କ ସହଯୋଗରେ, ଆମେ ମନ୍ଦିରର ଛାଦକୁ ମଜବୁତ ଖମ୍ଭା ସହ ପୁନର୍ନିର୍ମାଣ ଓ ଉଚ୍ଚ କରିବାର ଯୋଜନା କରୁଛୁ, ଯାହାଦ୍ୱାରା ଏହି ମନ୍ଦିର ଭବିଷ୍ୟତ ପିଢ଼ି ପାଇଁ ସୁରକ୍ଷିତ, ଶକ୍ତିଶାଳୀ ଓ ସୁରକ୍ଷିତ ରହିପାରିବ।",
@@ -592,7 +592,7 @@ export default function TempleDonation() {
     }
     .hero-content {
       position: relative; z-index: 2;
-      max-width: 800px; padding: 0 20px;
+      max-width: 800px; padding: 0 24px;
     }
     .hero-om {
       font-size: 72px; color: var(--gold);
@@ -616,10 +616,15 @@ export default function TempleDonation() {
       animation: shimmer 4s linear infinite;
       line-height: 1.2; margin-bottom: 24px;
     }
+    .hero-sub-wrap {
+      max-width: 650px;
+      margin: 0 auto 40px;
+    }
     .hero-sub {
       font-size: clamp(16px, 2vw, 20px);
       color: rgba(255,248,231,0.8);
-      line-height: 1.8; max-width: 650px; margin: 0 auto 40px;
+      line-height: 1.8;
+      margin: 0;
       font-weight: 300;
     }
     .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
@@ -696,14 +701,14 @@ export default function TempleDonation() {
     }
     .top-notice-text {
       flex: 1;
-      padding: 6px 14px;
+      padding: 6px 22px;
       color: rgba(255,248,231,0.9);
       overflow: hidden;
       white-space: nowrap;
     }
     .top-notice-inner {
       display: inline-block;
-      animation: topNoticeScroll 18s linear infinite;
+      animation: topNoticeScroll 30s linear infinite;
     }
     @keyframes topNoticeScroll {
       0% { transform: translateX(100%); }
@@ -1029,13 +1034,46 @@ export default function TempleDonation() {
     @media (max-width: 768px) {
       .nav-brand { font-size: 14px; }
       .nav-brand span:first-child { font-size: 22px !important; }
-      .hero { min-height: auto; padding: 120px 16px 80px; }
-      .hero-sub { font-size: 15px; }
+      .hero {
+        min-height: auto;
+        padding: 112px 16px 72px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        overflow: visible;
+      }
+      .hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 4px;
+      }
+      .hero-sub-wrap {
+        max-width: 100%;
+        margin: 0 auto 20px;
+        background: linear-gradient(180deg, rgba(45,20,16,0.9), rgba(92,14,14,0.62));
+        border: 1px solid rgba(196,146,42,0.35);
+        border-radius: 18px;
+        box-shadow: inset 0 1px 0 rgba(232,197,109,0.12), 0 14px 32px rgba(0,0,0,0.28);
+        backdrop-filter: blur(8px);
+      }
+      .hero-sub {
+        display: block;
+        position: relative;
+        z-index: 3;
+        font-size: 14px;
+        line-height: 1.6;
+        padding: 16px 18px;
+        color: rgba(255,248,231,0.92);
+        white-space: normal;
+        overflow-wrap: anywhere;
+      }
+      .hero-sub-wrap.fade-up-d3 { animation: none; opacity: 1; }
       .hero-btns { flex-direction: column; }
       .btn-primary,
       .btn-secondary {
         width: 100%;
+        max-width: 320px;
         justify-content: center;
+        margin-inline: auto;
       }
       .section-sub { font-size: 16px; padding: 0 4px; }
       .about-text { font-size: 16px; }
@@ -1123,7 +1161,9 @@ export default function TempleDonation() {
           <div className="hero-om fade-up">ॐ</div>
           <h1 className="hero-title fade-up-d1">{t.heroTitle}</h1>
           <div className="hero-highlight fade-up-d2">{t.heroHighlight}</div>
-          <p className="hero-sub fade-up-d3">{t.heroSub}</p>
+          <div className="hero-sub-wrap fade-up-d3">
+            <p className="hero-sub">{t.heroSub}</p>
+          </div>
           {t.reasonP1 && (
             <div className="top-notice-bar fade-up-d4">
               <div className="top-notice-label">
