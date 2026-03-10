@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+import qrImage from "./QR.jpeg";
+import receiptImage from "./Receipt.jpeg";
 
 const translations = {
   en: {
@@ -1303,7 +1305,7 @@ export default function TempleDonation() {
               <div className="qr-label">{t.scanQR}</div>
               <div className="qr-placeholder">
                 <img
-                  src="/QR.jpeg"
+                  src={qrImage}
                   alt="UPI QR code for temple donation"
                   className="qr-img"
                 />
@@ -1320,7 +1322,7 @@ export default function TempleDonation() {
             </div>
             <div style={{ marginTop: 24, textAlign: "center" }}>
               <img
-                src="/Receipt.jpeg"
+                src={receiptImage}
                 alt="Donation receipt example"
                 style={{
                   maxWidth: "100%",
