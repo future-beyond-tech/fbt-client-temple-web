@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 const translations = {
   en: {
-    nav: "Sri Durga Amma Devi Temple",
+    nav: "Jai Maa Kali - Sri Durga Amma Devi Temple",
     tagline: "Divine Reconstruction • Sacred Renewal",
     heroTitle: "Rebuild the Abode of",
     heroHighlight: "Maa Durga",
@@ -28,7 +28,7 @@ const translations = {
     ifsc: "IFSC Code: SBIN0001234",
     afterPayment: "After Making Your Offering",
     afterPaymentDesc: "After completing your donation, please send a screenshot of the payment confirmation along with your full name, phone number, and address via WhatsApp to the number below:",
-    whatsappNumber: "+91 98765 43210",
+    whatsappNumber: "+91 99114 14416",
     whatsappNote: "Our temple committee will acknowledge your donation and add your name to our sacred donor records within 24 hours.",
     donorsTitle: "Sacred Donor Records",
     donorsSub: "We maintain complete transparency. View the full list of all devotees who have contributed to this divine cause.",
@@ -47,22 +47,26 @@ const translations = {
     trust3Desc: "Managed by a dedicated committee of respected community elders and spiritual leaders with decades of service.",
     trust4Title: "Regular Updates",
     trust4Desc: "Donors receive monthly progress reports with photos and financial statements of the reconstruction work.",
-    committeeTitle: "Temple Committee Members",
-    member1: "Sri Ramesh Sharma",
-    member1Role: "Committee Chairman",
-    member2: "Smt. Lakshmi Devi",
-    member2Role: "Treasurer",
-    member3: "Sri Venkat Rao",
-    member3Role: "Secretary",
-    footerText: "Sri Durga Amma Devi Temple Reconstruction Trust",
+    committeeTitle: "Temple Treasurer",
+    member1: "Shri Arvind Singh",
+    member1Role: "कोषाध्यक्ष (Treasurer)",
+    blessingLine: "With the blessings of Maa Kali and the generous support of the villagers of Birnia (Post–Jotha, Dhoraiya, Banka, Bihar-813109).",
+    footerText: "Jai Maa Kali - Sri Durga Amma Devi Temple Reconstruction Trust",
     footerReg: "Registration No: XXXXX/2024 | 80G Certified",
-    footerAddress: "Temple Road, Sacred Village, District, State - 500001",
+    footerAddress: "Birnia, Post–Jotha, Dhoraiya, Banka, Bihar - 813109",
     footerRights: "© 2024 All Rights Reserved. Built with devotion.",
     langLabel: "Language",
     progressLabel: "Reconstruction Progress",
+    reasonTitle: "Reason to Donate",
+    reasonP1: "The existing Maa Kali Mandir is very old and its structure has weakened over time. During the rainy season, road water enters the temple premises, which creates difficulty for devotees and affects the sanctity of the temple.",
+    reasonP2: "Therefore, with the blessings of Maa Kali and the support of all villagers, we are planning to reconstruct and uplift the temple roof with proper pillars so that the temple remains safe, strong, and protected for future generations.",
+    noticeLabel: "Notice Message",
+    noticeTitle: "Important Notice:",
+    noticeP1: "We will collect donations only until the required amount for the construction is achieved.",
+    noticeP2: "Once sufficient funds are collected, no further donations will be requested.",
   },
   hi: {
-    nav: "श्री दुर्गा अम्मा देवी मंदिर",
+    nav: "जय माँ काली - श्री दुर्गा अम्मा देवी मंदिर",
     tagline: "दिव्य पुनर्निर्माण • पवित्र नवीनीकरण",
     heroTitle: "का धाम पुनर्निर्माण करें",
     heroHighlight: "माँ दुर्गा",
@@ -88,7 +92,7 @@ const translations = {
     ifsc: "IFSC कोड: SBIN0001234",
     afterPayment: "दान करने के बाद",
     afterPaymentDesc: "दान पूरा करने के बाद, कृपया भुगतान पुष्टि का स्क्रीनशॉट अपने पूरे नाम, फोन नंबर और पते के साथ नीचे दिए गए नंबर पर व्हाट्सएप करें:",
-    whatsappNumber: "+91 98765 43210",
+    whatsappNumber: "+91 99114 14416",
     whatsappNote: "हमारी मंदिर समिति 24 घंटे के भीतर आपके दान की पुष्टि करेगी और आपका नाम पवित्र दाता रिकॉर्ड में जोड़ेगी।",
     donorsTitle: "पवित्र दाता रिकॉर्ड",
     donorsSub: "हम पूर्ण पारदर्शिता बनाए रखते हैं। इस दिव्य कार्य में योगदान देने वाले सभी भक्तों की पूरी सूची देखें।",
@@ -107,22 +111,26 @@ const translations = {
     trust3Desc: "सम्मानित सामुदायिक बुजुर्गों और आध्यात्मिक नेताओं की समर्पित समिति द्वारा प्रबंधित।",
     trust4Title: "नियमित अपडेट",
     trust4Desc: "दाताओं को फोटो और वित्तीय विवरण के साथ मासिक प्रगति रिपोर्ट प्राप्त होती है।",
-    committeeTitle: "मंदिर समिति सदस्य",
-    member1: "श्री रमेश शर्मा",
-    member1Role: "समिति अध्यक्ष",
-    member2: "श्रीमती लक्ष्मी देवी",
-    member2Role: "कोषाध्यक्ष",
-    member3: "श्री वेंकट राव",
-    member3Role: "सचिव",
-    footerText: "श्री दुर्गा अम्मा देवी मंदिर पुनर्निर्माण ट्रस्ट",
+    committeeTitle: "मंदिर कोषाध्यक्ष",
+    member1: "श्री अरविंद सिंह",
+    member1Role: "कोषाध्यक्ष (Treasurer)",
+    blessingLine: "माँ काली की कृपा और बिरनिया ग्राम (पोस्ट–जोत्था, धोरैया, बांका, बिहार-813109) के ग्रामवासियों के उदार सहयोग से।",
+    footerText: "जय माँ काली - श्री दुर्गा अम्मा देवी मंदिर पुनर्निर्माण ट्रस्ट",
     footerReg: "पंजीकरण संख्या: XXXXX/2024 | 80G प्रमाणित",
-    footerAddress: "मंदिर मार्ग, पवित्र ग्राम, जिला, राज्य - 500001",
+    footerAddress: "बिरनिया, पोस्ट–जोत्था, धोरैया, बांका, बिहार - 813109",
     footerRights: "© 2024 सर्वाधिकार सुरक्षित। भक्ति से निर्मित।",
     langLabel: "भाषा",
     progressLabel: "पुनर्निर्माण प्रगति",
+    reasonTitle: "दान करने का कारण",
+    reasonP1: "वर्तमान माँ काली मंदिर बहुत पुराना हो चुका है और समय के साथ इसकी संरचना कमजोर हो गई है। बरसात के मौसम में सड़क का पानी मंदिर परिसर में आ जाता है, जिससे भक्तों को परेशानी होती है और मंदिर की पवित्रता पर भी प्रभाव पड़ता है।",
+    reasonP2: "इसीलिए माँ काली की कृपा और सभी ग्रामवासियों के सहयोग से हम मंदिर की छत को मज़बूत खंभों के साथ ऊँचा कर पुनर्निर्माण करने की योजना बना रहे हैं, ताकि यह मंदिर आने वाली पीढ़ियों के लिए सुरक्षित, मजबूत और संरक्षित रह सके।",
+    noticeLabel: "सूचना संदेश",
+    noticeTitle: "महत्वपूर्ण सूचना:",
+    noticeP1: "निर्माण कार्य के लिए जितनी राशि की आवश्यकता है, केवल उतनी ही राशि तक दान एकत्र किया जाएगा।",
+    noticeP2: "जब पर्याप्त धनराशि एकत्र हो जाएगी, उसके बाद किसी प्रकार का अतिरिक्त दान नहीं लिया जाएगा।",
   },
   te: {
-    nav: "శ్రీ దుర్గా అమ్మ దేవి ఆలయం",
+    nav: "జై మా కాలి - శ్రీ దుర్గా అమ్మ దేవి ఆలయం",
     tagline: "దివ్య పునర్నిర్మాణం • పవిత్ర నవీకరణ",
     heroTitle: "యొక్క నివాసాన్ని పునర్నిర్మించండి",
     heroHighlight: "అమ్మవారు దుర్గా",
@@ -148,7 +156,7 @@ const translations = {
     ifsc: "IFSC కోడ్: SBIN0001234",
     afterPayment: "మీ అర్పణ చేసిన తర్వాత",
     afterPaymentDesc: "దానం పూర్తి చేసిన తర్వాత, దయచేసి చెల్లింపు నిర్ధారణ స్క్రీన్‌షాట్‌ను మీ పూర్తి పేరు, ఫోన్ నంబర్ మరియు చిరునామాతో క్రింది నంబర్‌కు WhatsApp చేయండి:",
-    whatsappNumber: "+91 98765 43210",
+    whatsappNumber: "+91 99114 14416",
     whatsappNote: "మా ఆలయ కమిటీ 24 గంటల్లో మీ దానాన్ని నిర్ధారిస్తుంది మరియు మీ పేరును పవిత్ర దాత రికార్డులలో చేరుస్తుంది.",
     donorsTitle: "పవిత్ర దాత రికార్డులు",
     donorsSub: "మేము పూర్తి పారదర్శకతను కొనసాగిస్తాము. ఈ దివ్య కార్యానికి సహకరించిన భక్తుల పూర్తి జాబితాను చూడండి.",
@@ -167,22 +175,26 @@ const translations = {
     trust3Desc: "గౌరవనీయ సమాజ పెద్దలు మరియు ఆధ్యాత్మిక నాయకుల అంకితభావ కమిటీ నిర్వహిస్తుంది.",
     trust4Title: "క్రమ అప్‌డేట్‌లు",
     trust4Desc: "దాతలు ఫోటోలు మరియు ఆర్థిక వివరాలతో నెలవారీ పురోగతి నివేదికలను అందుకుంటారు.",
-    committeeTitle: "ఆలయ కమిటీ సభ్యులు",
-    member1: "శ్రీ రమేష్ శర్మ",
-    member1Role: "కమిటీ ఛైర్మన్",
-    member2: "శ్రీమతి లక్ష్మీ దేవి",
-    member2Role: "కోశాధికారి",
-    member3: "శ్రీ వెంకట్ రావు",
-    member3Role: "సెక్రటరీ",
-    footerText: "శ్రీ దుర్గా అమ్మ దేవి ఆలయ పునర్నిర్మాణ ట్రస్ట్",
+    committeeTitle: "ఆలయ ఖజాంచి",
+    member1: "శ్రీ అర్వింద్ సింగ్",
+    member1Role: "ఖజాంచి (Treasurer)",
+    blessingLine: "మా కాలీ అమ్మ ఆశీర్వాదంతో మరియు బిర్నియా గ్రామ (పోస్ట్–జోతా, ధొరయ్యా, బాంకా, బీహార్-813109) గ్రామస్తుల ఉదార సహకారంతో.",
+    footerText: "జై మా కాలి - శ్రీ దుర్గా అమ్మ దేవి ఆలయ పునర్నిర్మాణ ట్రస్ట్",
     footerReg: "రిజిస్ట్రేషన్ నం: XXXXX/2024 | 80G ధృవీకరించబడింది",
-    footerAddress: "ఆలయ రోడ్, పవిత్ర గ్రామం, జిల్లా, రాష్ట్రం - 500001",
+    footerAddress: "బిర్నియా, పోస్టు–జోతా, ధొరయ్యా, బాంకా, బీహార్ - 813109",
     footerRights: "© 2024 అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి. భక్తితో నిర్మించబడింది.",
     langLabel: "భాష",
     progressLabel: "పునర్నిర్మాణ పురోగతి",
+    reasonTitle: "దానం చేయడానికి కారణం",
+    reasonP1: "ప్రస్తుతం ఉన్న మా కాళీ అమ్మ ఆలయం చాలా పాతది, కాలక్రమేణా దాని నిర్మాణం బలహీనమైంది. వర్షాకాలంలో రోడ్డు నీరు ఆలయ ప్రాంగణంలోకి వచ్చి, భక్తులకు ఇబ్బంది కలిగిస్తూ ఆలయ పవిత్రతపై ప్రభావం చూపుతోంది.",
+    reasonP2: "అందువల్ల మా కాళీ అమ్మ ఆశీర్వాదంతో మరియు సమస్త గ్రామస్థుల సహకారంతో, ఆలయ పైకప్పును బలమైన స్తంభాలతో ఎత్తుగా పునర్నిర్మాణం చేయాలని సంకల్పించాము, తద్వారా ఈ ఆలయం భవిష్యత్ తరాల కోసం సురక్షితంగా, బలంగా మరియు రక్షితంగా ఉండగలదు.",
+    noticeLabel: "ప్రకటన సందేశం",
+    noticeTitle: "ముఖ్య ప్రకటన:",
+    noticeP1: "నిర్మాణానికి అవసరమైన మొత్తం చేరేవరకు మాత్రమే దానాలు స్వీకరించబడతాయి.",
+    noticeP2: "సరిపడిన నిధులు సేకరించిన తర్వాత, ఇకపై ఏ విధమైన దానం కోరబడదు.",
   },
   mr: {
-    nav: "श्री दुर्गा अम्मा देवी मंदिर",
+    nav: "जय माँ काली - श्री दुर्गा अम्मा देवी मंदिर",
     tagline: "दिव्य पुनर्बांधणी • पवित्र नूतनीकरण",
     heroTitle: "चे धाम पुनर्बांधणी करा",
     heroHighlight: "माँ दुर्गा",
@@ -208,7 +220,7 @@ const translations = {
     ifsc: "IFSC कोड: SBIN0001234",
     afterPayment: "दान केल्यानंतर",
     afterPaymentDesc: "दान पूर्ण केल्यानंतर, कृपया पेमेंट पुष्टीकरणाचा स्क्रीनशॉट तुमचे पूर्ण नाव, फोन नंबर आणि पत्त्यासह खालील नंबरवर WhatsApp करा:",
-    whatsappNumber: "+91 98765 43210",
+    whatsappNumber: "+91 99114 14416",
     whatsappNote: "आमची मंदिर समिती 24 तासांत तुमच्या दानाची पुष्टी करेल.",
     donorsTitle: "पवित्र दाता नोंदी",
     donorsSub: "आम्ही पूर्ण पारदर्शकता राखतो. या दिव्य कार्यात योगदान दिलेल्या सर्व भक्तांची यादी पहा.",
@@ -227,22 +239,26 @@ const translations = {
     trust3Desc: "सन्माननीय समाज वडील आणि आध्यात्मिक नेत्यांच्या समर्पित समितीद्वारे व्यवस्थापित.",
     trust4Title: "नियमित अपडेट्स",
     trust4Desc: "दात्यांना फोटो आणि आर्थिक तपशीलांसह मासिक प्रगती अहवाल मिळतो.",
-    committeeTitle: "मंदिर समिती सदस्य",
-    member1: "श्री रमेश शर्मा",
-    member1Role: "समिती अध्यक्ष",
-    member2: "श्रीमती लक्ष्मी देवी",
-    member2Role: "कोषाध्यक्ष",
-    member3: "श्री वेंकट राव",
-    member3Role: "सचिव",
-    footerText: "श्री दुर्गा अम्मा देवी मंदिर पुनर्बांधणी ट्रस्ट",
+    committeeTitle: "मंदिर कोषाध्यक्ष",
+    member1: "श्री अरविंद सिंह",
+    member1Role: "कोषाध्यक्ष (Treasurer)",
+    blessingLine: "माँ कालीच्या कृपेने आणि बिरनिया गाव (पोस्ट–जोत्था, धोरैया, बांका, बिहार-813109) येथील ग्रामस्थांच्या उदार सहकार्याने.",
+    footerText: "जय माँ काली - श्री दुर्गा अम्मा देवी मंदिर पुनर्बांधणी ट्रस्ट",
     footerReg: "नोंदणी क्र.: XXXXX/2024 | 80G प्रमाणित",
-    footerAddress: "मंदिर रोड, पवित्र गाव, जिल्हा, राज्य - 500001",
+    footerAddress: "बिरनिया, पोस्ट–जोत्था, धोरैया, बांका, बिहार - 813109",
     footerRights: "© 2024 सर्व हक्क राखीव. भक्तीने निर्मित.",
     langLabel: "भाषा",
     progressLabel: "पुनर्बांधणी प्रगती",
+    reasonTitle: "दान करण्याचे कारण",
+    reasonP1: "सध्या असलेले माँ काली मंदिर अतिशय जुने झाले आहे आणि कालांतराने त्याची रचना कमकुवत झाली आहे. पावसाळ्यात रस्त्याचे पाणी मंदिर परिसरात येते, ज्यामुळे भक्तांना अडचण होते आणि मंदिराची पावित्र्यभावना बाधित होते.",
+    reasonP2: "म्हणूनच, माँ कालीच्या कृपेने आणि सर्व ग्रामस्थांच्या सहकार्याने आम्ही योग्य खांबांसह मंदिराची छत उंच करून त्याचे पुनर्बांधकाम करण्याचा संकल्प केला आहे, जेणेकरून हे मंदिर भावी पिढ्यांसाठी सुरक्षित, मजबूत आणि संरक्षित राहील.",
+    noticeLabel: "सूचना संदेश",
+    noticeTitle: "महत्वाची सूचना:",
+    noticeP1: "बांधकामासाठी जितकी रक्कम आवश्यक आहे, तेवढ्याच रकमेपर्यंत दान स्वीकारले जाईल.",
+    noticeP2: "पुरेशी निधी जमा झाल्यानंतर पुढे कोणतेही दान मागितले जाणार नाही.",
   },
   bn: {
-    nav: "শ্রী দুর্গা আম্মা দেবী মন্দির",
+    nav: "জয় মা কালী - শ্রী দুর্গা আম্মা দেবী মন্দির",
     tagline: "দিব্য পুনর্নির্মাণ • পবিত্র নবায়ন",
     heroTitle: "এর আবাস পুনর্নির্মাণ করুন",
     heroHighlight: "মা দুর্গা",
@@ -268,7 +284,7 @@ const translations = {
     ifsc: "IFSC কোড: SBIN0001234",
     afterPayment: "দান করার পরে",
     afterPaymentDesc: "দান সম্পূর্ণ করার পর, অনুগ্রহ করে পেমেন্ট নিশ্চিতকরণের স্ক্রিনশট আপনার পুরো নাম, ফোন নম্বর এবং ঠিকানা সহ নীচের নম্বরে WhatsApp করুন:",
-    whatsappNumber: "+91 98765 43210",
+    whatsappNumber: "+91 99114 14416",
     whatsappNote: "আমাদের মন্দির কমিটি ২৪ ঘন্টার মধ্যে আপনার দান নিশ্চিত করবে।",
     donorsTitle: "পবিত্র দাতা রেকর্ড",
     donorsSub: "আমরা সম্পূর্ণ স্বচ্ছতা বজায় রাখি। এই দিব্য কাজে অবদানকারী সমস্ত ভক্তদের তালিকা দেখুন।",
@@ -287,22 +303,26 @@ const translations = {
     trust3Desc: "সম্মানিত সম্প্রদায়ের প্রবীণ এবং আধ্যাত্মিক নেতাদের নিবেদিত কমিটি দ্বারা পরিচালিত।",
     trust4Title: "নিয়মিত আপডেট",
     trust4Desc: "দাতারা ফটো এবং আর্থিক বিবরণ সহ মাসিক অগ্রগতি প্রতিবেদন পান।",
-    committeeTitle: "মন্দির কমিটি সদস্য",
-    member1: "শ্রী রমেশ শর্মা",
-    member1Role: "কমিটি চেয়ারম্যান",
-    member2: "শ্রীমতী লক্ষ্মী দেবী",
-    member2Role: "কোষাধ্যক্ষ",
-    member3: "শ্রী ভেঙ্কট রাও",
-    member3Role: "সচিব",
-    footerText: "শ্রী দুর্গা আম্মা দেবী মন্দির পুনর্নির্মাণ ট্রাস্ট",
+    committeeTitle: "মন্দির কোষাধ্যক্ষ",
+    member1: "শ্রী অরবিন্দ সিংহ",
+    member1Role: "কোষাধ্যক্ষ (Treasurer)",
+    blessingLine: "মা কালীের আশীর্বাদ এবং বিরনিয়া গ্রামের (পোস্ট–জোঠা, ধোরাইয়া, বাঙ্কা, বিহার-৮১৩১০৯) গ্রামবাসীদের উদার সহযোগিতায়।",
+    footerText: "জয় মা কালী - শ্রী দুর্গা আম্মা দেবী মন্দির পুনর্নির্মাণ ট্রাস্ট",
     footerReg: "নিবন্ধন নং: XXXXX/2024 | 80G প্রমাণিত",
-    footerAddress: "মন্দির রোড, পবিত্র গ্রাম, জেলা, রাজ্য - 500001",
+    footerAddress: "বিরনিয়া, পোস্ট–জোঠা, ধোরাইয়া, বাঙ্কা, বিহার - ৮১৩১০৯",
     footerRights: "© 2024 সর্বস্বত্ব সংরক্ষিত। ভক্তি দিয়ে নির্মিত।",
     langLabel: "ভাষা",
     progressLabel: "পুনর্নির্মাণ অগ্রগতি",
+    reasonTitle: "দান করার কারণ",
+    reasonP1: "বর্তমান মা কালী মন্দিরটি অনেক পুরনো এবং সময়ের সাথে সাথে এর কাঠামো দুর্বল হয়ে পড়েছে। বর্ষাকালে রাস্তার জল মন্দির প্রাঙ্গণে ঢুকে পড়ে, যার ফলে ভক্তদের অসুবিধা হয় এবং মন্দিরের পবিত্রতাও নষ্ট হয়।",
+    reasonP2: "তাই মা কালীের আশীর্বাদে এবং সকল গ্রামবাসীর সহযোগিতায় আমরা মন্দিরের ছাদটি মজবুত স্তম্ভসহ উঁচু করে পুনর্নির্মাণের পরিকল্পনা করছি, যাতে ভবিষ্যৎ প্রজন্মের জন্য মন্দিরটি নিরাপদ, সবল ও সুরক্ষিত থাকে।",
+    noticeLabel: "নোটিশ বার্তা",
+    noticeTitle: "গুরুত্বপূর্ণ নোটিশ:",
+    noticeP1: "নির্মাণের জন্য যতটুকু অর্থের প্রয়োজন, কেবল সেই পরিমাণ পর্যন্তই দান সংগ্রহ করা হবে।",
+    noticeP2: "যখন পর্যাপ্ত অর্থ জমা হয়ে যাবে, তখন আর কোনও দান গ্রহণ করা হবে না।",
   },
   od: {
-    nav: "ଶ୍ରୀ ଦୁର୍ଗା ଆମ୍ମା ଦେବୀ ମନ୍ଦିର",
+    nav: "ଜୟ ମା କାଳୀ - ଶ୍ରୀ ଦୁର୍ଗା ଆମ୍ମା ଦେବୀ ମନ୍ଦିର",
     tagline: "ଦିବ୍ୟ ପୁନର୍ନିର୍ମାଣ • ପବିତ୍ର ନବୀକରଣ",
     heroTitle: "ଙ୍କ ନିବାସ ପୁନର୍ନିର୍ମାଣ କରନ୍ତୁ",
     heroHighlight: "ମା ଦୁର୍ଗା",
@@ -328,7 +348,7 @@ const translations = {
     ifsc: "IFSC କୋଡ୍: SBIN0001234",
     afterPayment: "ଦାନ କରିବା ପରେ",
     afterPaymentDesc: "ଦାନ ସମ୍ପୂର୍ଣ୍ଣ କରିବା ପରେ, ଦୟାକରି ପେମେଣ୍ଟ ନିଶ୍ଚିତକରଣର ସ୍କ୍ରିନସଟ ଆପଣଙ୍କ ସମ୍ପୂର୍ଣ୍ଣ ନାମ, ଫୋନ ନମ୍ବର ଏବଂ ଠିକଣା ସହ ତଳେ ନମ୍ବରରେ WhatsApp କରନ୍ତୁ:",
-    whatsappNumber: "+91 98765 43210",
+    whatsappNumber: "+91 99114 14416",
     whatsappNote: "ଆମ ମନ୍ଦିର କମିଟି ୨୪ ଘଣ୍ଟା ମଧ୍ୟରେ ଆପଣଙ୍କ ଦାନ ନିଶ୍ଚିତ କରିବ।",
     donorsTitle: "ପବିତ୍ର ଦାତା ରେକର୍ଡ",
     donorsSub: "ଆମେ ସମ୍ପୂର୍ଣ୍ଣ ସ୍ୱଚ୍ଛତା ବଜାୟ ରଖୁ। ଏହି ଦିବ୍ୟ କାର୍ଯ୍ୟରେ ଅବଦାନ ଦେଇଥିବା ସମସ୍ତ ଭକ୍ତଙ୍କ ତାଲିକା ଦେଖନ୍ତୁ।",
@@ -347,19 +367,23 @@ const translations = {
     trust3Desc: "ସମ୍ମାନିତ ସମାଜ ବୟୋଜ୍ୟେଷ୍ଠ ଏବଂ ଆଧ୍ୟାତ୍ମିକ ନେତାଙ୍କ ସମର୍ପିତ କମିଟି ଦ୍ୱାରା ପରିଚାଳିତ।",
     trust4Title: "ନିୟମିତ ଅପଡେଟ",
     trust4Desc: "ଦାତାମାନେ ଫଟୋ ଏବଂ ଆର୍ଥିକ ବିବରଣୀ ସହ ମାସିକ ଅଗ୍ରଗତି ରିପୋର୍ଟ ପାଆନ୍ତି।",
-    committeeTitle: "ମନ୍ଦିର କମିଟି ସଦସ୍ୟ",
-    member1: "ଶ୍ରୀ ରମେଶ ଶର୍ମା",
-    member1Role: "କมିଟି ଅଧ୍ୟକ୍ଷ",
-    member2: "ଶ୍ରୀମତୀ ଲକ୍ଷ୍ମୀ ଦେବୀ",
-    member2Role: "କୋଷାଧ୍ୟକ୍ଷ",
-    member3: "ଶ୍ରୀ ଭେଙ୍କଟ ରାଓ",
-    member3Role: "ସଚିବ",
-    footerText: "ଶ୍ରୀ ଦୁର୍ଗା ଆମ୍ମା ଦେବୀ ମନ୍ଦିର ପୁନର୍ନିର୍ମାଣ ଟ୍ରଷ୍ଟ",
+    committeeTitle: "ମନ୍ଦିର କୋଷାଧ୍ୟକ୍ଷ",
+    member1: "ଶ୍ରୀ ଅରବିନ୍ଦ ସିଂହ",
+    member1Role: "କୋଷାଧ୍ୟକ୍ଷ (Treasurer)",
+    blessingLine: "ମା କାଳୀଙ୍କ କୃପା ଏବଂ ବିରନିଆ ଗ୍ରାମ (ପୋଷ୍ଟ–ଜୋଥା, ଧୋରାଇୟା, ବାଙ୍କା, ବିହାର-813109) ଗ୍ରାମବାସୀଙ୍କ ଉଦାର ସହଯୋଗରେ।",
+    footerText: "ଜୟ ମା କାଳୀ - ଶ୍ରୀ ଦୁର୍ଗା ଆମ୍ମା ଦେବୀ ମନ୍ଦିର ପୁନର୍ନିର୍ମାଣ ଟ୍ରଷ୍ଟ",
     footerReg: "ନିବନ୍ଧନ ନଂ: XXXXX/2024 | 80G ପ୍ରମାଣିତ",
-    footerAddress: "ମନ୍ଦିର ରୋଡ, ପବିତ୍ର ଗ୍ରାମ, ଜିଲ୍ଲା, ରାଜ୍ୟ - 500001",
+    footerAddress: "ବିରନିଆ, ପୋଷ୍ଟ–ଜୋଥା, ଧୋରାଇୟା, ବାଙ୍କା, ବିହାର - 813109",
     footerRights: "© 2024 ସମସ୍ତ ଅଧିକାର ସଂରକ୍ଷିତ। ଭକ୍ତି ସହ ନିର୍ମିତ।",
     langLabel: "ভାষা",
     progressLabel: "ପୁନର୍ନିର୍ମାଣ ଅଗ୍ରଗତି",
+    reasonTitle: "ଦାନ କରିବାର କାରଣ",
+    reasonP1: "ବର୍ତ୍ତମାନର ମା କାଳୀ ମନ୍ଦିର ଅତ୍ୟନ୍ତ ପୁରୁଣା ଏବଂ ସମୟ ସହ ଏହାର ସଂରଚନା ଦୁର୍ବଳ ହୋଇଯାଇଛି। ବର୍ଷା ଋତୁରେ ରାସ୍ତାର ପାଣି ମନ୍ଦିର ପ୍ରାଙ୍ଗଣଭିତରକୁ ପ୍ରବେଶ କରେ, ଯାହାର ଫଳରେ ଭକ୍ତମାନଙ୍କୁ ଅସୁବିଧା ହୁଏ ଏବଂ ମନ୍ଦିରର ପବିତ୍ରତା ଉପରେ ପ୍ରଭାବ ପଡ଼େ।",
+    reasonP2: "ସେହିକାରଣେ ମା କାଳୀଙ୍କ କୃପା ଏବଂ ସମସ୍ତ ଗ୍ରାମବାସୀଙ୍କ ସହଯୋଗରେ, ଆମେ ମନ୍ଦିରର ଛାଦକୁ ମଜବୁତ ଖମ୍ଭା ସହ ପୁନର୍ନିର୍ମାଣ ଓ ଉଚ୍ଚ କରିବାର ଯୋଜନା କରୁଛୁ, ଯାହାଦ୍ୱାରା ଏହି ମନ୍ଦିର ଭବିଷ୍ୟତ ପିଢ଼ି ପାଇଁ ସୁରକ୍ଷିତ, ଶକ୍ତିଶାଳୀ ଓ ସୁରକ୍ଷିତ ରହିପାରିବ।",
+    noticeLabel: "ସୂଚନା ବାର୍ତ୍ତା",
+    noticeTitle: "ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ସୂଚନା:",
+    noticeP1: "ନିର୍ମାଣ କାମ ପାଇଁ ଯେତେଟିକି ଟଙ୍କା ଆବଶ୍ୟକ, କେବଳ ସେତେଟିକି ପରିମାଣ ପର୍ଯ୍ୟନ୍ତ ଦାନ ଗ୍ରହଣ କରାଯିବ।",
+    noticeP2: "ଯେତେବେଳେ ପ୍ରଚୁର ପରିମାଣର ଧନରାଶି ସଂଗ୍ରହ ହେବ, ସେତେବେଳେ ଆଉ ଅତିରିକ୍ତ ଦାନ ନିଆଯିବ ନାହିଁ।",
   },
 };
 
@@ -420,7 +444,7 @@ const Counter = ({ end, duration = 2000, prefix = "", suffix = "" }) => {
 };
 
 export default function TempleDonation() {
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState("hi");
   const [showLangMenu, setShowLangMenu] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const t = translations[lang];
@@ -647,6 +671,43 @@ export default function TempleDonation() {
     }
     .about-text p { margin-bottom: 20px; }
 
+    /* Top notice bar (hero) */
+    .top-notice-bar {
+      max-width: 900px;
+      margin: 20px auto 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(196,146,42,0.6);
+      background: radial-gradient(circle at left, rgba(226,61,40,0.25), transparent 60%);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+    }
+    .top-notice-label {
+      padding: 8px 14px;
+      background: rgba(226,61,40,0.85);
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .top-notice-text {
+      flex: 1;
+      padding: 6px 14px;
+      color: rgba(255,248,231,0.9);
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .top-notice-inner {
+      display: inline-block;
+      animation: topNoticeScroll 18s linear infinite;
+    }
+    @keyframes topNoticeScroll {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
     /* Temple Comparison */
     .temple-grid {
       display: grid; grid-template-columns: 1fr 1fr;
@@ -751,11 +812,11 @@ export default function TempleDonation() {
     .qr-placeholder {
       width: 220px; height: 220px;
       margin: 20px auto;
-      background: white; border-radius: 12px;
+      border-radius: 12px;
+      overflow: hidden;
       display: flex; align-items: center; justify-content: center;
-      padding: 16px;
     }
-    .qr-img { width: 100%; height: 100%; object-fit: contain; }
+    .qr-img { width: 100%; height: 100%; object-fit: cover; }
     .qr-label {
       font-family: 'Cinzel Decorative', serif;
       font-size: 18px; color: var(--gold);
@@ -879,10 +940,17 @@ export default function TempleDonation() {
 
     /* Committee */
     .committee-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 24px; margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+      justify-items: center;
     }
-    @media (max-width: 768px) { .committee-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) {
+      .committee-grid {
+        grid-template-columns: 1fr;
+      }
+    }
     .member-card {
       text-align: center; padding: 32px;
       background: rgba(45,20,16,0.6);
@@ -1054,6 +1122,18 @@ export default function TempleDonation() {
           <h1 className="hero-title fade-up-d1">{t.heroTitle}</h1>
           <div className="hero-highlight fade-up-d2">{t.heroHighlight}</div>
           <p className="hero-sub fade-up-d3">{t.heroSub}</p>
+          {t.reasonP1 && (
+            <div className="top-notice-bar fade-up-d4">
+              <div className="top-notice-label">
+                {t.noticeLabel || "Notice"}
+              </div>
+              <div className="top-notice-text">
+                <div className="top-notice-inner">
+                  {t.reasonP1}
+                </div>
+              </div>
+            </div>
+          )}
           <div className="hero-btns fade-up-d4">
             <button className="btn-primary" onClick={() => scrollTo("donate")}>{t.donateNow}</button>
             <button className="btn-secondary" onClick={() => scrollTo("donors")}>{t.viewDonors}</button>
@@ -1066,15 +1146,15 @@ export default function TempleDonation() {
         <div className="section">
           <div className="stats-grid">
             <div className="stat-card">
-              <div className="stat-number"><Counter end={32} prefix="₹" suffix="L" /></div>
+              <div className="stat-number"><Counter end={40000} prefix="₹" /></div>
               <div className="stat-label">{t.totalRaised}</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number"><Counter end={75} prefix="₹" suffix="L" /></div>
+              <div className="stat-number"><Counter end={500000} prefix="₹" /></div>
               <div className="stat-label">{t.totalGoal}</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number"><Counter end={847} /></div>
+              <div className="stat-number"><Counter end={40} /></div>
               <div className="stat-label">{t.totalDonors}</div>
             </div>
             <div className="stat-card">
@@ -1104,6 +1184,80 @@ export default function TempleDonation() {
           <p>{t.aboutP2}</p>
           <p>{t.aboutP3}</p>
         </div>
+
+        {/* Reason to Donate */}
+        {t.reasonTitle && (
+          <div style={{ marginTop: 50 }}>
+            <h2 className="section-title" style={{ fontSize: 26 }}>{t.reasonTitle}</h2>
+            <div className="about-text" style={{ marginTop: 10 }}>
+              <p>{t.reasonP1}</p>
+              <p>{t.reasonP2}</p>
+            </div>
+          </div>
+        )}
+
+        {/* Important Notice */}
+        {t.noticeTitle && (
+          <div
+            style={{
+              marginTop: 40,
+              padding: 26,
+              borderRadius: 18,
+              border: "1px solid rgba(226,61,40,0.6)",
+              background:
+                "linear-gradient(135deg, rgba(92,14,14,0.9), rgba(45,20,16,0.9))",
+              boxShadow: "0 18px 50px rgba(0,0,0,0.55)",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 10,
+                marginBottom: 10,
+              }}
+            >
+              <span
+                style={{
+                  width: 26,
+                  height: 26,
+                  borderRadius: "50%",
+                  background:
+                    "radial-gradient(circle at 30% 30%, #FFEAD5, #FF6F00)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: 16,
+                  color: "#1A0A0A",
+                }}
+              >
+                !
+              </span>
+              <div
+                style={{
+                  fontSize: 14,
+                  textTransform: "uppercase",
+                  letterSpacing: 1.4,
+                  color: "var(--saffron)",
+                  fontWeight: 700,
+                }}
+              >
+                {t.noticeLabel || "Notice Message"}
+              </div>
+            </div>
+            <div
+              style={{
+                fontSize: 16,
+                color: "rgba(255,248,231,0.95)",
+                lineHeight: 1.9,
+              }}
+            >
+              <strong>{t.noticeTitle}</strong>{" "}
+              {t.noticeP1}{" "}
+              {t.noticeP2}
+            </div>
+          </div>
+        )}
 
         {/* Temple Comparison */}
         <div className="temple-grid">
@@ -1148,57 +1302,11 @@ export default function TempleDonation() {
             <div className="qr-card">
               <div className="qr-label">{t.scanQR}</div>
               <div className="qr-placeholder">
-                {/* QR Code placeholder - replace with actual QR */}
-                <svg viewBox="0 0 200 200" className="qr-img">
-                  <rect width="200" height="200" fill="white"/>
-                  {/* Simplified QR pattern */}
-                  <rect x="20" y="20" width="50" height="50" fill="#1A0A0A" rx="4"/>
-                  <rect x="26" y="26" width="38" height="38" fill="white" rx="2"/>
-                  <rect x="32" y="32" width="26" height="26" fill="#1A0A0A" rx="2"/>
-                  <rect x="130" y="20" width="50" height="50" fill="#1A0A0A" rx="4"/>
-                  <rect x="136" y="26" width="38" height="38" fill="white" rx="2"/>
-                  <rect x="142" y="32" width="26" height="26" fill="#1A0A0A" rx="2"/>
-                  <rect x="20" y="130" width="50" height="50" fill="#1A0A0A" rx="4"/>
-                  <rect x="26" y="136" width="38" height="38" fill="white" rx="2"/>
-                  <rect x="32" y="142" width="26" height="26" fill="#1A0A0A" rx="2"/>
-                  {/* Data pattern */}
-                  <rect x="80" y="20" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="100" y="20" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="80" y="40" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="110" y="40" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="80" y="60" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="90" y="60" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="20" y="80" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="40" y="80" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="60" y="80" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="80" y="80" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="110" y="80" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="130" y="80" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="160" y="80" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="20" y="100" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="50" y="100" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="80" y="100" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="100" y="100" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="120" y="100" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="150" y="100" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="170" y="100" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="30" y="110" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="60" y="110" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="90" y="110" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="80" y="130" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="100" y="130" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="130" y="130" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="160" y="130" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="80" y="150" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="110" y="150" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="140" y="150" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="170" y="150" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="80" y="170" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="100" y="170" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="130" y="170" width="10" height="10" fill="#1A0A0A"/>
-                  <rect x="150" y="170" width="10" height="10" fill="#1A0A0A"/>
-                  <text x="100" y="198" textAnchor="middle" fontSize="8" fill="#666" fontFamily="sans-serif">SCAN TO DONATE</text>
-                </svg>
+                <img
+                  src="/QR.jpeg"
+                  alt="UPI QR code for temple donation"
+                  className="qr-img"
+                />
               </div>
               <p className="qr-note">{t.qrNote}</p>
             </div>
@@ -1209,6 +1317,18 @@ export default function TempleDonation() {
               <div className="bank-detail">{t.accName}</div>
               <div className="bank-detail">{t.accNo}</div>
               <div className="bank-detail">{t.ifsc}</div>
+            </div>
+            <div style={{ marginTop: 24, textAlign: "center" }}>
+              <img
+                src="/Receipt.jpeg"
+                alt="Donation receipt example"
+                style={{
+                  maxWidth: "100%",
+                  borderRadius: 12,
+                  border: "1px solid rgba(196,146,42,0.4)",
+                  boxShadow: "0 12px 30px rgba(0,0,0,0.4)",
+                }}
+              />
             </div>
           </div>
 
@@ -1223,7 +1343,7 @@ export default function TempleDonation() {
             <p>{t.afterPaymentDesc}</p>
             <div className="whatsapp-number">{t.whatsappNumber}</div>
             <a
-              href={`https://wa.me/919876543210?text=${encodeURIComponent("Jai Mata Di! I have made a donation to Sri Durga Amma Devi Temple Reconstruction. Attaching my payment screenshot.")}`}
+              href={`https://wa.me/919911414416?text=${encodeURIComponent("Jai Maa Kali! I have made a donation to Jai Maa Kali - Sri Durga Amma Devi Temple Reconstruction Trust. Attaching my payment screenshot.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="whatsapp-link"
@@ -1294,20 +1414,17 @@ export default function TempleDonation() {
           <div style={{ marginTop: 80 }}>
             <h2 className="section-title" style={{ fontSize: 28 }}>{t.committeeTitle}</h2>
             <div className="committee-grid">
-              <div className="member-card">
-                <div className="member-avatar">R</div>
+              <div className="member-card" style={{ maxWidth: 320 }}>
+                <div className="member-avatar">
+                  {t.member1?.charAt(0) || "A"}
+                </div>
                 <h3>{t.member1}</h3>
                 <p>{t.member1Role}</p>
-              </div>
-              <div className="member-card">
-                <div className="member-avatar">L</div>
-                <h3>{t.member2}</h3>
-                <p>{t.member2Role}</p>
-              </div>
-              <div className="member-card">
-                <div className="member-avatar">V</div>
-                <h3>{t.member3}</h3>
-                <p>{t.member3Role}</p>
+                {t.blessingLine && (
+                  <p style={{ marginTop: 16, fontSize: 14, color: "rgba(255,248,231,0.7)", lineHeight: 1.7 }}>
+                    {t.blessingLine}
+                  </p>
+                )}
               </div>
             </div>
           </div>
