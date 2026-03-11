@@ -23,11 +23,6 @@ const translations = {
     donateSub: "Scan the QR code below to make your divine contribution. Every offering, big or small, brings us closer to realizing this sacred vision.",
     scanQR: "Scan to Donate",
     qrNote: "Scan this QR code with any UPI app (Google Pay, PhonePe, Paytm) to make your sacred offering",
-    bankDetails: "Bank Transfer Details",
-    bankName: "Bank Name: State Bank of India",
-    accName: "Account Name: Jai Maa Kali Mandir Trust",
-    accNo: "Account No: XXXX XXXX XXXX 1234",
-    ifsc: "IFSC Code: SBIN0001234",
     afterPayment: "After Making Your Offering",
     afterPaymentDesc: "After completing your donation, please send a screenshot of the payment confirmation along with your full name, phone number, and address via WhatsApp to the number below:",
     whatsappNumber: "+91 99114 14416",
@@ -40,15 +35,6 @@ const translations = {
     totalGoal: "Goal Amount",
     totalDonors: "Blessed Donors",
     daysLeft: "Days Remaining",
-    trustTitle: "Why Trust Us?",
-    trust1Title: "Registered Trust",
-    trust1Desc: "Registered under the Indian Trusts Act with full government recognition and 80G tax exemption benefits.",
-    trust2Title: "Complete Transparency",
-    trust2Desc: "Every donation is recorded and publicly available. Regular audits ensure your contributions are used as intended.",
-    trust3Title: "Temple Committee",
-    trust3Desc: "Managed by a dedicated committee of respected community elders and spiritual leaders with decades of service.",
-    trust4Title: "Regular Updates",
-    trust4Desc: "Donors receive monthly progress reports with photos and financial statements of the reconstruction work.",
     committeeTitle: "Temple Treasurer",
     member1: "Shri Arvind Singh",
     member1Role: "कोषाध्यक्ष (Treasurer)",
@@ -66,6 +52,15 @@ const translations = {
     noticeTitle: "Important Notice:",
     noticeP1: "We will collect donations only until the required amount for the construction is achieved.",
     noticeP2: "Once sufficient funds are collected, no further donations will be requested.",
+    viewDonorList: "View Donors List",
+    depositedLabel: "Confirmed Depositors",
+    pendingLabel: "Yet to Deposit",
+    closeModal: "Close",
+    loadingDonors: "Loading donor data...",
+    fetchError: "Could not load data. Please open the spreadsheet directly.",
+    amountLabel: "Amount",
+    noDonors: "No confirmed donors yet.",
+    noPending: "No pending entries.",
   },
   hi: {
     nav: "जय माँ काली मंदिर",
@@ -87,11 +82,6 @@ const translations = {
     donateSub: "अपना दिव्य योगदान देने के लिए नीचे दिए गए QR कोड को स्कैन करें। हर चढ़ावा इस पवित्र दृष्टि को साकार करने के करीब लाता है।",
     scanQR: "दान के लिए स्कैन करें",
     qrNote: "अपना पवित्र चढ़ावा देने के लिए किसी भी UPI ऐप से इस QR कोड को स्कैन करें",
-    bankDetails: "बैंक हस्तांतरण विवरण",
-    bankName: "बैंक का नाम: भारतीय स्टेट बैंक",
-    accName: "खाता नाम: जय माँ काली मंदिर ट्रस्ट",
-    accNo: "खाता संख्या: XXXX XXXX XXXX 1234",
-    ifsc: "IFSC कोड: SBIN0001234",
     afterPayment: "दान करने के बाद",
     afterPaymentDesc: "दान पूरा करने के बाद, कृपया भुगतान पुष्टि का स्क्रीनशॉट अपने पूरे नाम, फोन नंबर और पते के साथ नीचे दिए गए नंबर पर व्हाट्सएप करें:",
     whatsappNumber: "+91 99114 14416",
@@ -104,15 +94,6 @@ const translations = {
     totalGoal: "लक्ष्य राशि",
     totalDonors: "आशीर्वादित दाता",
     daysLeft: "शेष दिन",
-    trustTitle: "हम पर भरोसा क्यों करें?",
-    trust1Title: "पंजीकृत ट्रस्ट",
-    trust1Desc: "भारतीय ट्रस्ट अधिनियम के तहत पंजीकृत, सरकारी मान्यता और 80G कर छूट लाभ सहित।",
-    trust2Title: "पूर्ण पारदर्शिता",
-    trust2Desc: "हर दान दर्ज किया जाता है और सार्वजनिक रूप से उपलब्ध है। नियमित ऑडिट सुनिश्चित करते हैं।",
-    trust3Title: "मंदिर समिति",
-    trust3Desc: "सम्मानित सामुदायिक बुजुर्गों और आध्यात्मिक नेताओं की समर्पित समिति द्वारा प्रबंधित।",
-    trust4Title: "नियमित अपडेट",
-    trust4Desc: "दाताओं को फोटो और वित्तीय विवरण के साथ मासिक प्रगति रिपोर्ट प्राप्त होती है।",
     committeeTitle: "मंदिर कोषाध्यक्ष",
     member1: "श्री अरविंद सिंह",
     member1Role: "कोषाध्यक्ष (Treasurer)",
@@ -130,6 +111,15 @@ const translations = {
     noticeTitle: "महत्वपूर्ण सूचना:",
     noticeP1: "निर्माण कार्य के लिए जितनी राशि की आवश्यकता है, केवल उतनी ही राशि तक दान एकत्र किया जाएगा।",
     noticeP2: "जब पर्याप्त धनराशि एकत्र हो जाएगी, उसके बाद किसी प्रकार का अतिरिक्त दान नहीं लिया जाएगा।",
+    viewDonorList: "दाता सूची देखें",
+    depositedLabel: "जमा किए गए दाता",
+    pendingLabel: "अभी जमा नहीं",
+    closeModal: "बंद करें",
+    loadingDonors: "डेटा लोड हो रहा है...",
+    fetchError: "डेटा लोड नहीं हो सका। कृपया स्प्रेडशीट सीधे खोलें।",
+    amountLabel: "राशि",
+    noDonors: "अभी कोई पुष्ट दाता नहीं।",
+    noPending: "कोई लंबित प्रविष्टि नहीं।",
   },
   te: {
     nav: "జై మా కాలి ఆలయం",
@@ -151,11 +141,6 @@ const translations = {
     donateSub: "మీ దివ్య సహకారం అందించడానికి క్రింది QR కోడ్‌ను స్కాన్ చేయండి. ప్రతి అర్పణ ఈ పవిత్ర దృష్టిని సాకారం చేయడానికి మనల్ని దగ్గరగా తీసుకువస్తుంది.",
     scanQR: "దానం కోసం స్కాన్ చేయండి",
     qrNote: "మీ పవిత్ర అర్పణ చేయడానికి ఏదైనా UPI యాప్‌తో ఈ QR కోడ్‌ను స్కాన్ చేయండి",
-    bankDetails: "బ్యాంక్ బదిలీ వివరాలు",
-    bankName: "బ్యాంక్ పేరు: స్టేట్ బ్యాంక్ ఆఫ్ ఇండియా",
-    accName: "ఖాతా పేరు: జై మా కాలి ఆలయ ట్రస్ట్",
-    accNo: "ఖాతా నంబర్: XXXX XXXX XXXX 1234",
-    ifsc: "IFSC కోడ్: SBIN0001234",
     afterPayment: "మీ అర్పణ చేసిన తర్వాత",
     afterPaymentDesc: "దానం పూర్తి చేసిన తర్వాత, దయచేసి చెల్లింపు నిర్ధారణ స్క్రీన్‌షాట్‌ను మీ పూర్తి పేరు, ఫోన్ నంబర్ మరియు చిరునామాతో క్రింది నంబర్‌కు WhatsApp చేయండి:",
     whatsappNumber: "+91 99114 14416",
@@ -168,15 +153,6 @@ const translations = {
     totalGoal: "లక్ష్య మొత్తం",
     totalDonors: "ఆశీర్వదించబడిన దాతలు",
     daysLeft: "మిగిలిన రోజులు",
-    trustTitle: "మాపై ఎందుకు నమ్మకం?",
-    trust1Title: "నమోదిత ట్రస్ట్",
-    trust1Desc: "భారతీయ ట్రస్ట్‌ల చట్టం కింద నమోదు, ప్రభుత్వ గుర్తింపు మరియు 80G పన్ను మినహాయింపు ప్రయోజనాలతో.",
-    trust2Title: "పూర్తి పారదర్శకత",
-    trust2Desc: "ప్రతి దానం నమోదు చేయబడుతుంది మరియు బహిరంగంగా అందుబాటులో ఉంటుంది. క్రమ ఆడిట్‌లు నిర్ధారిస్తాయి.",
-    trust3Title: "ఆలయ కమిటీ",
-    trust3Desc: "గౌరవనీయ సమాజ పెద్దలు మరియు ఆధ్యాత్మిక నాయకుల అంకితభావ కమిటీ నిర్వహిస్తుంది.",
-    trust4Title: "క్రమ అప్‌డేట్‌లు",
-    trust4Desc: "దాతలు ఫోటోలు మరియు ఆర్థిక వివరాలతో నెలవారీ పురోగతి నివేదికలను అందుకుంటారు.",
     committeeTitle: "ఆలయ ఖజాంచి",
     member1: "శ్రీ అర్వింద్ సింగ్",
     member1Role: "ఖజాంచి (Treasurer)",
@@ -194,6 +170,15 @@ const translations = {
     noticeTitle: "ముఖ్య ప్రకటన:",
     noticeP1: "నిర్మాణానికి అవసరమైన మొత్తం చేరేవరకు మాత్రమే దానాలు స్వీకరించబడతాయి.",
     noticeP2: "సరిపడిన నిధులు సేకరించిన తర్వాత, ఇకపై ఏ విధమైన దానం కోరబడదు.",
+    viewDonorList: "View Donors List",
+    depositedLabel: "Confirmed Depositors",
+    pendingLabel: "Yet to Deposit",
+    closeModal: "Close",
+    loadingDonors: "Loading...",
+    fetchError: "Could not load data. Please open the spreadsheet directly.",
+    amountLabel: "Amount",
+    noDonors: "No confirmed donors yet.",
+    noPending: "No pending entries.",
   },
   mr: {
     nav: "जय माँ काली मंदिर",
@@ -215,11 +200,6 @@ const translations = {
     donateSub: "तुमचे दिव्य योगदान देण्यासाठी खालील QR कोड स्कॅन करा.",
     scanQR: "दानासाठी स्कॅन करा",
     qrNote: "तुमचे पवित्र अर्पण करण्यासाठी कोणत्याही UPI अॅपने हा QR कोड स्कॅन करा",
-    bankDetails: "बँक हस्तांतरण तपशील",
-    bankName: "बँकेचे नाव: स्टेट बँक ऑफ इंडिया",
-    accName: "खाते नाव: जय माँ काली मंदिर ट्रस्ट",
-    accNo: "खाते क्र.: XXXX XXXX XXXX 1234",
-    ifsc: "IFSC कोड: SBIN0001234",
     afterPayment: "दान केल्यानंतर",
     afterPaymentDesc: "दान पूर्ण केल्यानंतर, कृपया पेमेंट पुष्टीकरणाचा स्क्रीनशॉट तुमचे पूर्ण नाव, फोन नंबर आणि पत्त्यासह खालील नंबरवर WhatsApp करा:",
     whatsappNumber: "+91 99114 14416",
@@ -232,15 +212,6 @@ const translations = {
     totalGoal: "लक्ष्य रक्कम",
     totalDonors: "आशीर्वादित दाते",
     daysLeft: "उरलेले दिवस",
-    trustTitle: "आमच्यावर विश्वास का?",
-    trust1Title: "नोंदणीकृत ट्रस्ट",
-    trust1Desc: "भारतीय ट्रस्ट कायद्यांतर्गत नोंदणीकृत, सरकारी मान्यता आणि 80G कर सवलत.",
-    trust2Title: "पूर्ण पारदर्शकता",
-    trust2Desc: "प्रत्येक दान नोंदवले जाते आणि सार्वजनिकरित्या उपलब्ध असते.",
-    trust3Title: "मंदिर समिती",
-    trust3Desc: "सन्माननीय समाज वडील आणि आध्यात्मिक नेत्यांच्या समर्पित समितीद्वारे व्यवस्थापित.",
-    trust4Title: "नियमित अपडेट्स",
-    trust4Desc: "दात्यांना फोटो आणि आर्थिक तपशीलांसह मासिक प्रगती अहवाल मिळतो.",
     committeeTitle: "मंदिर कोषाध्यक्ष",
     member1: "श्री अरविंद सिंह",
     member1Role: "कोषाध्यक्ष (Treasurer)",
@@ -258,6 +229,15 @@ const translations = {
     noticeTitle: "महत्वाची सूचना:",
     noticeP1: "बांधकामासाठी जितकी रक्कम आवश्यक आहे, तेवढ्याच रकमेपर्यंत दान स्वीकारले जाईल.",
     noticeP2: "पुरेशी निधी जमा झाल्यानंतर पुढे कोणतेही दान मागितले जाणार नाही.",
+    viewDonorList: "View Donors List",
+    depositedLabel: "Confirmed Depositors",
+    pendingLabel: "Yet to Deposit",
+    closeModal: "Close",
+    loadingDonors: "Loading...",
+    fetchError: "Could not load data. Please open the spreadsheet directly.",
+    amountLabel: "Amount",
+    noDonors: "No confirmed donors yet.",
+    noPending: "No pending entries.",
   },
   bn: {
     nav: "জয় মা কালী মন্দির",
@@ -279,11 +259,6 @@ const translations = {
     donateSub: "আপনার দিব্য অবদান দিতে নীচের QR কোড স্ক্যান করুন।",
     scanQR: "দানের জন্য স্ক্যান করুন",
     qrNote: "যেকোনো UPI অ্যাপ দিয়ে এই QR কোড স্ক্যান করুন",
-    bankDetails: "ব্যাংক ট্রান্সফার বিবরণ",
-    bankName: "ব্যাংকের নাম: স্টেট ব্যাংক অফ ইন্ডিয়া",
-    accName: "অ্যাকাউন্ট নাম: জয় মা কালী মন্দির ট্রাস্ট",
-    accNo: "অ্যাকাউন্ট নং: XXXX XXXX XXXX 1234",
-    ifsc: "IFSC কোড: SBIN0001234",
     afterPayment: "দান করার পরে",
     afterPaymentDesc: "দান সম্পূর্ণ করার পর, অনুগ্রহ করে পেমেন্ট নিশ্চিতকরণের স্ক্রিনশট আপনার পুরো নাম, ফোন নম্বর এবং ঠিকানা সহ নীচের নম্বরে WhatsApp করুন:",
     whatsappNumber: "+91 99114 14416",
@@ -296,15 +271,6 @@ const translations = {
     totalGoal: "লক্ষ্য পরিমাণ",
     totalDonors: "আশীর্বাদিত দাতা",
     daysLeft: "বাকি দিন",
-    trustTitle: "আমাদের কেন বিশ্বাস করবেন?",
-    trust1Title: "নিবন্ধিত ট্রাস্ট",
-    trust1Desc: "ভারতীয় ট্রাস্ট আইনের অধীনে নিবন্ধিত, সরকারি স্বীকৃতি এবং 80G কর ছাড় সুবিধা সহ।",
-    trust2Title: "সম্পূর্ণ স্বচ্ছতা",
-    trust2Desc: "প্রতিটি দান নথিভুক্ত এবং প্রকাশ্যে উপলব্ধ। নিয়মিত অডিট নিশ্চিত করে।",
-    trust3Title: "মন্দির কমিটি",
-    trust3Desc: "সম্মানিত সম্প্রদায়ের প্রবীণ এবং আধ্যাত্মিক নেতাদের নিবেদিত কমিটি দ্বারা পরিচালিত।",
-    trust4Title: "নিয়মিত আপডেট",
-    trust4Desc: "দাতারা ফটো এবং আর্থিক বিবরণ সহ মাসিক অগ্রগতি প্রতিবেদন পান।",
     committeeTitle: "মন্দির কোষাধ্যক্ষ",
     member1: "শ্রী অরবিন্দ সিংহ",
     member1Role: "কোষাধ্যক্ষ (Treasurer)",
@@ -322,6 +288,15 @@ const translations = {
     noticeTitle: "গুরুত্বপূর্ণ নোটিশ:",
     noticeP1: "নির্মাণের জন্য যতটুকু অর্থের প্রয়োজন, কেবল সেই পরিমাণ পর্যন্তই দান সংগ্রহ করা হবে।",
     noticeP2: "যখন পর্যাপ্ত অর্থ জমা হয়ে যাবে, তখন আর কোনও দান গ্রহণ করা হবে না।",
+    viewDonorList: "View Donors List",
+    depositedLabel: "Confirmed Depositors",
+    pendingLabel: "Yet to Deposit",
+    closeModal: "Close",
+    loadingDonors: "Loading...",
+    fetchError: "Could not load data. Please open the spreadsheet directly.",
+    amountLabel: "Amount",
+    noDonors: "No confirmed donors yet.",
+    noPending: "No pending entries.",
   },
   od: {
     nav: "ଜୟ ମା କାଳୀ ମନ୍ଦିର",
@@ -343,11 +318,6 @@ const translations = {
     donateSub: "ଆପଣଙ୍କ ଦିବ୍ୟ ଅବଦାନ ଦେବା ପାଇଁ ତଳେ QR କୋଡ୍ ସ୍କାନ କରନ୍ତୁ।",
     scanQR: "ଦାନ ପାଇଁ ସ୍କାନ କରନ୍ତୁ",
     qrNote: "ଯେକୌଣସି UPI ଆପ୍ ସହ ଏହି QR କୋଡ୍ ସ୍କାନ କରନ୍ତୁ",
-    bankDetails: "ବ୍ୟାଙ୍କ ଟ୍ରାନ୍ସଫର ବିବରଣୀ",
-    bankName: "ବ୍ୟାଙ୍କ ନାମ: ଷ୍ଟେଟ ବ୍ୟାଙ୍କ ଅଫ ଇଣ୍ଡିଆ",
-    accName: "ଖାତା ନାମ: ଜୟ ମା କାଳୀ ମନ୍ଦିର ଟ୍ରଷ୍ଟ",
-    accNo: "ଖାତା ନଂ: XXXX XXXX XXXX 1234",
-    ifsc: "IFSC କୋଡ୍: SBIN0001234",
     afterPayment: "ଦାନ କରିବା ପରେ",
     afterPaymentDesc: "ଦାନ ସମ୍ପୂର୍ଣ୍ଣ କରିବା ପରେ, ଦୟାକରି ପେମେଣ୍ଟ ନିଶ୍ଚିତକରଣର ସ୍କ୍ରିନସଟ ଆପଣଙ୍କ ସମ୍ପୂର୍ଣ୍ଣ ନାମ, ଫୋନ ନମ୍ବର ଏବଂ ଠିକଣା ସହ ତଳେ ନମ୍ବରରେ WhatsApp କରନ୍ତୁ:",
     whatsappNumber: "+91 99114 14416",
@@ -360,15 +330,6 @@ const translations = {
     totalGoal: "ଲକ୍ଷ୍ୟ ପରିମାଣ",
     totalDonors: "ଆଶୀର୍ବାଦିତ ଦାତା",
     daysLeft: "ବାକି ଦିନ",
-    trustTitle: "ଆମ ଉପରେ କାହିଁକି ବିଶ୍ୱାସ?",
-    trust1Title: "ନିବନ୍ଧିତ ଟ୍ରଷ୍ଟ",
-    trust1Desc: "ଭାରତୀୟ ଟ୍ରଷ୍ଟ ଆଇନ ଅଧୀନରେ ନିବନ୍ଧିତ, ସରକାରୀ ସ୍ୱୀକୃତି ଏବଂ 80G କର ଛାଡ ସୁବିଧା ସହ।",
-    trust2Title: "ସମ୍ପୂର୍ଣ୍ଣ ସ୍ୱଚ୍ଛତା",
-    trust2Desc: "ପ୍ରତ୍ୟେକ ଦାନ ରେକର୍ଡ ହୁଏ ଏବଂ ସାର୍ବଜନୀନ ଭାବେ ଉପಲବ୍ଧ।",
-    trust3Title: "ମନ୍ଦିର କମିଟି",
-    trust3Desc: "ସମ୍ମାନିତ ସମାଜ ବୟୋଜ୍ୟେଷ୍ଠ ଏବଂ ଆଧ୍ୟାତ୍ମିକ ନେତାଙ୍କ ସମର୍ପିତ କମିଟି ଦ୍ୱାରା ପରିଚାଳିତ।",
-    trust4Title: "ନିୟମିତ ଅପଡେଟ",
-    trust4Desc: "ଦାତାମାନେ ଫଟୋ ଏବଂ ଆର୍ଥିକ ବିବରଣୀ ସହ ମାସିକ ଅଗ୍ରଗତି ରିପୋର୍ଟ ପାଆନ୍ତି।",
     committeeTitle: "ମନ୍ଦିର କୋଷାଧ୍ୟକ୍ଷ",
     member1: "ଶ୍ରୀ ଅରବିନ୍ଦ ସିଂହ",
     member1Role: "କୋଷାଧ୍ୟକ୍ଷ (Treasurer)",
@@ -386,6 +347,15 @@ const translations = {
     noticeTitle: "ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ସୂଚନା:",
     noticeP1: "ନିର୍ମାଣ କାମ ପାଇଁ ଯେତେଟିକି ଟଙ୍କା ଆବଶ୍ୟକ, କେବଳ ସେତେଟିକି ପରିମାଣ ପର୍ଯ୍ୟନ୍ତ ଦାନ ଗ୍ରହଣ କରାଯିବ।",
     noticeP2: "ଯେତେବେଳେ ପ୍ରଚୁର ପରିମାଣର ଧନରାଶି ସଂଗ୍ରହ ହେବ, ସେତେବେଳେ ଆଉ ଅତିରିକ୍ତ ଦାନ ନିଆଯିବ ନାହିଁ।",
+    viewDonorList: "View Donors List",
+    depositedLabel: "Confirmed Depositors",
+    pendingLabel: "Yet to Deposit",
+    closeModal: "Close",
+    loadingDonors: "Loading...",
+    fetchError: "Could not load data. Please open the spreadsheet directly.",
+    amountLabel: "Amount",
+    noDonors: "No confirmed donors yet.",
+    noPending: "No pending entries.",
   },
 };
 
@@ -435,42 +405,6 @@ const ChartIcon = ({ size = 24 }) => (
   </svg>
 );
 
-const LandmarkIcon = ({ size = 24 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="M4 10h16L12 5 4 10Z" />
-    <path d="M6 10v7m4-7v7m4-7v7m4-7v7" />
-    <path d="M3 20h18" />
-    <path d="M4 17h16" />
-  </svg>
-);
-
-const ClipboardIcon = ({ size = 24 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <rect x="6" y="5" width="12" height="15" rx="2" />
-    <path d="M9 5.5V4.5A1.5 1.5 0 0 1 10.5 3h3A1.5 1.5 0 0 1 15 4.5v1" />
-    <path d="M9 10h6M9 13.5h6M9 17h4" />
-  </svg>
-);
-
-const CommitteeIcon = ({ size = 24 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <circle cx="12" cy="8" r="2.5" />
-    <circle cx="7" cy="10" r="2" />
-    <circle cx="17" cy="10" r="2" />
-    <path d="M8.5 18c.6-2.3 2-3.5 3.5-3.5s2.9 1.2 3.5 3.5" />
-    <path d="M3.8 18c.4-1.7 1.6-2.6 3.2-2.9" />
-    <path d="M20.2 18c-.4-1.7-1.6-2.6-3.2-2.9" />
-  </svg>
-);
-
-const BellIcon = ({ size = 24 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="M8 18h8" />
-    <path d="M10 20a2 2 0 0 0 4 0" />
-    <path d="M6 18h12l-1.2-1.8a4 4 0 0 1-.8-2.3V11a4 4 0 1 0-8 0v2.9a4 4 0 0 1-.8 2.3L6 18Z" />
-  </svg>
-);
-
 // Decorative Divider
 const Divider = () => (
   <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, margin: "40px 0" }}>
@@ -511,11 +445,71 @@ const Counter = ({ end, duration = 2000, prefix = "", suffix = "" }) => {
   return <span ref={ref}>{prefix}{count.toLocaleString()}{suffix}</span>;
 };
 
+const SHEET_ID = "1NYPlaHIUdomegVHvgGYnESoEU0JQf7tZ2i8N2LyNetQ";
+
+function parseSheetCSV(csvText) {
+  const lines = csvText.trim().split("\n");
+  if (lines.length < 2) return [];
+
+  const parseRow = (line) => {
+    const result = [];
+    let inQuotes = false;
+    let current = "";
+    for (let ci = 0; ci < line.length; ci++) {
+      if (line[ci] === '"') { inQuotes = !inQuotes; }
+      else if (line[ci] === "," && !inQuotes) { result.push(current.trim()); current = ""; }
+      else { current += line[ci]; }
+    }
+    result.push(current.trim());
+    return result;
+  };
+
+  const headers = parseRow(lines[0]).map((h) => h.toLowerCase().replace(/"/g, ""));
+  const nameIdx = headers.findIndex((h) => h.includes("name") || h.includes("naam") || h.includes("नाम") || h.includes("नाव"));
+  const amtIdx  = headers.findIndex((h) => h.includes("amount") || h.includes("donation") || h.includes("राशि") || h.includes("₹") || h.includes("amt"));
+  const statIdx = headers.findIndex((h) => h.includes("status") || h.includes("paid") || h.includes("payment") || h.includes("स्थिति") || h.includes("deposited"));
+
+  const rows = [];
+  for (let ri = 1; ri < lines.length; ri++) {
+    const cols = parseRow(lines[ri]);
+    const name = nameIdx >= 0 ? cols[nameIdx]?.replace(/"/g, "").trim() : cols[0]?.replace(/"/g, "").trim();
+    if (!name) continue;
+    const amount = amtIdx >= 0 ? cols[amtIdx]?.replace(/"/g, "").trim() : "";
+    const rawStatus = statIdx >= 0 ? cols[statIdx]?.replace(/"/g, "").trim().toLowerCase() : "";
+    const isPaid = statIdx < 0 || ["paid", "yes", "confirmed", "deposited", "done", "हाँ", "जमा"].some((k) => rawStatus.includes(k));
+    rows.push({ name, amount, isPaid });
+  }
+  return rows;
+}
+
 export default function TempleDonation() {
   const [lang, setLang] = useState("hi");
   const [showLangMenu, setShowLangMenu] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [showDonorModal, setShowDonorModal] = useState(false);
+  const [donorRows, setDonorRows] = useState([]);
+  const [loadingDonors, setLoadingDonors] = useState(false);
+  const [donorError, setDonorError] = useState("");
   const t = translations[lang];
+
+  const fetchAndShowDonors = async () => {
+    setShowDonorModal(true);
+    if (donorRows.length > 0) return; // already loaded
+    setLoadingDonors(true);
+    setDonorError("");
+    try {
+      const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv`;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const text = await res.text();
+      const parsed = parseSheetCSV(text);
+      setDonorRows(parsed);
+    } catch {
+      setDonorError(t.fetchError || "Could not load data. Please open the spreadsheet directly.");
+    } finally {
+      setLoadingDonors(false);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -931,6 +925,20 @@ export default function TempleDonation() {
       font-size: 15px; color: rgba(255,248,231,0.8);
       line-height: 1.6;
     }
+    .receipt-card {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .receipt-card .receipt-img {
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid rgba(196,146,42,0.4);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    }
 
     /* WhatsApp Section */
     .whatsapp-card {
@@ -996,44 +1004,6 @@ export default function TempleDonation() {
       flex-shrink: 0;
     }
     .excel-icon svg { width: 24px; height: 24px; }
-
-    /* Trust Section */
-    .trust-grid {
-      display: grid; grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-    @media (max-width: 768px) { .trust-grid { grid-template-columns: 1fr; } }
-    .trust-card {
-      padding: 32px;
-      background: rgba(45,20,16,0.6);
-      border: 1px solid rgba(196,146,42,0.2);
-      border-radius: 16px;
-      transition: all 0.4s;
-    }
-    .trust-card:hover {
-      border-color: var(--gold);
-      background: rgba(45,20,16,0.8);
-      transform: translateY(-3px);
-    }
-    .trust-icon {
-      width: 56px; height: 56px;
-      background: linear-gradient(135deg, rgba(196,146,42,0.2), rgba(196,146,42,0.1));
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--gold);
-      margin-bottom: 16px;
-      border: 1px solid rgba(196,146,42,0.3);
-    }
-    .trust-icon svg { width: 24px; height: 24px; }
-    .trust-card h3 {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: 18px; color: var(--gold);
-      margin-bottom: 8px;
-    }
-    .trust-card p {
-      font-size: 15px; color: rgba(255,248,231,0.7);
-      line-height: 1.7;
-    }
 
     /* Committee */
     .committee-grid {
@@ -1198,10 +1168,86 @@ export default function TempleDonation() {
         padding-inline: 20px;
       }
     }
+
+    /* Donor List Button */
+    .donor-list-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: linear-gradient(135deg, rgba(196,146,42,0.2), rgba(196,146,42,0.1));
+      border: 2px solid var(--gold);
+      color: var(--gold); padding: 14px 32px;
+      border-radius: 12px; font-size: 15px;
+      font-weight: 600; cursor: pointer;
+      font-family: inherit;
+      transition: all 0.3s; margin-top: 16px;
+    }
+    .donor-list-btn:hover { background: rgba(196,146,42,0.3); transform: translateY(-2px); }
+
+    /* Modal Overlay */
+    .modal-overlay {
+      position: fixed; inset: 0; z-index: 2000;
+      background: rgba(10,4,4,0.85);
+      backdrop-filter: blur(6px);
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px;
+    }
+    .modal-box {
+      background: linear-gradient(160deg, var(--dark-warm), var(--dark));
+      border: 1px solid rgba(196,146,42,0.5);
+      border-radius: 20px;
+      width: 100%; max-width: 680px;
+      max-height: 85vh; display: flex; flex-direction: column;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+    }
+    .modal-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 24px 28px 16px;
+      border-bottom: 1px solid rgba(196,146,42,0.2);
+    }
+    .modal-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 20px; color: var(--gold);
+    }
+    .modal-close {
+      background: rgba(196,146,42,0.15); border: 1px solid rgba(196,146,42,0.4);
+      color: var(--gold); width: 36px; height: 36px;
+      border-radius: 50%; cursor: pointer; font-size: 18px;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s;
+    }
+    .modal-close:hover { background: rgba(196,146,42,0.35); }
+    .modal-body { overflow-y: auto; padding: 20px 28px 28px; flex: 1; }
+    .modal-section-title {
+      font-size: 13px; text-transform: uppercase;
+      letter-spacing: 1.5px; font-weight: 700;
+      margin-bottom: 12px; margin-top: 20px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .modal-section-title:first-child { margin-top: 0; }
+    .modal-section-title .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      display: inline-block; flex-shrink: 0;
+    }
+    .donor-table { width: 100%; border-collapse: collapse; }
+    .donor-table th {
+      text-align: left; font-size: 12px; text-transform: uppercase;
+      letter-spacing: 1px; color: rgba(255,248,231,0.4);
+      padding: 6px 10px; border-bottom: 1px solid rgba(196,146,42,0.15);
+    }
+    .donor-table td {
+      padding: 10px 10px; font-size: 15px;
+      border-bottom: 1px solid rgba(196,146,42,0.08);
+      color: rgba(255,248,231,0.9);
+    }
+    .donor-table tr:last-child td { border-bottom: none; }
+    .donor-table tr:hover td { background: rgba(196,146,42,0.06); }
+    .amount-cell { color: var(--gold); font-weight: 600; }
+    .modal-empty { font-size: 14px; color: rgba(255,248,231,0.4); padding: 12px 10px; }
+    .modal-loading { text-align: center; padding: 40px 0; color: rgba(255,248,231,0.6); font-size: 15px; }
+    .modal-error { padding: 20px; text-align: center; color: var(--vermillion); font-size: 15px; line-height: 1.6; }
   `;
 
   // Generate particles
-  const particles = Array.from({ length: 30 }, (_, i) => ({
+  const particles = Array.from({ length: 30 }, () => ({
     left: `${Math.random() * 100}%`,
     top: `${Math.random() * 100}%`,
     delay: `${Math.random() * 5}s`,
@@ -1456,23 +1502,11 @@ export default function TempleDonation() {
               <p className="qr-note">{t.qrNote}</p>
             </div>
 
-            <div className="bank-card">
-              <h3>{t.bankDetails}</h3>
-              <div className="bank-detail">{t.bankName}</div>
-              <div className="bank-detail">{t.accName}</div>
-              <div className="bank-detail">{t.accNo}</div>
-              <div className="bank-detail">{t.ifsc}</div>
-            </div>
-            <div style={{ marginTop: 24, textAlign: "center" }}>
+            <div className="bank-card receipt-card">
               <img
                 src={receiptImage}
                 alt="Donation receipt example"
-                style={{
-                  maxWidth: "100%",
-                  borderRadius: 12,
-                  border: "1px solid rgba(196,146,42,0.4)",
-                  boxShadow: "0 12px 30px rgba(0,0,0,0.4)",
-                }}
+                className="receipt-img"
               />
             </div>
           </div>
@@ -1523,51 +1557,94 @@ export default function TempleDonation() {
             </span>
             {t.viewSheet}
           </a>
+          <br />
+          <button className="donor-list-btn" onClick={fetchAndShowDonors}>
+            👁 {t.viewDonorList}
+          </button>
           <p style={{ marginTop: 20, fontSize: 14, color: "rgba(255,248,231,0.5)" }}>
             {t.donorsNote}
           </p>
         </div>
       </div>
 
-      {/* Trust Section */}
-      <div style={{ background: "linear-gradient(180deg, var(--dark), rgba(92,14,14,0.15), var(--dark))" }}>
-        <div className="section">
-          <h2 className="section-title">{t.trustTitle}</h2>
-          <Divider />
-          <div className="trust-grid">
-            <div className="trust-card">
-              <div className="trust-icon">
-                <LandmarkIcon size={24} />
-              </div>
-              <h3>{t.trust1Title}</h3>
-              <p>{t.trust1Desc}</p>
+      {/* Donor Modal */}
+      {showDonorModal && (
+        <div className="modal-overlay" onClick={(e) => { if (e.target === e.currentTarget) setShowDonorModal(false); }}>
+          <div className="modal-box">
+            <div className="modal-header">
+              <span className="modal-title">🙏 {t.donorsTitle}</span>
+              <button className="modal-close" onClick={() => setShowDonorModal(false)}>✕</button>
             </div>
-            <div className="trust-card">
-              <div className="trust-icon">
-                <ClipboardIcon size={24} />
-              </div>
-              <h3>{t.trust2Title}</h3>
-              <p>{t.trust2Desc}</p>
-            </div>
-            <div className="trust-card">
-              <div className="trust-icon">
-                <CommitteeIcon size={24} />
-              </div>
-              <h3>{t.trust3Title}</h3>
-              <p>{t.trust3Desc}</p>
-            </div>
-            <div className="trust-card">
-              <div className="trust-icon">
-                <BellIcon size={24} />
-              </div>
-              <h3>{t.trust4Title}</h3>
-              <p>{t.trust4Desc}</p>
+            <div className="modal-body">
+              {loadingDonors && <div className="modal-loading">⏳ {t.loadingDonors}</div>}
+              {donorError && (
+                <div className="modal-error">
+                  ⚠️ {donorError}
+                  <br /><br />
+                  <a href={`https://docs.google.com/spreadsheets/d/${SHEET_ID}/edit?usp=sharing`} target="_blank" rel="noopener noreferrer" style={{ color: "var(--gold)" }}>
+                    {t.viewSheet}
+                  </a>
+                </div>
+              )}
+              {!loadingDonors && !donorError && (() => {
+                const deposited = donorRows.filter((r) => r.isPaid);
+                const pending   = donorRows.filter((r) => !r.isPaid);
+                return (
+                  <>
+                    <div className="modal-section-title" style={{ color: "#4CAF50" }}>
+                      <span className="dot" style={{ background: "#4CAF50" }} />
+                      ✅ {t.depositedLabel} ({deposited.length})
+                    </div>
+                    {deposited.length === 0
+                      ? <p className="modal-empty">{t.noDonors}</p>
+                      : (
+                        <table className="donor-table">
+                          <thead><tr><th>#</th><th>Name</th><th>{t.amountLabel}</th></tr></thead>
+                          <tbody>
+                            {deposited.map((d, idx) => (
+                              <tr key={idx}>
+                                <td style={{ color: "rgba(255,248,231,0.4)", width: 36 }}>{idx + 1}</td>
+                                <td>{d.name}</td>
+                                <td className="amount-cell">{d.amount ? `₹${d.amount}` : "—"}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      )
+                    }
+
+                    {pending.length > 0 && (
+                      <>
+                        <div className="modal-section-title" style={{ color: "var(--saffron)", marginTop: 28 }}>
+                          <span className="dot" style={{ background: "var(--saffron)" }} />
+                          ⏳ {t.pendingLabel} ({pending.length})
+                        </div>
+                        <table className="donor-table">
+                          <thead><tr><th>#</th><th>Name</th><th>{t.amountLabel}</th></tr></thead>
+                          <tbody>
+                            {pending.map((d, idx) => (
+                              <tr key={idx}>
+                                <td style={{ color: "rgba(255,248,231,0.4)", width: 36 }}>{idx + 1}</td>
+                                <td>{d.name}</td>
+                                <td className="amount-cell">{d.amount ? `₹${d.amount}` : "—"}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </>
+                    )}
+                  </>
+                );
+              })()}
             </div>
           </div>
+        </div>
+      )}
 
-          {/* Committee */}
-          <div style={{ marginTop: 80 }}>
-            <h2 className="section-title" style={{ fontSize: 28 }}>{t.committeeTitle}</h2>
+      {/* Committee (same gradient block, no Trust section) */}
+      <div style={{ background: "linear-gradient(180deg, var(--dark), rgba(92,14,14,0.15), var(--dark))" }}>
+        <div className="section">
+          <h2 className="section-title" style={{ fontSize: 28 }}>{t.committeeTitle}</h2>
             <div className="committee-grid">
               <div className="member-card" style={{ maxWidth: 320 }}>
                 <div className="member-avatar">
@@ -1580,7 +1657,6 @@ export default function TempleDonation() {
                     {t.blessingLine}
                   </p>
                 )}
-              </div>
             </div>
           </div>
         </div>
