@@ -1573,7 +1573,7 @@ export default function TempleDonation() {
             <div className="whatsapp-name">{t.whatsappName}</div>
             <div className="whatsapp-number">{t.whatsappNumber}</div>
             <a
-              href={`https://wa.me/919911414416?text=${encodeURIComponent("Jai Maa Kali! I have made a donation to Jai Maa Kali - Sri Durga Amma Devi Temple Reconstruction Trust. Attaching my payment screenshot.")}`}
+              href={`https://wa.me/919911414416?text=${encodeURIComponent("Jai Maa Kali! I have made a donation to Jai Maa Kali Mandir Renovation Trust. Attaching my payment screenshot.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="whatsapp-link"
