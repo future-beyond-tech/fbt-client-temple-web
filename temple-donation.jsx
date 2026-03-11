@@ -913,6 +913,13 @@ export default function TempleDonation() {
       object-fit: cover;
       border-bottom: 2px solid rgba(196,146,42,0.3);
     }
+    .temple-img-placeholder {
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(196,146,42,0.08);
+      color: rgba(196,146,42,0.7);
+      font-size: 18px; font-style: italic;
+      letter-spacing: 0.5px;
+    }
     .temple-label {
       padding: 24px;
     }
@@ -1566,24 +1573,14 @@ export default function TempleDonation() {
         {/* Temple Comparison */}
         <div className="temple-grid">
           <div className="temple-card">
-            <img
-              className="temple-img"
-              src="https://images.unsplash.com/photo-1621427637840-04735b084ef9?w=600&h=400&fit=crop"
-              alt="Current Temple"
-              onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=600&h=400&fit=crop"; }}
-            />
+            <div className="temple-img temple-img-placeholder">(Will update soon)</div>
             <div className="temple-label">
               <h3>{t.oldTemple}</h3>
               <p>{t.oldTempleDesc}</p>
             </div>
           </div>
           <div className="temple-card">
-            <img
-              className="temple-img"
-              src="https://images.unsplash.com/photo-1564804955922-3f48a4f90a7c?w=600&h=400&fit=crop"
-              alt="Proposed New Temple"
-              onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1606298855672-3efb63017be8?w=600&h=400&fit=crop"; }}
-            />
+            <div className="temple-img temple-img-placeholder">(Will update soon)</div>
             <div className="temple-label">
               <h3>{t.newTemple}</h3>
               <p>{t.newTempleDesc}</p>
