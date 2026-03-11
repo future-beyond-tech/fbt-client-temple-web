@@ -1363,6 +1363,39 @@ export default function TempleDonation() {
     .modal-empty { font-size: 14px; color: rgba(255,248,231,0.4); padding: 12px 10px; }
     .modal-loading { text-align: center; padding: 40px 0; color: rgba(255,248,231,0.6); font-size: 15px; }
     .modal-error { padding: 20px; text-align: center; color: var(--vermillion); font-size: 15px; line-height: 1.6; }
+
+    /* Scroll Down Arrow */
+    .scroll-down-arrow {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 900;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      background: rgba(196,146,42,0.15);
+      backdrop-filter: blur(8px);
+      color: var(--gold);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: bounceArrow 2s ease-in-out infinite;
+      transition: opacity 0.3s, background 0.3s;
+      box-shadow: 0 4px 20px rgba(196,146,42,0.3);
+    }
+    .scroll-down-arrow:hover {
+      background: rgba(196,146,42,0.35);
+    }
+    .scroll-arrow-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    @keyframes bounceArrow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
   `;
 
   // Generate particles
@@ -1805,6 +1838,17 @@ export default function TempleDonation() {
         <Divider />
         <div className="footer-copy">{t.footerRights}</div>
       </footer>
+
+      {/* Scroll Down Arrow - fixed bottom-right, hides near page bottom */}
+      <button
+        className={`scroll-down-arrow ${scrollY + window.innerHeight >= document.body.scrollHeight - 100 ? "scroll-arrow-hidden" : ""}`}
+        onClick={() => window.scrollBy({ top: window.innerHeight * 0.8, behavior: "smooth" })}
+        aria-label="Scroll down"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </button>
     </>
   );
 }
