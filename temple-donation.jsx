@@ -425,6 +425,15 @@ const Counter = ({ end, duration = 2000, prefix = "", suffix = "" }) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const started = useRef(false);
+  const previousEnd = useRef(end);
+
+  useEffect(() => {
+    if (previousEnd.current !== end) {
+      previousEnd.current = end;
+      started.current = false;
+      setCount(0);
+    }
+  }, [end]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -488,6 +497,8 @@ function parseSheetCSV(csvText) {
 }
 
 export default function TempleDonation() {
+  const totalFundSheet = { gid: "1116878055", range: "B5" };
+  const totalRaisedRefreshMs = 60000;
   const [lang, setLang] = useState("hi");
   const [showLangMenu, setShowLangMenu] = useState(false);
   const [scrollY, setScrollY] = useState(0);
@@ -499,26 +510,79 @@ export default function TempleDonation() {
   const [totalFundReceived, setTotalFundReceived] = useState("");
   const [loadingFund, setLoadingFund] = useState(false);
   const [fundError, setFundError] = useState("");
+  const [totalRaisedValue, setTotalRaisedValue] = useState(10000);
   const t = translations[lang];
+
+  const parseAmount = (value) => {
+    const cleaned = String(value).replace(/[^\d.]/g, "");
+    if (!cleaned) return null;
+    const numeric = Number(cleaned);
+    return Number.isFinite(numeric) ? numeric : null;
+  };
+
+  const applyTotalFundValue = (value, { syncModalValue = false } = {}) => {
+    if (syncModalValue) setTotalFundReceived(value);
+    const numeric = parseAmount(value);
+    if (numeric && numeric > 0) setTotalRaisedValue(numeric);
+  };
+
+  const fetchCellValue = async ({ gid, range }) => {
+    const baseUrl = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}&range=${encodeURIComponent(range)}`;
+    const urlsToTry = [
+      baseUrl,
+      // CORS-safe proxy for deployments that block direct docs.google.com fetch
+      `https://r.jina.ai/${baseUrl}`,
+    ];
+    let lastErr;
+    for (const url of urlsToTry) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const text = (await res.text()).trim();
+        return text.replace(/"/g, "").split(/[\n,]/)[0]?.trim() || "";
+      } catch (e) {
+        lastErr = e;
+      }
+    }
+    throw lastErr || new Error("Failed to fetch cell value");
+  };
 
   const fetchAndShowTotalFund = async () => {
     setShowFundModal(true);
     setLoadingFund(true);
     setFundError("");
     try {
-      const gid = "1116878055";
-      const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}&range=B5`;
-      const res = await fetch(url);
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      const text = (await res.text()).trim();
-      const value = text.replace(/"/g, "").split(/[\n,]/)[0]?.trim() || "";
-      setTotalFundReceived(value);
+      const value = await fetchCellValue(totalFundSheet);
+      applyTotalFundValue(value, { syncModalValue: true });
     } catch {
       setFundError(t.fetchError || "Could not load data. Please open the spreadsheet directly.");
     } finally {
       setLoadingFund(false);
     }
   };
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const refreshTotalRaised = async () => {
+      try {
+        // Keep Total Raised consistent with "Total Fund Received" source cell
+        const value = await fetchCellValue(totalFundSheet);
+        if (cancelled) return;
+        applyTotalFundValue(value, { syncModalValue: showFundModal });
+      } catch {
+        // keep fallback
+      }
+    };
+
+    refreshTotalRaised();
+    const intervalId = window.setInterval(refreshTotalRaised, totalRaisedRefreshMs);
+
+    return () => {
+      cancelled = true;
+      window.clearInterval(intervalId);
+    };
+  }, [showFundModal]);
 
   const fetchAndShowDonors = async () => {
     setShowDonorModal(true);
@@ -1386,7 +1450,7 @@ export default function TempleDonation() {
         <div className="section">
           <div className="stats-grid">
             <div className="stat-card">
-              <div className="stat-number"><Counter end={10000} prefix="₹" /></div>
+              <div className="stat-number"><Counter end={totalRaisedValue} prefix="₹" /></div>
               <div className="stat-label">{t.totalRaised}</div>
             </div>
             <div className="stat-card">
