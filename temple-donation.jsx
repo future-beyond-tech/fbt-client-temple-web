@@ -4,7 +4,7 @@ import receiptImage from "./Receipt.jpeg";
 
 const translations = {
   en: {
-    nav: "Jai Maa Kali Mandir",
+    nav: "Jai Maa Kali Mandir, Birnia",
     tagline: "Divine Renovation • Sacred Renewal",
     heroTitle: "Rebuild the Abode of",
     heroHighlight: "Maa Durga",
@@ -23,8 +23,10 @@ const translations = {
     donateSub: "Scan the QR code below to make your divine contribution. Every offering, big or small, brings us closer to realizing this sacred vision.",
     scanQR: "Scan to Donate",
     qrNote: "Scan this QR code with any UPI app (Google Pay, PhonePe, Paytm) to make your sacred offering",
-    afterPayment: "After Making Your Offering",
+    afterPayment: "After Making Your Offering (Jai Maa Kali Mandir, Birnia)",
     afterPaymentDesc: "After completing your donation, please send a screenshot of the payment confirmation along with your full name, phone number, and address via WhatsApp to the number below:",
+    whatsappPlace: "Jai Maa Kali Mandir, Birnia",
+    whatsappName: "Dheeraj Kumar",
     whatsappNumber: "+91 99114 14416",
     whatsappNote: "Our temple committee will acknowledge your donation and add your name to our sacred donor records within 24 hours.",
     donorsTitle: "Sacred Donor Records",
@@ -40,8 +42,7 @@ const translations = {
     member1Role: "कोषाध्यक्ष (Treasurer)",
     blessingLine: "With the blessings of Maa Kali and the generous support of the villagers of Birnia (Post–Jotha, Dhoraiya, Banka, Bihar-813109).",
     footerText: "Jai Maa Kali Mandir Renovation Trust",
-    footerReg: "Registration No: XXXXX/2024 | 80G Certified",
-    footerAddress: "Birnia, Post–Jotha, Dhoraiya, Banka, Bihar - 813109",
+    footerAddress: "Village Birnia, Post–Jotha, Dhoraiya, Banka, Bihar - 813109",
     footerRights: "© 2024 All Rights Reserved. Built with devotion.",
     langLabel: "Language",
     progressLabel: "Renovation Progress",
@@ -52,7 +53,7 @@ const translations = {
     noticeTitle: "Important Notice:",
     noticeP1: "We will collect donations only until the required amount for the construction is achieved.",
     noticeP2: "Once sufficient funds are collected, no further donations will be requested.",
-    viewDonorList: "View Donors List",
+    viewDonorList: "Total Fund Received",
     depositedLabel: "Confirmed Depositors",
     pendingLabel: "Yet to Deposit",
     closeModal: "Close",
@@ -63,7 +64,7 @@ const translations = {
     noPending: "No pending entries.",
   },
   hi: {
-    nav: "जय माँ काली मंदिर",
+    nav: "जय माँ काली मंदिर, बिरनिया",
     tagline: "दिव्य नवीनीकरण • पवित्र नवीनीकरण",
     heroTitle: "का धाम पुनर्निर्माण करें",
     heroHighlight: "माँ दुर्गा",
@@ -82,8 +83,10 @@ const translations = {
     donateSub: "अपना दिव्य योगदान देने के लिए नीचे दिए गए QR कोड को स्कैन करें। हर चढ़ावा इस पवित्र दृष्टि को साकार करने के करीब लाता है।",
     scanQR: "दान के लिए स्कैन करें",
     qrNote: "अपना पवित्र चढ़ावा देने के लिए किसी भी UPI ऐप से इस QR कोड को स्कैन करें",
-    afterPayment: "दान करने के बाद",
+    afterPayment: "दान करने के बाद (जय माँ काली मंदिर, बिरनिया)",
     afterPaymentDesc: "दान पूरा करने के बाद, कृपया भुगतान पुष्टि का स्क्रीनशॉट अपने पूरे नाम, फोन नंबर और पते के साथ नीचे दिए गए नंबर पर व्हाट्सएप करें:",
+    whatsappPlace: "जय माँ काली मंदिर, बिरनिया",
+    whatsappName: "धीरज कुमार",
     whatsappNumber: "+91 99114 14416",
     whatsappNote: "हमारी मंदिर समिति 24 घंटे के भीतर आपके दान की पुष्टि करेगी और आपका नाम पवित्र दाता रिकॉर्ड में जोड़ेगी।",
     donorsTitle: "पवित्र दाता रिकॉर्ड",
@@ -99,8 +102,7 @@ const translations = {
     member1Role: "कोषाध्यक्ष (Treasurer)",
     blessingLine: "माँ काली की कृपा और बिरनिया ग्राम (पोस्ट–जोत्था, धोरैया, बांका, बिहार-813109) के ग्रामवासियों के उदार सहयोग से।",
     footerText: "जय माँ काली मंदिर नवीनीकरण ट्रस्ट",
-    footerReg: "पंजीकरण संख्या: XXXXX/2024 | 80G प्रमाणित",
-    footerAddress: "बिरनिया, पोस्ट–जोत्था, धोरैया, बांका, बिहार - 813109",
+    footerAddress: "ग्राम बिरनिया, पोस्ट–जोत्था, धोरैया, बांका, बिहार - 813109",
     footerRights: "© 2024 सर्वाधिकार सुरक्षित। भक्ति से निर्मित।",
     langLabel: "भाषा",
     progressLabel: "नवीनीकरण प्रगति",
@@ -111,7 +113,7 @@ const translations = {
     noticeTitle: "महत्वपूर्ण सूचना:",
     noticeP1: "निर्माण कार्य के लिए जितनी राशि की आवश्यकता है, केवल उतनी ही राशि तक दान एकत्र किया जाएगा।",
     noticeP2: "जब पर्याप्त धनराशि एकत्र हो जाएगी, उसके बाद किसी प्रकार का अतिरिक्त दान नहीं लिया जाएगा।",
-    viewDonorList: "दाता सूची देखें",
+    viewDonorList: "कुल प्राप्त राशि",
     depositedLabel: "जमा किए गए दाता",
     pendingLabel: "अभी जमा नहीं",
     closeModal: "बंद करें",
@@ -122,7 +124,7 @@ const translations = {
     noPending: "कोई लंबित प्रविष्टि नहीं।",
   },
   te: {
-    nav: "జై మా కాలి ఆలయం",
+    nav: "జై మా కాలి ఆలయం, బిర్నియా",
     tagline: "దివ్య పునర్వ్యవస్థీకరణ • పవిత్ర నవీకరణ",
     heroTitle: "యొక్క నివాసాన్ని పునర్నిర్మించండి",
     heroHighlight: "అమ్మవారు దుర్గా",
@@ -141,8 +143,10 @@ const translations = {
     donateSub: "మీ దివ్య సహకారం అందించడానికి క్రింది QR కోడ్‌ను స్కాన్ చేయండి. ప్రతి అర్పణ ఈ పవిత్ర దృష్టిని సాకారం చేయడానికి మనల్ని దగ్గరగా తీసుకువస్తుంది.",
     scanQR: "దానం కోసం స్కాన్ చేయండి",
     qrNote: "మీ పవిత్ర అర్పణ చేయడానికి ఏదైనా UPI యాప్‌తో ఈ QR కోడ్‌ను స్కాన్ చేయండి",
-    afterPayment: "మీ అర్పణ చేసిన తర్వాత",
+    afterPayment: "మీ అర్పణ చేసిన తర్వాత (జై మా కాలి మందిరం, బిర్నియా)",
     afterPaymentDesc: "దానం పూర్తి చేసిన తర్వాత, దయచేసి చెల్లింపు నిర్ధారణ స్క్రీన్‌షాట్‌ను మీ పూర్తి పేరు, ఫోన్ నంబర్ మరియు చిరునామాతో క్రింది నంబర్‌కు WhatsApp చేయండి:",
+    whatsappPlace: "జై మా కాలి మందిరం, బిర్నియా",
+    whatsappName: "ధీరజ్ కుమార్",
     whatsappNumber: "+91 99114 14416",
     whatsappNote: "మా ఆలయ కమిటీ 24 గంటల్లో మీ దానాన్ని నిర్ధారిస్తుంది మరియు మీ పేరును పవిత్ర దాత రికార్డులలో చేరుస్తుంది.",
     donorsTitle: "పవిత్ర దాత రికార్డులు",
@@ -158,8 +162,7 @@ const translations = {
     member1Role: "ఖజాంచి (Treasurer)",
     blessingLine: "మా కాలీ అమ్మ ఆశీర్వాదంతో మరియు బిర్నియా గ్రామ (పోస్ట్–జోతా, ధొరయ్యా, బాంకా, బీహార్-813109) గ్రామస్తుల ఉదార సహకారంతో.",
     footerText: "జై మా కాలి ఆలయ పునర్వ్యవస్థీకరణ ట్రస్ట్",
-    footerReg: "రిజిస్ట్రేషన్ నం: XXXXX/2024 | 80G ధృవీకరించబడింది",
-    footerAddress: "బిర్నియా, పోస్టు–జోతా, ధొరయ్యా, బాంకా, బీహార్ - 813109",
+    footerAddress: "గ్రామం బిర్నియా, పోస్టు–జోతా, ధొరయ్యా, బాంకా, బీహార్ - 813109",
     footerRights: "© 2024 అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి. భక్తితో నిర్మించబడింది.",
     langLabel: "భాష",
     progressLabel: "పునర్వ్యవస్థీకరణ పురోగతి",
@@ -170,7 +173,7 @@ const translations = {
     noticeTitle: "ముఖ్య ప్రకటన:",
     noticeP1: "నిర్మాణానికి అవసరమైన మొత్తం చేరేవరకు మాత్రమే దానాలు స్వీకరించబడతాయి.",
     noticeP2: "సరిపడిన నిధులు సేకరించిన తర్వాత, ఇకపై ఏ విధమైన దానం కోరబడదు.",
-    viewDonorList: "View Donors List",
+    viewDonorList: "Total Fund Received",
     depositedLabel: "Confirmed Depositors",
     pendingLabel: "Yet to Deposit",
     closeModal: "Close",
@@ -181,7 +184,7 @@ const translations = {
     noPending: "No pending entries.",
   },
   mr: {
-    nav: "जय माँ काली मंदिर",
+    nav: "जय माँ काली मंदिर, बिरनिया",
     tagline: "दिव्य नूतनीकरण • पवित्र नूतनीकरण",
     heroTitle: "चे धाम पुनर्बांधणी करा",
     heroHighlight: "माँ दुर्गा",
@@ -200,8 +203,10 @@ const translations = {
     donateSub: "तुमचे दिव्य योगदान देण्यासाठी खालील QR कोड स्कॅन करा.",
     scanQR: "दानासाठी स्कॅन करा",
     qrNote: "तुमचे पवित्र अर्पण करण्यासाठी कोणत्याही UPI अॅपने हा QR कोड स्कॅन करा",
-    afterPayment: "दान केल्यानंतर",
+    afterPayment: "दान केल्यानंतर (जय माँ काली मंदिर, बिरनिया)",
     afterPaymentDesc: "दान पूर्ण केल्यानंतर, कृपया पेमेंट पुष्टीकरणाचा स्क्रीनशॉट तुमचे पूर्ण नाव, फोन नंबर आणि पत्त्यासह खालील नंबरवर WhatsApp करा:",
+    whatsappPlace: "जय माँ काली मंदिर, बिरनिया",
+    whatsappName: "धीरज कुमार",
     whatsappNumber: "+91 99114 14416",
     whatsappNote: "आमची मंदिर समिती 24 तासांत तुमच्या दानाची पुष्टी करेल.",
     donorsTitle: "पवित्र दाता नोंदी",
@@ -217,8 +222,7 @@ const translations = {
     member1Role: "कोषाध्यक्ष (Treasurer)",
     blessingLine: "माँ कालीच्या कृपेने आणि बिरनिया गाव (पोस्ट–जोत्था, धोरैया, बांका, बिहार-813109) येथील ग्रामस्थांच्या उदार सहकार्याने.",
     footerText: "जय माँ काली मंदिर नूतनीकरण ट्रस्ट",
-    footerReg: "नोंदणी क्र.: XXXXX/2024 | 80G प्रमाणित",
-    footerAddress: "बिरनिया, पोस्ट–जोत्था, धोरैया, बांका, बिहार - 813109",
+    footerAddress: "गाव बिरनिया, पोस्ट–जोत्था, धोरैया, बांका, बिहार - 813109",
     footerRights: "© 2024 सर्व हक्क राखीव. भक्तीने निर्मित.",
     langLabel: "भाषा",
     progressLabel: "नूतनीकरण प्रगती",
@@ -229,7 +233,7 @@ const translations = {
     noticeTitle: "महत्वाची सूचना:",
     noticeP1: "बांधकामासाठी जितकी रक्कम आवश्यक आहे, तेवढ्याच रकमेपर्यंत दान स्वीकारले जाईल.",
     noticeP2: "पुरेशी निधी जमा झाल्यानंतर पुढे कोणतेही दान मागितले जाणार नाही.",
-    viewDonorList: "View Donors List",
+    viewDonorList: "Total Fund Received",
     depositedLabel: "Confirmed Depositors",
     pendingLabel: "Yet to Deposit",
     closeModal: "Close",
@@ -240,7 +244,7 @@ const translations = {
     noPending: "No pending entries.",
   },
   bn: {
-    nav: "জয় মা কালী মন্দির",
+    nav: "জয় মা কালী মন্দির, বিরনিয়া",
     tagline: "দিব্য সংস্কার (Renovation) • পবিত্র নবায়ন",
     heroTitle: "এর আবাস পুনর্নির্মাণ করুন",
     heroHighlight: "মা দুর্গা",
@@ -259,8 +263,10 @@ const translations = {
     donateSub: "আপনার দিব্য অবদান দিতে নীচের QR কোড স্ক্যান করুন।",
     scanQR: "দানের জন্য স্ক্যান করুন",
     qrNote: "যেকোনো UPI অ্যাপ দিয়ে এই QR কোড স্ক্যান করুন",
-    afterPayment: "দান করার পরে",
+    afterPayment: "দান করার পরে (জয় মা কালী মন্দির, বিরনিয়া)",
     afterPaymentDesc: "দান সম্পূর্ণ করার পর, অনুগ্রহ করে পেমেন্ট নিশ্চিতকরণের স্ক্রিনশট আপনার পুরো নাম, ফোন নম্বর এবং ঠিকানা সহ নীচের নম্বরে WhatsApp করুন:",
+    whatsappPlace: "জয় মা কালী মন্দির, বিরনিয়া",
+    whatsappName: "ধীরজ কুমার",
     whatsappNumber: "+91 99114 14416",
     whatsappNote: "আমাদের মন্দির কমিটি ২৪ ঘন্টার মধ্যে আপনার দান নিশ্চিত করবে।",
     donorsTitle: "পবিত্র দাতা রেকর্ড",
@@ -276,8 +282,7 @@ const translations = {
     member1Role: "কোষাধ্যক্ষ (Treasurer)",
     blessingLine: "মা কালীের আশীর্বাদ এবং বিরনিয়া গ্রামের (পোস্ট–জোঠা, ধোরাইয়া, বাঙ্কা, বিহার-৮১৩১০৯) গ্রামবাসীদের উদার সহযোগিতায়।",
     footerText: "জয় মা কালী মন্দির সংস্কার ট্রাস্ট",
-    footerReg: "নিবন্ধন নং: XXXXX/2024 | 80G প্রমাণিত",
-    footerAddress: "বিরনিয়া, পোস্ট–জোঠা, ধোরাইয়া, বাঙ্কা, বিহার - ৮১৩১০৯",
+    footerAddress: "গ্রাম বিরনিয়া, পোস্ট–জোঠা, ধোরাইয়া, বাঙ্কা, বিহার - ৮১৩১০৯",
     footerRights: "© 2024 সর্বস্বত্ব সংরক্ষিত। ভক্তি দিয়ে নির্মিত।",
     langLabel: "ভাষা",
     progressLabel: "সংস্কার অগ্রগতি",
@@ -288,7 +293,7 @@ const translations = {
     noticeTitle: "গুরুত্বপূর্ণ নোটিশ:",
     noticeP1: "নির্মাণের জন্য যতটুকু অর্থের প্রয়োজন, কেবল সেই পরিমাণ পর্যন্তই দান সংগ্রহ করা হবে।",
     noticeP2: "যখন পর্যাপ্ত অর্থ জমা হয়ে যাবে, তখন আর কোনও দান গ্রহণ করা হবে না।",
-    viewDonorList: "View Donors List",
+    viewDonorList: "Total Fund Received",
     depositedLabel: "Confirmed Depositors",
     pendingLabel: "Yet to Deposit",
     closeModal: "Close",
@@ -299,7 +304,7 @@ const translations = {
     noPending: "No pending entries.",
   },
   od: {
-    nav: "ଜୟ ମା କାଳୀ ମନ୍ଦିର",
+    nav: "ଜୟ ମା କାଳୀ ମନ୍ଦିର, ବିରନିଆ",
     tagline: "ଦିବ୍ୟ ପୁନରୁଦ୍ଧାର (Renovation) • ପବିତ୍ର ନବୀକରଣ",
     heroTitle: "ଙ୍କ ନିବାସ ପୁନର୍ନିର୍ମାଣ କରନ୍ତୁ",
     heroHighlight: "ମା ଦୁର୍ଗା",
@@ -318,8 +323,10 @@ const translations = {
     donateSub: "ଆପଣଙ୍କ ଦିବ୍ୟ ଅବଦାନ ଦେବା ପାଇଁ ତଳେ QR କୋଡ୍ ସ୍କାନ କରନ୍ତୁ।",
     scanQR: "ଦାନ ପାଇଁ ସ୍କାନ କରନ୍ତୁ",
     qrNote: "ଯେକୌଣସି UPI ଆପ୍ ସହ ଏହି QR କୋଡ୍ ସ୍କାନ କରନ୍ତୁ",
-    afterPayment: "ଦାନ କରିବା ପରେ",
+    afterPayment: "ଦାନ କରିବା ପରେ (ଜୟ ମା କାଳୀ ମନ୍ଦିର, ବିରନିଆ)",
     afterPaymentDesc: "ଦାନ ସମ୍ପୂର୍ଣ୍ଣ କରିବା ପରେ, ଦୟାକରି ପେମେଣ୍ଟ ନିଶ୍ଚିତକରଣର ସ୍କ୍ରିନସଟ ଆପଣଙ୍କ ସମ୍ପୂର୍ଣ୍ଣ ନାମ, ଫୋନ ନମ୍ବର ଏବଂ ଠିକଣା ସହ ତଳେ ନମ୍ବରରେ WhatsApp କରନ୍ତୁ:",
+    whatsappPlace: "ଜୟ ମା କାଳୀ ମନ୍ଦିର, ବିରନିଆ",
+    whatsappName: "ଧୀରଜ କୁମାର",
     whatsappNumber: "+91 99114 14416",
     whatsappNote: "ଆମ ମନ୍ଦିର କମିଟି ୨୪ ଘଣ୍ଟା ମଧ୍ୟରେ ଆପଣଙ୍କ ଦାନ ନିଶ୍ଚିତ କରିବ।",
     donorsTitle: "ପବିତ୍ର ଦାତା ରେକର୍ଡ",
@@ -335,8 +342,7 @@ const translations = {
     member1Role: "କୋଷାଧ୍ୟକ୍ଷ (Treasurer)",
     blessingLine: "ମା କାଳୀଙ୍କ କୃପା ଏବଂ ବିରନିଆ ଗ୍ରାମ (ପୋଷ୍ଟ–ଜୋଥା, ଧୋରାଇୟା, ବାଙ୍କା, ବିହାର-813109) ଗ୍ରାମବାସୀଙ୍କ ଉଦାର ସହଯୋଗରେ।",
     footerText: "ଜୟ ମା କାଳୀ ମନ୍ଦିର ପୁନରୁଦ୍ଧାର ଟ୍ରଷ୍ଟ",
-    footerReg: "ନିବନ୍ଧନ ନଂ: XXXXX/2024 | 80G ପ୍ରମାଣିତ",
-    footerAddress: "ବିରନିଆ, ପୋଷ୍ଟ–ଜୋଥା, ଧୋରାଇୟା, ବାଙ୍କା, ବିହାର - 813109",
+    footerAddress: "ଗାଁ ବିରନିଆ, ପୋଷ୍ଟ–ଜୋଥା, ଧୋରାଇୟା, ବାଙ୍କା, ବିହାର - 813109",
     footerRights: "© 2024 ସମସ୍ତ ଅଧିକାର ସଂରକ୍ଷିତ। ଭକ୍ତି ସହ ନିର୍ମିତ।",
     langLabel: "ভାষা",
     progressLabel: "ପୁନରୁଦ୍ଧାର ଅଗ୍ରଗତି",
@@ -347,7 +353,7 @@ const translations = {
     noticeTitle: "ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ସୂଚନା:",
     noticeP1: "ନିର୍ମାଣ କାମ ପାଇଁ ଯେତେଟିକି ଟଙ୍କା ଆବଶ୍ୟକ, କେବଳ ସେତେଟିକି ପରିମାଣ ପର୍ଯ୍ୟନ୍ତ ଦାନ ଗ୍ରହଣ କରାଯିବ।",
     noticeP2: "ଯେତେବେଳେ ପ୍ରଚୁର ପରିମାଣର ଧନରାଶି ସଂଗ୍ରହ ହେବ, ସେତେବେଳେ ଆଉ ଅତିରିକ୍ତ ଦାନ ନିଆଯିବ ନାହିଁ।",
-    viewDonorList: "View Donors List",
+    viewDonorList: "Total Fund Received",
     depositedLabel: "Confirmed Depositors",
     pendingLabel: "Yet to Deposit",
     closeModal: "Close",
@@ -465,16 +471,15 @@ function parseSheetCSV(csvText) {
   };
 
   const headers = parseRow(lines[0]).map((h) => h.toLowerCase().replace(/"/g, ""));
-  const nameIdx = headers.findIndex((h) => h.includes("name") || h.includes("naam") || h.includes("नाम") || h.includes("नाव"));
-  const amtIdx  = headers.findIndex((h) => h.includes("amount") || h.includes("donation") || h.includes("राशि") || h.includes("₹") || h.includes("amt"));
   const statIdx = headers.findIndex((h) => h.includes("status") || h.includes("paid") || h.includes("payment") || h.includes("स्थिति") || h.includes("deposited"));
 
   const rows = [];
   for (let ri = 1; ri < lines.length; ri++) {
     const cols = parseRow(lines[ri]);
-    const name = nameIdx >= 0 ? cols[nameIdx]?.replace(/"/g, "").trim() : cols[0]?.replace(/"/g, "").trim();
+    // Force mapping: Column C = Name, Column F = Amount
+    const name = cols[2]?.replace(/"/g, "").trim();
     if (!name) continue;
-    const amount = amtIdx >= 0 ? cols[amtIdx]?.replace(/"/g, "").trim() : "";
+    const amount = cols[5]?.replace(/"/g, "").trim() || "";
     const rawStatus = statIdx >= 0 ? cols[statIdx]?.replace(/"/g, "").trim().toLowerCase() : "";
     const isPaid = statIdx < 0 || ["paid", "yes", "confirmed", "deposited", "done", "हाँ", "जमा"].some((k) => rawStatus.includes(k));
     rows.push({ name, amount, isPaid });
@@ -490,7 +495,30 @@ export default function TempleDonation() {
   const [donorRows, setDonorRows] = useState([]);
   const [loadingDonors, setLoadingDonors] = useState(false);
   const [donorError, setDonorError] = useState("");
+  const [showFundModal, setShowFundModal] = useState(false);
+  const [totalFundReceived, setTotalFundReceived] = useState("");
+  const [loadingFund, setLoadingFund] = useState(false);
+  const [fundError, setFundError] = useState("");
   const t = translations[lang];
+
+  const fetchAndShowTotalFund = async () => {
+    setShowFundModal(true);
+    setLoadingFund(true);
+    setFundError("");
+    try {
+      const gid = "1116878055";
+      const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}&range=B5`;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const text = (await res.text()).trim();
+      const value = text.replace(/"/g, "").split(/[\n,]/)[0]?.trim() || "";
+      setTotalFundReceived(value);
+    } catch {
+      setFundError(t.fetchError || "Could not load data. Please open the spreadsheet directly.");
+    } finally {
+      setLoadingFund(false);
+    }
+  };
 
   const fetchAndShowDonors = async () => {
     setShowDonorModal(true);
@@ -783,12 +811,20 @@ export default function TempleDonation() {
       white-space: nowrap;
     }
     .top-notice-inner {
-      display: inline-block;
+      display: inline-flex;
+      width: max-content;
       animation: topNoticeScroll 30s linear infinite;
+      will-change: transform;
+    }
+    .top-notice-item {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      padding-right: 48px; /* space between loops */
     }
     @keyframes topNoticeScroll {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
     /* Temple Comparison */
@@ -964,6 +1000,22 @@ export default function TempleDonation() {
       font-size: 16px; color: rgba(255,248,231,0.8);
       line-height: 1.7; margin-bottom: 16px;
     }
+    .whatsapp-place {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 17px;
+      color: var(--gold);
+      margin-top: 4px;
+      margin-bottom: 4px;
+      letter-spacing: 0.3px;
+    }
+    .whatsapp-name {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 18px;
+      color: rgba(255,248,231,0.92);
+      margin-top: 8px;
+      margin-bottom: 6px;
+      letter-spacing: 0.2px;
+    }
     .whatsapp-number {
       font-family: 'Cinzel Decorative', serif;
       font-size: 32px; color: #25D366;
@@ -1053,10 +1105,6 @@ export default function TempleDonation() {
     .footer-brand {
       font-family: 'Cinzel Decorative', serif;
       font-size: 20px; color: var(--gold);
-      margin-bottom: 8px;
-    }
-    .footer-reg {
-      font-size: 14px; color: rgba(255,248,231,0.5);
       margin-bottom: 8px;
     }
     .footer-addr {
@@ -1320,7 +1368,8 @@ export default function TempleDonation() {
               </div>
               <div className="top-notice-text">
                 <div className="top-notice-inner">
-                  {t.reasonP1}
+                  <span className="top-notice-item">{t.reasonP1}</span>
+                  <span className="top-notice-item" aria-hidden="true">{t.reasonP1}</span>
                 </div>
               </div>
             </div>
@@ -1337,15 +1386,15 @@ export default function TempleDonation() {
         <div className="section">
           <div className="stats-grid">
             <div className="stat-card">
-              <div className="stat-number"><Counter end={40000} prefix="₹" /></div>
+              <div className="stat-number"><Counter end={10000} prefix="₹" /></div>
               <div className="stat-label">{t.totalRaised}</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number"><Counter end={500000} prefix="₹" /></div>
+              <div className="stat-number"><span style={{ fontFamily: "'Cinzel Decorative', serif" }}>₹4–5 Lakh</span></div>
               <div className="stat-label">{t.totalGoal}</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number"><Counter end={40} /></div>
+              <div className="stat-number"><Counter end={15} /></div>
               <div className="stat-label">{t.totalDonors}</div>
             </div>
             <div className="stat-card">
@@ -1520,6 +1569,8 @@ export default function TempleDonation() {
             </div>
             <h3>{t.afterPayment}</h3>
             <p>{t.afterPaymentDesc}</p>
+            <div className="whatsapp-place">{t.whatsappPlace}</div>
+            <div className="whatsapp-name">{t.whatsappName}</div>
             <div className="whatsapp-number">{t.whatsappNumber}</div>
             <a
               href={`https://wa.me/919911414416?text=${encodeURIComponent("Jai Maa Kali! I have made a donation to Jai Maa Kali - Sri Durga Amma Devi Temple Reconstruction Trust. Attaching my payment screenshot.")}`}
@@ -1558,7 +1609,7 @@ export default function TempleDonation() {
             {t.viewSheet}
           </a>
           <br />
-          <button className="donor-list-btn" onClick={fetchAndShowDonors}>
+          <button className="donor-list-btn" onClick={fetchAndShowTotalFund}>
             👁 {t.viewDonorList}
           </button>
           <p style={{ marginTop: 20, fontSize: 14, color: "rgba(255,248,231,0.5)" }}>
@@ -1566,6 +1617,27 @@ export default function TempleDonation() {
           </p>
         </div>
       </div>
+
+      {/* Total Fund Modal */}
+      {showFundModal && (
+        <div className="modal-overlay" onClick={(e) => { if (e.target === e.currentTarget) setShowFundModal(false); }}>
+          <div className="modal-box">
+            <div className="modal-header">
+              <span className="modal-title">🙏 {t.viewDonorList}</span>
+              <button className="modal-close" onClick={() => setShowFundModal(false)}>✕</button>
+            </div>
+            <div className="modal-body" style={{ textAlign: "center" }}>
+              {loadingFund && <div className="modal-loading">⏳ {t.loadingDonors}</div>}
+              {fundError && <div className="modal-error">⚠️ {fundError}</div>}
+              {!loadingFund && !fundError && (
+                <div style={{ fontFamily: "'Cinzel Decorative', serif", fontSize: 42, color: "var(--gold)", marginTop: 10 }}>
+                  ₹{(totalFundReceived || "—").toString().replace(/[^\d.]/g, "") || totalFundReceived || "—"}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Donor Modal */}
       {showDonorModal && (
@@ -1668,7 +1740,6 @@ export default function TempleDonation() {
           <TempleBadgeIcon size={40} />
         </div>
         <div className="footer-brand">{t.footerText}</div>
-        <div className="footer-reg">{t.footerReg}</div>
         <div className="footer-addr">{t.footerAddress}</div>
         <Divider />
         <div className="footer-copy">{t.footerRights}</div>
