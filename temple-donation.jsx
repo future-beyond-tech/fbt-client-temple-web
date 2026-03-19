@@ -1519,12 +1519,13 @@ export default function TempleDonation() {
     }
     .welcome-popup-date {
       font-family: 'Cinzel Decorative', serif;
-      font-size: 0.82rem;
-      color: #FF6F00;
-      letter-spacing: 1px;
+      font-size: 0.88rem;
+      color: #ffffff;
+      font-weight: 700;
+      letter-spacing: 1.5px;
       margin: 16px 0 24px;
-      background: rgba(255,111,0,0.08);
-      border: 1px solid rgba(255,111,0,0.2);
+      background: rgba(255,111,0,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
       border-radius: 30px;
       padding: 7px 20px;
       display: inline-block;
@@ -1557,9 +1558,9 @@ export default function TempleDonation() {
       position: absolute;
       top: 14px;
       right: 16px;
-      background: rgba(196,146,42,0.15);
-      border: 1px solid rgba(196,146,42,0.4);
-      color: #C4922A;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.45);
+      color: #ffffff;
       border-radius: 50%;
       width: 34px;
       height: 34px;
@@ -1572,7 +1573,7 @@ export default function TempleDonation() {
       line-height: 1;
     }
     .welcome-popup-close:hover {
-      background: rgba(196,146,42,0.35);
+      background: rgba(255,255,255,0.25);
       transform: scale(1.1);
     }
     @media (max-width: 480px) {
