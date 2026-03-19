@@ -62,6 +62,14 @@ const translations = {
     amountLabel: "Amount",
     noDonors: "No confirmed donors yet.",
     noPending: "No pending entries.",
+    popupTitle: "जय माँ काली 🙏\nJai Maa Kali Mandir Renovation",
+    popupLine1: "With folded hands and a heart full of devotion, we humbly bow at the divine feet of Maa Kali — the eternal mother, the destroyer of darkness, the source of all creation.",
+    popupLine2: "Her sacred abode awaits renewal. This is not merely a construction — it is an act of faith, a collective prayer, an offering of love to the Mother who has sheltered us all.",
+    popupDate: "🗓️ Collection begins: 26th March 2025",
+    popupLine3: "The doors of donation shall remain open until every brick of Her temple is sanctified with your blessings. May Maa Kali's grace illuminate every soul who steps forward in this noble seva.",
+    popupQuote: "\"धन से नहीं, श्रद्धा से माँ प्रसन्न होती है।\"",
+    popupQuoteEn: "It is not wealth, but devotion that pleases the Mother.",
+    popupBtn: "🙏 Jai Maa Kali",
   },
   hi: {
     nav: "जय माँ काली मंदिर, बिरनिया",
@@ -122,6 +130,14 @@ const translations = {
     amountLabel: "राशि",
     noDonors: "अभी कोई पुष्ट दाता नहीं।",
     noPending: "कोई लंबित प्रविष्टि नहीं।",
+    popupTitle: "जय माँ काली 🙏\nजय माँ काली मंदिर जीर्णोद्धार",
+    popupLine1: "जोड़े हाथों और भक्ति से भरे हृदय के साथ, हम माँ काली के दिव्य चरणों में विनम्रतापूर्वक नमन करते हैं — सनातन माँ, अंधकार की संहारकर्ता, सृष्टि का स्रोत।",
+    popupLine2: "उनका पवित्र धाम पुनरुद्धार की प्रतीक्षा कर रहा है। यह केवल निर्माण नहीं — यह श्रद्धा का कार्य है, एक सामूहिक प्रार्थना, उस माँ को प्रेम का अर्पण जिसने हम सभी को आश्रय दिया है।",
+    popupDate: "🗓️ संग्रह शुरू: 26 मार्च 2025",
+    popupLine3: "दान के द्वार तब तक खुले रहेंगे जब तक उनके मंदिर की हर ईंट आपके आशीर्वाद से पवित्र न हो जाए। माँ काली की कृपा उन सभी आत्माओं को प्रकाशित करे जो इस पुण्य सेवा में आगे आते हैं।",
+    popupQuote: "\"धन से नहीं, श्रद्धा से माँ प्रसन्न होती है।\"",
+    popupQuoteEn: "माँ धन से नहीं, भक्ति से प्रसन्न होती हैं।",
+    popupBtn: "🙏 जय माँ काली",
   },
   te: {
     nav: "జై మా కాలి ఆలయం, బిర్నియా",
@@ -182,6 +198,14 @@ const translations = {
     amountLabel: "Amount",
     noDonors: "No confirmed donors yet.",
     noPending: "No pending entries.",
+    popupTitle: "జయ్ మా కాళి 🙏\nజయ్ మా కాళి మందిర్ పునరుద్ధరణ",
+    popupLine1: "చేతులు జోడించి, భక్తితో నిండిన హృదయంతో, మేము మా కాళి యొక్క దివ్య పాదాల వద్ద వినమ్రంగా సాష్టాంగపడుతున్నాము — శాశ్వతమైన తల్లి, చీకటి నాశకి, సర్వ సృష్టి మూలం.",
+    popupLine2: "ఆమె పవిత్ర నివాసం పునరుద్ధరణ కోసం ఎదురు చూస్తోంది. ఇది కేవలం నిర్మాణం మాత్రమే కాదు — ఇది విశ్వాసపు చర్య, సామూహిక ప్రార్థన, మనందరికీ ఆశ్రయమిచ్చిన తల్లికి ప్రేమ అర్పణ.",
+    popupDate: "🗓️ సేకరణ ప్రారంభం: 26 మార్చి 2025",
+    popupLine3: "ఆమె మందిరంలోని ప్రతి ఇటుక మీ ఆశీర్వాదాలతో పవిత్రం అయ్యే వరకు దాన ద్వారాలు తెరుచుకుని ఉంటాయి. ఈ పుణ్య సేవలో ముందడుగు వేసే ప్రతి ఆత్మను మా కాళి కృప వెలిగించాలి.",
+    popupQuote: "\"ధనంతో కాదు, భక్తితో తల్లి సంతోషిస్తుంది.\"",
+    popupQuoteEn: "It is not wealth, but devotion that pleases the Mother.",
+    popupBtn: "🙏 జయ్ మా కాళి",
   },
   mr: {
     nav: "जय माँ काली मंदिर, बिरनिया",
@@ -242,6 +266,14 @@ const translations = {
     amountLabel: "Amount",
     noDonors: "No confirmed donors yet.",
     noPending: "No pending entries.",
+    popupTitle: "जय माँ काली 🙏\nजय माँ काली मंदिर नवीनीकरण",
+    popupLine1: "हात जोडून आणि भक्तीने भरलेल्या हृदयाने, आम्ही माँ कालीच्या दिव्य चरणांवर नम्रपणे नतमस्तक होतो — चिरंतन माता, अंधाराची संहारक, सर्व सृष्टीचा स्रोत.",
+    popupLine2: "तिचे पवित्र निवासस्थान नूतनीकरणाची प्रतीक्षा करत आहे. हे केवळ बांधकाम नाही — हे श्रद्धेचे कार्य आहे, सामूहिक प्रार्थना, ज्या आईने आपल्या सर्वांना आश्रय दिला तिला प्रेमाचे अर्पण.",
+    popupDate: "🗓️ संकलन सुरू: 26 मार्च 2025",
+    popupLine3: "तिच्या मंदिराची प्रत्येक वीट आपल्या आशीर्वादाने पवित्र होईपर्यंत दानाचे दरवाजे उघडे राहतील. या पुण्य सेवेत पुढे येणाऱ्या प्रत्येक आत्म्याला माँ कालीची कृपा प्रकाशित करो.",
+    popupQuote: "\"धनाने नाही, श्रद्धेने माँ प्रसन्न होतात.\"",
+    popupQuoteEn: "It is not wealth, but devotion that pleases the Mother.",
+    popupBtn: "🙏 जय माँ काली",
   },
   bn: {
     nav: "জয় মা কালী মন্দির, বিরনিয়া",
@@ -302,6 +334,14 @@ const translations = {
     amountLabel: "Amount",
     noDonors: "No confirmed donors yet.",
     noPending: "No pending entries.",
+    popupTitle: "জয় মা কালি 🙏\nজয় মা কালি মন্দির সংস্কার",
+    popupLine1: "হাত জোড় করে এবং ভক্তিতে পূর্ণ হৃদয় নিয়ে, আমরা মা কালীর দিব্য পাদপদ্মে বিনম্রভাবে প্রণাম করি — চিরন্তন মা, অন্ধকারের বিনাশিনী, সমস্ত সৃষ্টির উৎস।",
+    popupLine2: "তাঁর পবিত্র ধাম পুনরুদ্ধারের প্রতীক্ষায় আছে। এটি কেবল নির্মাণ নয় — এটি বিশ্বাসের কাজ, সম্মিলিত প্রার্থনা, সেই মায়ের প্রতি ভালোবাসার অর্পণ যিনি আমাদের সকলকে আশ্রয় দিয়েছেন।",
+    popupDate: "🗓️ সংগ্রহ শুরু: ২৬ মার্চ ২০২৫",
+    popupLine3: "তাঁর মন্দিরের প্রতিটি ইট আপনার আশীর্বাদে পবিত্র না হওয়া পর্যন্ত দানের দ্বার উন্মুক্ত থাকবে। এই পুণ্য সেবায় এগিয়ে আসা প্রতিটি আত্মাকে মা কালীর কৃপা আলোকিত করুক।",
+    popupQuote: "\"ধন দিয়ে নয়, ভক্তি দিয়ে মা সন্তুষ্ট হন।\"",
+    popupQuoteEn: "It is not wealth, but devotion that pleases the Mother.",
+    popupBtn: "🙏 জয় মা কালি",
   },
   od: {
     nav: "ଜୟ ମା କାଳୀ ମନ୍ଦିର, ବିରନିଆ",
@@ -362,6 +402,14 @@ const translations = {
     amountLabel: "Amount",
     noDonors: "No confirmed donors yet.",
     noPending: "No pending entries.",
+    popupTitle: "ଜୟ ମା କାଳୀ 🙏\nଜୟ ମା କାଳୀ ମନ୍ଦିର ନବୀକରଣ",
+    popupLine1: "ହାତ ଯୋଡ଼ି ଏବଂ ଭକ୍ତିରେ ପୂର୍ଣ ହୃଦୟ ନେଇ, ଆମେ ମା କାଳୀଙ୍କ ଦିବ୍ୟ ଚରଣରେ ନମ୍ରଭାବରେ ପ୍ରଣାମ କରୁ — ଶାଶ୍ୱତ ମା, ଅନ୍ଧକାରର ସଂହାରିଣୀ, ସମସ୍ତ ସୃଷ୍ଟିର ଉତ୍ସ।",
+    popupLine2: "ତାଙ୍କ ପବିତ୍ର ଧାମ ପୁନରୁଦ୍ଧାରର ପ୍ରତୀକ୍ଷାରେ ଅଛି। ଏହା କେବଳ ନିର୍ମାଣ ନୁହେଁ — ଏହା ବିଶ୍ୱାସର କାର୍ଯ୍ୟ, ସାମୂହିକ ପ୍ରାର୍ଥନା, ଆମ ସକଳଙ୍କୁ ଆଶ୍ରୟ ଦେଇଥିବା ମାଙ୍କ ପ୍ରତି ଭଲପାଇବାର ଅର୍ପଣ।",
+    popupDate: "🗓️ ସଂଗ୍ରହ ଆରମ୍ଭ: ୨୬ ମାର୍ଚ୍ଚ ୨୦୨୫",
+    popupLine3: "ତାଙ୍କ ମନ୍ଦିରର ପ୍ରତ୍ୟେକ ଇଟା ଆପଣଙ୍କ ଆଶୀର୍ବାଦରେ ପବିତ୍ର ନ ହେବା ପର୍ଯ୍ୟନ୍ତ ଦାନର ଦ୍ୱାର ଖୋଲା ରହିବ। ଏହି ପୁଣ୍ୟ ସେବାରେ ଆଗେ ଆସୁଥିବା ପ୍ରତ୍ୟେକ ଆତ୍ମାକୁ ମା କାଳୀଙ୍କ କୃପା ଆଲୋକିତ କରୁ।",
+    popupQuote: "\"ଧନ ନୁହେଁ, ଭକ୍ତି ଦ୍ୱାରା ମା ସନ୍ତୁଷ୍ଟ ହୁଅନ୍ତି।\"",
+    popupQuoteEn: "It is not wealth, but devotion that pleases the Mother.",
+    popupBtn: "🙏 ଜୟ ମା କାଳୀ",
   },
 };
 
@@ -502,6 +550,7 @@ export default function TempleDonation() {
   const [lang, setLang] = useState("hi");
   const [showLangMenu, setShowLangMenu] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [showWelcomePopup, setShowWelcomePopup] = useState(true);
   const [showDonorModal, setShowDonorModal] = useState(false);
   const [donorRows, setDonorRows] = useState([]);
   const [loadingDonors, setLoadingDonors] = useState(false);
@@ -1396,6 +1445,119 @@ export default function TempleDonation() {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(8px); }
     }
+    .welcome-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(10,5,2,0.82);
+      backdrop-filter: blur(6px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      animation: fadeIn 0.6s ease;
+    }
+    .welcome-popup {
+      background: linear-gradient(160deg, #1a0a00 0%, #2a1000 50%, #1a0a00 100%);
+      border: 1px solid rgba(196,146,42,0.5);
+      border-radius: 20px;
+      max-width: 520px;
+      width: 100%;
+      padding: 44px 40px 36px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 0 60px rgba(196,146,42,0.25), 0 0 120px rgba(139,26,26,0.15), inset 0 1px 0 rgba(196,146,42,0.2);
+      animation: popupEntrance 0.7s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    @keyframes popupEntrance {
+      from { opacity: 0; transform: scale(0.85) translateY(30px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .welcome-popup-diya {
+      font-size: 42px;
+      margin-bottom: 6px;
+      animation: divaGlow 2.5s ease-in-out infinite;
+      display: block;
+    }
+    @keyframes divaGlow {
+      0%, 100% { filter: drop-shadow(0 0 6px rgba(255,150,0,0.6)); transform: scale(1); }
+      50%       { filter: drop-shadow(0 0 18px rgba(255,150,0,0.9)); transform: scale(1.08); }
+    }
+    .welcome-popup-om {
+      font-size: 28px;
+      color: #C4922A;
+      letter-spacing: 6px;
+      margin-bottom: 18px;
+      opacity: 0.85;
+      display: block;
+    }
+    .welcome-popup-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.15rem;
+      color: #C4922A;
+      margin-bottom: 22px;
+      line-height: 1.5;
+      text-shadow: 0 0 20px rgba(196,146,42,0.4);
+    }
+    .welcome-popup-divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #C4922A, transparent);
+      margin: 0 auto 22px;
+    }
+    .welcome-popup-message {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.08rem;
+      color: rgba(255,235,200,0.92);
+      line-height: 1.85;
+      margin-bottom: 10px;
+    }
+    .welcome-popup-message em {
+      color: #C4922A;
+      font-style: normal;
+      font-weight: 600;
+    }
+    .welcome-popup-date {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 0.82rem;
+      color: #FF6F00;
+      letter-spacing: 1px;
+      margin: 16px 0 24px;
+      background: rgba(255,111,0,0.08);
+      border: 1px solid rgba(255,111,0,0.2);
+      border-radius: 30px;
+      padding: 7px 20px;
+      display: inline-block;
+    }
+    .welcome-popup-footer {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1rem;
+      color: rgba(255,235,200,0.7);
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+    .welcome-popup-btn {
+      background: linear-gradient(135deg, #C4922A, #8B1A1A);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 13px 44px;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(196,146,42,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .welcome-popup-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(196,146,42,0.5);
+    }
+    @media (max-width: 480px) {
+      .welcome-popup { padding: 32px 22px 28px; }
+      .welcome-popup-title { font-size: 0.95rem; }
+      .welcome-popup-message { font-size: 0.97rem; }
+    }
   `;
 
   // Generate particles
@@ -1409,6 +1571,34 @@ export default function TempleDonation() {
   return (
     <>
       <style>{css}</style>
+
+      {/* Welcome Popup */}
+      {showWelcomePopup && (
+        <div className="welcome-overlay" onClick={() => setShowWelcomePopup(false)}>
+          <div className="welcome-popup" onClick={e => e.stopPropagation()}>
+            <span className="welcome-popup-diya">🪔</span>
+            <span className="welcome-popup-om">ॐ</span>
+            <div className="welcome-popup-title">
+              {t.popupTitle.split("\n").map((line, i) => (
+                <span key={i}>{line}{i === 0 && <br />}</span>
+              ))}
+            </div>
+            <div className="welcome-popup-divider" />
+            <p className="welcome-popup-message">{t.popupLine1}</p>
+            <p className="welcome-popup-message">{t.popupLine2}</p>
+            <div className="welcome-popup-date">{t.popupDate}</div>
+            <p className="welcome-popup-message">{t.popupLine3}</p>
+            <p className="welcome-popup-footer">
+              {t.popupQuote}<br />
+              <span style={{fontSize:'0.88em', color:'rgba(255,235,200,0.5)'}}>{t.popupQuoteEn}</span>
+            </p>
+            <button className="welcome-popup-btn" onClick={() => setShowWelcomePopup(false)}>
+              {t.popupBtn}
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="mandala-bg" />
 
       {/* Navigation */}
@@ -1433,7 +1623,7 @@ export default function TempleDonation() {
                   <button
                     key={code}
                     className={`lang-option ${lang === code ? "active" : ""}`}
-                    onClick={() => { setLang(code); setShowLangMenu(false); }}
+                    onClick={() => { setLang(code); setShowLangMenu(false); setShowWelcomePopup(true); }}
                   >
                     {name}
                   </button>
@@ -1502,7 +1692,7 @@ export default function TempleDonation() {
               <div className="stat-label">{t.totalDonors}</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number"><Counter end={142} /></div>
+              <div className="stat-number"><Counter end={30} /></div>
               <div className="stat-label">{t.daysLeft}</div>
             </div>
           </div>
