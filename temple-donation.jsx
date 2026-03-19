@@ -1553,6 +1553,28 @@ export default function TempleDonation() {
       transform: translateY(-2px);
       box-shadow: 0 8px 30px rgba(196,146,42,0.5);
     }
+    .welcome-popup-close {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      background: rgba(196,146,42,0.15);
+      border: 1px solid rgba(196,146,42,0.4);
+      color: #C4922A;
+      border-radius: 50%;
+      width: 34px;
+      height: 34px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, transform 0.2s;
+      line-height: 1;
+    }
+    .welcome-popup-close:hover {
+      background: rgba(196,146,42,0.35);
+      transform: scale(1.1);
+    }
     @media (max-width: 480px) {
       .welcome-popup { padding: 32px 22px 28px; }
       .welcome-popup-title { font-size: 0.95rem; }
@@ -1576,6 +1598,7 @@ export default function TempleDonation() {
       {showWelcomePopup && (
         <div className="welcome-overlay" onClick={() => setShowWelcomePopup(false)}>
           <div className="welcome-popup" onClick={e => e.stopPropagation()}>
+            <button className="welcome-popup-close" onClick={() => setShowWelcomePopup(false)} aria-label="Close">✕</button>
             <span className="welcome-popup-diya">🪔</span>
             <span className="welcome-popup-om">ॐ</span>
             <div className="welcome-popup-title">
