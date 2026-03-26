@@ -11,17 +11,17 @@ const translations = {
     heroSub: "Join us in the sacred mission to renovate and restore the divine Jai Maa Kali Mandir. Every contribution brings us closer to creating a magnificent spiritual sanctuary for generations to come.",
     donateNow: "Donate Now",
     viewDonors: "View Donors",
-    aboutTitle: "About the Renovation",
-    aboutP1: "For centuries, the Jai Maa Kali Mandir has been a beacon of spiritual light and devotion. The temple, originally built over 200 years ago, has served as a sacred sanctuary for millions of devotees seeking the divine blessings of Maa Durga.",
-    aboutP2: "Due to natural wear and the passage of time, the temple structure requires significant restoration and renovation. Our vision is to renew this divine abode into a magnificent spiritual complex that honors the ancient traditions while providing modern facilities for devotees.",
-    aboutP3: "The renovation project includes restoration of the main sanctum, construction of new prayer halls, renovation of the temple gopuram, landscaping of the temple premises, and installation of proper drainage and lighting systems.",
+    aboutTitle: "Jai Maa Kali 🙏",
+    aboutP1: "This sacred abode of Maa Kali is approximately 80+ years old. Over time, the temple has been constructed and reconstructed by the villagers. Currently, the road level has risen about 1.5–2 feet above the temple, causing rainwater to enter the temple during monsoons, which creates significant difficulties for the devotees.",
+    aboutP2: "Keeping this problem in mind, it has been decided to raise the temple above the road level and reconstruct it in a new form. The auspicious date for the commencement of temple construction has been set for April 20, 2026, and the construction work will begin from that day.",
+    aboutP3: "Your cooperation in this sacred endeavor is extremely important. We humbly request everyone to contribute donations in the name of Maa Kali as per your devotion and become a part of this noble cause. All the villagers will forever be grateful for your invaluable support. Jai Maa Kali 🙏",
     oldTemple: "Current Temple",
     oldTempleDesc: "The existing temple structure showing signs of age and wear, requiring urgent restoration to preserve its sacred heritage.",
     newTemple: "Proposed New Temple",
     newTempleDesc: "The envisioned magnificently renovated temple — a divine masterpiece blending ancient architecture with modern amenities.",
     donateTitle: "Make a Sacred Offering",
     donateSub: "Scan the QR code below to make your divine contribution. Every offering, big or small, brings us closer to realizing this sacred vision.",
-    scanQR: "Scan to Donate",
+    scanQR: "Aravind Kumar Singh",
     qrNote: "Scan this QR code with any UPI app (Google Pay, PhonePe, Paytm) to make your sacred offering",
     afterPayment: "After Making Your Offering (Jai Maa Kali Mandir, Birnia)",
     afterPaymentDesc: "After completing your donation, please send a screenshot of the payment confirmation along with your full name, phone number, and address via WhatsApp to the number below:",
@@ -62,13 +62,13 @@ const translations = {
     amountLabel: "Amount",
     noDonors: "No confirmed donors yet.",
     noPending: "No pending entries.",
-    popupTitle: "जय माँ काली 🙏\nJai Maa Kali Mandir Renovation",
-    popupLine1: "With folded hands and a heart full of devotion, we humbly bow at the divine feet of Maa Kali — the eternal mother, the destroyer of darkness, the source of all creation.",
-    popupLine2: "Her sacred abode awaits renewal. This is not merely a construction — it is an act of faith, a collective prayer, an offering of love to the Mother who has sheltered us all.",
-    popupDate: "🗓️ Collection begins: 26th March 2026",
-    popupLine3: "The doors of donation shall remain open until every brick of Her temple is sanctified with your blessings. May Maa Kali's grace illuminate every soul who steps forward in this noble seva.",
-    popupQuote: "\"धन से नहीं, श्रद्धा से माँ प्रसन्न होती है।\"",
-    popupQuoteEn: "It is not wealth, but devotion that pleases the Mother.",
+    popupTitle: "🪔 Jai Maa Kali 🙏\nJai Maa Kali Mandir Renovation",
+    popupLine1: "With devotion, we bow at the feet of Maa Kali. The reconstruction of the temple is a collective act of faith.",
+    popupLine2: "Your smallest contribution is also significant in this sacred cause. All the villagers will forever be grateful for your invaluable support.",
+    popupDate: "📅 Collection begins: 26th March 2026",
+    popupLine3: "May Maa Kali keep her blessings upon everyone.",
+    popupQuote: "\"Mother is pleased not by wealth, but by devotion.\"",
+    popupQuoteEn: "",
     popupBtn: "🙏 Jai Maa Kali",
   },
   hi: {
@@ -79,17 +79,17 @@ const translations = {
     heroSub: "जय माँ काली मंदिर के नवीनीकरण और जीर्णोद्धार के पवित्र मिशन में हमारे साथ जुड़ें। हर योगदान आने वाली पीढ़ियों के लिए एक भव्य आध्यात्मिक अभयारण्य बनाने के करीब लाता है।",
     donateNow: "अभी दान करें",
     viewDonors: "दाताओं को देखें",
-    aboutTitle: "नवीनीकरण के बारे में",
-    aboutP1: "सदियों से, जय माँ काली मंदिर आध्यात्मिक प्रकाश और भक्ति का प्रतीक रहा है। 200 से अधिक वर्ष पहले निर्मित यह मंदिर माँ काली के दिव्य आशीर्वाद की कामना करने वाले लाखों भक्तों के लिए एक पवित्र अभयारण्य रहा है।",
-    aboutP2: "प्राकृतिक क्षरण और समय बीतने के कारण, मंदिर संरचना को महत्वपूर्ण जीर्णोद्धार और पुनर्निर्माण की आवश्यकता है। हमारी दृष्टि इस दिव्य धाम को एक भव्य आध्यात्मिक परिसर में पुनर्निर्मित करना है।",
-    aboutP3: "पुनर्निर्माण परियोजना में मुख्य गर्भगृह की बहाली, नए प्रार्थना हॉल का निर्माण, मंदिर गोपुरम का नवीनीकरण, और आधुनिक सुविधाओं की स्थापना शामिल है।",
+    aboutTitle: "जय माँ काली 🙏",
+    aboutP1: "माँ काली जी का यह आस्थल लगभग 80+ वर्ष पुराना है। समय-समय पर ग्रामवासियों द्वारा मंदिर का निर्माण एवं पुनः निर्माण किया जाता रहा है। वर्तमान में सड़क का स्तर मंदिर से लगभग 1.5–2 फुट ऊँचा हो जाने के कारण वर्षा के समय पानी मंदिर में प्रवेश कर जाता है, जिससे श्रद्धालुओं को काफी कठिनाइयों का सामना करना पड़ता है।",
+    aboutP2: "इसी समस्या को ध्यान में रखते हुए यह निर्णय लिया गया है कि मंदिर को सड़क के स्तर से ऊपर उठाकर पुनः नवीन रूप में निर्माण किया जाए। मंदिर निर्माण कार्य का शुभ मुहूर्त 20 अप्रैल 2026 निर्धारित किया गया है, और इसी दिन से निर्माण कार्य प्रारंभ किया जाएगा।",
+    aboutP3: "इस पुण्य कार्य में आपका सहयोग अत्यंत महत्वपूर्ण है। आप सभी से विनम्र निवेदन है कि अपनी श्रद्धा अनुसार माँ काली के नाम दान देकर इस कार्य में सहभागी बनें। समस्त ग्रामवासी आपके इस अमूल्य सहयोग के लिए सदैव आभारी रहेंगे। जय माँ काली 🙏",
     oldTemple: "वर्तमान मंदिर",
     oldTempleDesc: "मौजूदा मंदिर संरचना जो समय के साथ जीर्ण हो गई है, इसकी पवित्र विरासत को संरक्षित करने के लिए तत्काल जीर्णोद्धार की आवश्यकता है।",
     newTemple: "प्रस्तावित नया मंदिर",
     newTempleDesc: "कल्पित भव्य नवीनीकृत मंदिर — प्राचीन वास्तुकला और आधुनिक सुविधाओं का दिव्य मिश्रण।",
     donateTitle: "पवित्र दान करें",
     donateSub: "अपना दिव्य योगदान देने के लिए नीचे दिए गए QR कोड को स्कैन करें। हर चढ़ावा इस पवित्र दृष्टि को साकार करने के करीब लाता है।",
-    scanQR: "दान के लिए स्कैन करें",
+    scanQR: "Aravind Kumar Singh",
     qrNote: "अपना पवित्र चढ़ावा देने के लिए किसी भी UPI ऐप से इस QR कोड को स्कैन करें",
     afterPayment: "दान करने के बाद (जय माँ काली मंदिर, बिरनिया)",
     afterPaymentDesc: "दान पूरा करने के बाद, कृपया भुगतान पुष्टि का स्क्रीनशॉट अपने पूरे नाम, फोन नंबर और पते के साथ नीचे दिए गए नंबर पर व्हाट्सएप करें:",
@@ -130,13 +130,13 @@ const translations = {
     amountLabel: "राशि",
     noDonors: "अभी कोई पुष्ट दाता नहीं।",
     noPending: "कोई लंबित प्रविष्टि नहीं।",
-    popupTitle: "जय माँ काली 🙏\nजय माँ काली मंदिर जीर्णोद्धार",
-    popupLine1: "जोड़े हाथों और भक्ति से भरे हृदय के साथ, हम माँ काली के दिव्य चरणों में विनम्रतापूर्वक नमन करते हैं — सनातन माँ, अंधकार की संहारकर्ता, सृष्टि का स्रोत।",
-    popupLine2: "उनका पवित्र धाम पुनरुद्धार की प्रतीक्षा कर रहा है। यह केवल निर्माण नहीं — यह श्रद्धा का कार्य है, एक सामूहिक प्रार्थना, उस माँ को प्रेम का अर्पण जिसने हम सभी को आश्रय दिया है।",
-    popupDate: "🗓️ संग्रह शुरू: 26 मार्च 2026",
-    popupLine3: "दान के द्वार तब तक खुले रहेंगे जब तक उनके मंदिर की हर ईंट आपके आशीर्वाद से पवित्र न हो जाए। माँ काली की कृपा उन सभी आत्माओं को प्रकाशित करे जो इस पुण्य सेवा में आगे आते हैं।",
-    popupQuote: "\"धन से नहीं, श्रद्धा से माँ प्रसन्न होती है।\"",
-    popupQuoteEn: "माँ धन से नहीं, भक्ति से प्रसन्न होती हैं।",
+    popupTitle: "🪔 जय माँ काली 🙏\nजय माँ काली मंदिर जीर्णोद्धार",
+    popupLine1: "भक्ति भाव से हम माँ काली के चरणों में नमन करते हैं। मंदिर का पुनर्निर्माण एक सामूहिक श्रद्धा का कार्य है।",
+    popupLine2: "आपका छोटा सा सहयोग भी इस पुण्य कार्य में महत्वपूर्ण है। हम समस्त ग्रामवासी आपके इस अमूल्य सहयोग के लिए सदैव आभारी रहेंगे।",
+    popupDate: "📅 संग्रह प्रारंभ: 26 मार्च 2026",
+    popupLine3: "माँ काली सभी पर अपनी कृपा बनाए रखें।",
+    popupQuote: "\"माँ धन से नहीं, श्रद्धा से प्रसन्न होती हैं।\"",
+    popupQuoteEn: "",
     popupBtn: "🙏 जय माँ काली",
   },
   te: {
@@ -147,17 +147,17 @@ const translations = {
     heroSub: "జై మా కాలి ఆలయాన్ని నూతనీకరించే పవిత్ర మిషన్‌లో మాతో చేరండి. ప్రతి సహకారం రాబోయే తరాలకు ఒక అద్భుతమైన ఆధ్యాత్మిక ఆశ్రయాన్ని సృష్టించడానికి మనల్ని దగ్గరగా తీసుకువస్తుంది.",
     donateNow: "ఇప్పుడు దానం చేయండి",
     viewDonors: "దాతలను చూడండి",
-    aboutTitle: "పునర్వ్యవస్థీకరణ (Renovation) గురించి",
-    aboutP1: "శతాబ్దాలుగా, జై మా కాలి ఆలయం ఆధ్యాత్మిక వెలుగు మరియు భక్తి యొక్క దీపస్తంభంగా ఉంది. 200 సంవత్సరాల కిందట నిర్మించబడిన ఈ ఆలయం లక్షలాది భక్తులకు పవిత్ర ఆశ్రయంగా ఉంది.",
-    aboutP2: "సహజ క్షీణత మరియు కాలం గడవడం వలన, ఆలయ నిర్మాణానికి గణనీయమైన పునరుద్ధరణ అవసరం. ఈ దివ్య నివాసాన్ని అద్భుతమైన ఆధ్యాత్మిక సముదాయంగా పునర్నిర్మించడం మా దృష్టి.",
-    aboutP3: "పునర్నిర్మాణ ప్రాజెక్ట్‌లో ప్రధాన గర్భగృహ పునరుద్ధరణ, కొత్త ప్రార్థనా మందిరాల నిర్మాణం, ఆలయ గోపురం నవీకరణ మరియు ఆధునిక సౌకర్యాల ఏర్పాటు ఉన్నాయి.",
+    aboutTitle: "జై మా కాళి 🙏",
+    aboutP1: "మా కాళి తల్లి యొక్క ఈ పవిత్ర స్థలం సుమారు 80+ సంవత్సరాల పురాతనమైనది. కాలానుగుణంగా గ్రామస్తులచే ఆలయ నిర్మాణం మరియు పునర్నిర్మాణం జరుగుతూ వచ్చింది. ప్రస్తుతం రోడ్డు స్థాయి ఆలయం కంటే సుమారు 1.5–2 అడుగులు ఎత్తుగా ఉండటం వలన వర్షాకాలంలో నీరు ఆలయంలోకి ప్రవేశిస్తుంది, దీని వలన భక్తులకు చాలా ఇబ్బందులు ఎదురవుతున్నాయి.",
+    aboutP2: "ఈ సమస్యను దృష్టిలో ఉంచుకొని, ఆలయాన్ని రోడ్డు స్థాయి కంటే పైకి ఎత్తి కొత్త రూపంలో పునర్నిర్మించాలని నిర్ణయించబడింది. ఆలయ నిర్మాణ కార్యక్రమానికి శుభ ముహూర్తం 20 ఏప్రిల్ 2026 గా నిర్ణయించబడింది, మరియు ఆ రోజు నుండే నిర్మాణ కార్యక్రమం ప్రారంభమవుతుంది.",
+    aboutP3: "ఈ పుణ్య కార్యంలో మీ సహకారం అత్యంత ముఖ్యమైనది. మీ అందరికీ వినమ్ర విజ్ఞప్తి — మీ శ్రద్ధ అనుసారం మా కాళి పేరున దానం చేసి ఈ కార్యంలో భాగస్వాములు కండి. సమస్త గ్రామస్తులు మీ ఈ అమూల్యమైన సహకారానికి సదా కృతజ్ఞులుగా ఉంటారు. జై మా కాళి 🙏",
     oldTemple: "ప్రస్తుత ఆలయం",
     oldTempleDesc: "కాలం గడవడంతో శిథిలమైన ఆలయ నిర్మాణం, దాని పవిత్ర వారసత్వాన్ని సంరక్షించడానికి తక్షణ పునరుద్ధరణ అవసరం.",
     newTemple: "ప్రతిపాదిత కొత్త ఆలయం",
     newTempleDesc: "ఊహించిన అద్భుతమైన పునర్నిర్మిత ఆలయం — ప్రాచీన వాస్తుశిల్పం మరియు ఆధునిక సౌకర్యాల దివ్య మిశ్రమం.",
     donateTitle: "పవిత్ర అర్పణ చేయండి",
     donateSub: "మీ దివ్య సహకారం అందించడానికి క్రింది QR కోడ్‌ను స్కాన్ చేయండి. ప్రతి అర్పణ ఈ పవిత్ర దృష్టిని సాకారం చేయడానికి మనల్ని దగ్గరగా తీసుకువస్తుంది.",
-    scanQR: "దానం కోసం స్కాన్ చేయండి",
+    scanQR: "Aravind Kumar Singh",
     qrNote: "మీ పవిత్ర అర్పణ చేయడానికి ఏదైనా UPI యాప్‌తో ఈ QR కోడ్‌ను స్కాన్ చేయండి",
     afterPayment: "మీ అర్పణ చేసిన తర్వాత (జై మా కాలి మందిరం, బిర్నియా)",
     afterPaymentDesc: "దానం పూర్తి చేసిన తర్వాత, దయచేసి చెల్లింపు నిర్ధారణ స్క్రీన్‌షాట్‌ను మీ పూర్తి పేరు, ఫోన్ నంబర్ మరియు చిరునామాతో క్రింది నంబర్‌కు WhatsApp చేయండి:",
@@ -198,14 +198,14 @@ const translations = {
     amountLabel: "Amount",
     noDonors: "No confirmed donors yet.",
     noPending: "No pending entries.",
-    popupTitle: "జయ్ మా కాళి 🙏\nజయ్ మా కాళి మందిర్ పునరుద్ధరణ",
-    popupLine1: "చేతులు జోడించి, భక్తితో నిండిన హృదయంతో, మేము మా కాళి యొక్క దివ్య పాదాల వద్ద వినమ్రంగా సాష్టాంగపడుతున్నాము — శాశ్వతమైన తల్లి, చీకటి నాశకి, సర్వ సృష్టి మూలం.",
-    popupLine2: "ఆమె పవిత్ర నివాసం పునరుద్ధరణ కోసం ఎదురు చూస్తోంది. ఇది కేవలం నిర్మాణం మాత్రమే కాదు — ఇది విశ్వాసపు చర్య, సామూహిక ప్రార్థన, మనందరికీ ఆశ్రయమిచ్చిన తల్లికి ప్రేమ అర్పణ.",
-    popupDate: "🗓️ సేకరణ ప్రారంభం: 26 మార్చి 2026",
-    popupLine3: "ఆమె మందిరంలోని ప్రతి ఇటుక మీ ఆశీర్వాదాలతో పవిత్రం అయ్యే వరకు దాన ద్వారాలు తెరుచుకుని ఉంటాయి. ఈ పుణ్య సేవలో ముందడుగు వేసే ప్రతి ఆత్మను మా కాళి కృప వెలిగించాలి.",
-    popupQuote: "\"ధనంతో కాదు, భక్తితో తల్లి సంతోషిస్తుంది.\"",
-    popupQuoteEn: "It is not wealth, but devotion that pleases the Mother.",
-    popupBtn: "🙏 జయ్ మా కాళి",
+    popupTitle: "🪔 జై మా కాళి 🙏\nజై మా కాళి మందిర జీర్ణోద్ధరణ",
+    popupLine1: "భక్తి భావంతో మేము మా కాళి పాదాలకు నమస్కరిస్తున్నాము. మందిర పునర్నిర్మాణం ఒక సామూహిక శ్రద్ధా కార్యం.",
+    popupLine2: "మీ చిన్న సహకారం కూడా ఈ పుణ్య కార్యంలో ముఖ్యమైనది. సమస్త గ్రామస్తులు మీ ఈ అమూల్యమైన సహకారానికి సదా కృతజ్ఞులుగా ఉంటారు.",
+    popupDate: "📅 సేకరణ ప్రారంభం: 26 మార్చి 2026",
+    popupLine3: "మా కాళి అందరిపై తన కృపను కొనసాగించాలి.",
+    popupQuote: "\"తల్లి ధనంతో కాదు, శ్రద్ధతో సంతోషిస్తుంది.\"",
+    popupQuoteEn: "",
+    popupBtn: "🙏 జై మా కాళి",
   },
   mr: {
     nav: "जय माँ काली मंदिर, बिरनिया",
@@ -215,17 +215,17 @@ const translations = {
     heroSub: "जय माँ काली मंदिराच्या नूतनीकरणाच्या पवित्र मोहिमेत सामील व्हा. प्रत्येक योगदान येणाऱ्या पिढ्यांसाठी एक भव्य आध्यात्मिक अभयारण्य निर्माण करण्याच्या जवळ आणते.",
     donateNow: "आता दान करा",
     viewDonors: "दाते पहा",
-    aboutTitle: "नूतनीकरणाबद्दल",
-    aboutP1: "शतकानुशतके, जय माँ काली मंदिर हे आध्यात्मिक प्रकाश आणि भक्तीचे प्रतीक आहे. 200 वर्षांपूर्वी बांधलेले हे मंदिर लाखो भक्तांसाठी पवित्र अभयारण्य आहे.",
-    aboutP2: "नैसर्गिक झीज आणि काळाच्या ओघामुळे, मंदिर संरचनेला महत्त्वपूर्ण जीर्णोद्धार आवश्यक आहे.",
-    aboutP3: "पुनर्बांधणी प्रकल्पात मुख्य गर्भगृहाची पुनर्स्थापना, नवीन प्रार्थना सभागृहांचे बांधकाम आणि आधुनिक सुविधांची स्थापना समाविष्ट आहे.",
+    aboutTitle: "जय माँ काली 🙏",
+    aboutP1: "माँ काली देवीचे हे पवित्र स्थान अंदाजे 80+ वर्षे जुने आहे. वेळोवेळी ग्रामस्थांनी मंदिराचे बांधकाम आणि पुनर्बांधणी केली आहे. सध्या रस्त्याची पातळी मंदिरापेक्षा सुमारे 1.5–2 फूट उंच झाल्यामुळे पावसाळ्यात पाणी मंदिरात शिरते, ज्यामुळे भाविकांना खूप अडचणींना सामोरे जावे लागते.",
+    aboutP2: "या समस्येचा विचार करून, मंदिर रस्त्याच्या पातळीपेक्षा उंच करून नव्या स्वरूपात पुनर्बांधणी करण्याचा निर्णय घेण्यात आला आहे. मंदिर बांधकामाचा शुभ मुहूर्त 20 एप्रिल 2026 निश्चित करण्यात आला आहे आणि त्याच दिवसापासून बांधकाम सुरू होईल.",
+    aboutP3: "या पुण्य कार्यात तुमचे सहकार्य अत्यंत महत्त्वाचे आहे. सर्वांना विनम्र विनंती आहे की आपल्या श्रद्धेनुसार माँ कालीच्या नावाने दान देऊन या कार्यात सहभागी व्हा. समस्त ग्रामस्थ तुमच्या या अमूल्य सहकार्याबद्दल सदैव आभारी राहतील. जय माँ काली 🙏",
     oldTemple: "सध्याचे मंदिर",
     oldTempleDesc: "काळाच्या ओघात जीर्ण झालेली मंदिर रचना, तिच्या पवित्र वारशाचे जतन करण्यासाठी तातडीने जीर्णोद्धार आवश्यक.",
     newTemple: "प्रस्तावित नवीन मंदिर",
     newTempleDesc: "कल्पित भव्य पुनर्निर्मित मंदिर — प्राचीन वास्तुकला आणि आधुनिक सुविधांचे दिव्य मिश्रण.",
     donateTitle: "पवित्र अर्पण करा",
     donateSub: "तुमचे दिव्य योगदान देण्यासाठी खालील QR कोड स्कॅन करा.",
-    scanQR: "दानासाठी स्कॅन करा",
+    scanQR: "Aravind Kumar Singh",
     qrNote: "तुमचे पवित्र अर्पण करण्यासाठी कोणत्याही UPI अॅपने हा QR कोड स्कॅन करा",
     afterPayment: "दान केल्यानंतर (जय माँ काली मंदिर, बिरनिया)",
     afterPaymentDesc: "दान पूर्ण केल्यानंतर, कृपया पेमेंट पुष्टीकरणाचा स्क्रीनशॉट तुमचे पूर्ण नाव, फोन नंबर आणि पत्त्यासह खालील नंबरवर WhatsApp करा:",
@@ -266,13 +266,13 @@ const translations = {
     amountLabel: "Amount",
     noDonors: "No confirmed donors yet.",
     noPending: "No pending entries.",
-    popupTitle: "जय माँ काली 🙏\nजय माँ काली मंदिर नवीनीकरण",
-    popupLine1: "हात जोडून आणि भक्तीने भरलेल्या हृदयाने, आम्ही माँ कालीच्या दिव्य चरणांवर नम्रपणे नतमस्तक होतो — चिरंतन माता, अंधाराची संहारक, सर्व सृष्टीचा स्रोत.",
-    popupLine2: "तिचे पवित्र निवासस्थान नूतनीकरणाची प्रतीक्षा करत आहे. हे केवळ बांधकाम नाही — हे श्रद्धेचे कार्य आहे, सामूहिक प्रार्थना, ज्या आईने आपल्या सर्वांना आश्रय दिला तिला प्रेमाचे अर्पण.",
-    popupDate: "🗓️ संकलन सुरू: 26 मार्च 2026",
-    popupLine3: "तिच्या मंदिराची प्रत्येक वीट आपल्या आशीर्वादाने पवित्र होईपर्यंत दानाचे दरवाजे उघडे राहतील. या पुण्य सेवेत पुढे येणाऱ्या प्रत्येक आत्म्याला माँ कालीची कृपा प्रकाशित करो.",
-    popupQuote: "\"धनाने नाही, श्रद्धेने माँ प्रसन्न होतात.\"",
-    popupQuoteEn: "It is not wealth, but devotion that pleases the Mother.",
+    popupTitle: "🪔 जय माँ काली 🙏\nजय माँ काली मंदिर जीर्णोद्धार",
+    popupLine1: "भक्ती भावाने आम्ही माँ कालीच्या चरणांवर नतमस्तक होतो. मंदिराचे पुनर्बांधणी हे सामूहिक श्रद्धेचे कार्य आहे.",
+    popupLine2: "तुमचे छोटेसे सहकार्य देखील या पुण्य कार्यात महत्त्वाचे आहे. समस्त ग्रामस्थ तुमच्या या अमूल्य सहकार्याबद्दल सदैव आभारी राहतील.",
+    popupDate: "📅 संकलन सुरू: 26 मार्च 2026",
+    popupLine3: "माँ काली सर्वांवर आपली कृपा कायम ठेवो.",
+    popupQuote: "\"माँ धनाने नाही, श्रद्धेने प्रसन्न होतात.\"",
+    popupQuoteEn: "",
     popupBtn: "🙏 जय माँ काली",
   },
   bn: {
@@ -283,17 +283,17 @@ const translations = {
     heroSub: "শ্রী দুর্গা আম্মা দেবীর দিব্য মন্দির পুনর্নির্মাণের পবিত্র মিশনে আমাদের সাথে যোগ দিন। প্রতিটি অবদান আগামী প্রজন্মের জন্য একটি মহিমান্বিত আধ্যাত্মিক অভয়ারণ্য তৈরির কাছাকাছি নিয়ে আসে।",
     donateNow: "এখনই দান করুন",
     viewDonors: "দাতাদের দেখুন",
-    aboutTitle: "সংস্কার (Renovation) সম্পর্কে",
-    aboutP1: "শতাব্দী ধরে, জয় মা কালী মন্দির আধ্যাত্মিক আলো এবং ভক্তির প্রতীক। ২০০ বছরেরও বেশি আগে নির্মিত এই মন্দির লক্ষ লক্ষ ভক্তের পবিত্র আশ্রয়স্থল।",
-    aboutP2: "প্রাকৃতিক ক্ষয় এবং সময়ের কারণে, মন্দির কাঠামোর উল্লেখযোগ্য সংস্কার প্রয়োজন।",
-    aboutP3: "পুনর্নির্মাণ প্রকল্পে মূল গর্ভগৃহ পুনরুদ্ধার, নতুন প্রার্থনা হল নির্মাণ এবং আধুনিক সুবিধা স্থাপন অন্তর্ভুক্ত।",
+    aboutTitle: "জয় মা কালী 🙏",
+    aboutP1: "মা কালীর এই পবিত্র স্থান প্রায় ৮০+ বছরের পুরানো। সময়ে সময়ে গ্রামবাসীদের দ্বারা মন্দিরের নির্মাণ ও পুনর্নির্মাণ করা হয়ে আসছে। বর্তমানে রাস্তার স্তর মন্দির থেকে প্রায় ১.৫–২ ফুট উঁচু হয়ে যাওয়ার কারণে বর্ষাকালে জল মন্দিরে প্রবেশ করে, যার ফলে ভক্তদের অনেক কষ্টের সম্মুখীন হতে হয়।",
+    aboutP2: "এই সমস্যার কথা মাথায় রেখে সিদ্ধান্ত নেওয়া হয়েছে যে মন্দিরকে রাস্তার স্তর থেকে উপরে তুলে নতুন রূপে পুনর্নির্মাণ করা হবে। মন্দির নির্মাণ কাজের শুভ মুহূর্ত ২০ এপ্রিল ২০২৬ নির্ধারিত হয়েছে এবং সেই দিন থেকেই নির্মাণ কাজ শুরু হবে।",
+    aboutP3: "এই পুণ্য কাজে আপনার সহযোগিতা অত্যন্ত গুরুত্বপূর্ণ। সকলের প্রতি বিনম্র অনুরোধ — আপনার শ্রদ্ধা অনুসারে মা কালীর নামে দান করে এই কাজে অংশীদার হন। সমস্ত গ্রামবাসী আপনার এই অমূল্য সহযোগিতার জন্য চিরকাল কৃতজ্ঞ থাকবে। জয় মা কালী 🙏",
     oldTemple: "বর্তমান মন্দির",
     oldTempleDesc: "সময়ের সাথে জীর্ণ মন্দির কাঠামো, এর পবিত্র ঐতিহ্য সংরক্ষণের জন্য জরুরি সংস্কার প্রয়োজন।",
     newTemple: "প্রস্তাবিত নতুন মন্দির",
     newTempleDesc: "কল্পিত মহিমান্বিত পুনর্নির্মিত মন্দির — প্রাচীন স্থাপত্য এবং আধুনিক সুবিধার দিব্য মিশ্রণ।",
     donateTitle: "পবিত্র অর্পণ করুন",
     donateSub: "আপনার দিব্য অবদান দিতে নীচের QR কোড স্ক্যান করুন।",
-    scanQR: "দানের জন্য স্ক্যান করুন",
+    scanQR: "Aravind Kumar Singh",
     qrNote: "যেকোনো UPI অ্যাপ দিয়ে এই QR কোড স্ক্যান করুন",
     afterPayment: "দান করার পরে (জয় মা কালী মন্দির, বিরনিয়া)",
     afterPaymentDesc: "দান সম্পূর্ণ করার পর, অনুগ্রহ করে পেমেন্ট নিশ্চিতকরণের স্ক্রিনশট আপনার পুরো নাম, ফোন নম্বর এবং ঠিকানা সহ নীচের নম্বরে WhatsApp করুন:",
@@ -334,14 +334,14 @@ const translations = {
     amountLabel: "Amount",
     noDonors: "No confirmed donors yet.",
     noPending: "No pending entries.",
-    popupTitle: "জয় মা কালি 🙏\nজয় মা কালি মন্দির সংস্কার",
-    popupLine1: "হাত জোড় করে এবং ভক্তিতে পূর্ণ হৃদয় নিয়ে, আমরা মা কালীর দিব্য পাদপদ্মে বিনম্রভাবে প্রণাম করি — চিরন্তন মা, অন্ধকারের বিনাশিনী, সমস্ত সৃষ্টির উৎস।",
-    popupLine2: "তাঁর পবিত্র ধাম পুনরুদ্ধারের প্রতীক্ষায় আছে। এটি কেবল নির্মাণ নয় — এটি বিশ্বাসের কাজ, সম্মিলিত প্রার্থনা, সেই মায়ের প্রতি ভালোবাসার অর্পণ যিনি আমাদের সকলকে আশ্রয় দিয়েছেন।",
-    popupDate: "🗓️ সংগ্রহ শুরু: ২৬ মার্চ ২০২৬",
-    popupLine3: "তাঁর মন্দিরের প্রতিটি ইট আপনার আশীর্বাদে পবিত্র না হওয়া পর্যন্ত দানের দ্বার উন্মুক্ত থাকবে। এই পুণ্য সেবায় এগিয়ে আসা প্রতিটি আত্মাকে মা কালীর কৃপা আলোকিত করুক।",
-    popupQuote: "\"ধন দিয়ে নয়, ভক্তি দিয়ে মা সন্তুষ্ট হন।\"",
-    popupQuoteEn: "It is not wealth, but devotion that pleases the Mother.",
-    popupBtn: "🙏 জয় মা কালি",
+    popupTitle: "🪔 জয় মা কালী 🙏\nজয় মা কালী মন্দির জীর্ণোদ্ধার",
+    popupLine1: "ভক্তি ভাবে আমরা মা কালীর চরণে নমন করি। মন্দিরের পুনর্নির্মাণ একটি সামূহিক শ্রদ্ধার কাজ।",
+    popupLine2: "আপনার ছোট সহযোগিতাও এই পুণ্য কাজে গুরুত্বপূর্ণ। সমস্ত গ্রামবাসী আপনার এই অমূল্য সহযোগিতার জন্য চিরকাল কৃতজ্ঞ থাকবে।",
+    popupDate: "📅 সংগ্রহ শুরু: ২৬ মার্চ ২০২৬",
+    popupLine3: "মা কালী সকলের উপর তাঁর কৃপা বজায় রাখুন।",
+    popupQuote: "\"মা ধন দিয়ে নয়, শ্রদ্ধা দিয়ে সন্তুষ্ট হন।\"",
+    popupQuoteEn: "",
+    popupBtn: "🙏 জয় মা কালী",
   },
   od: {
     nav: "ଜୟ ମା କାଳୀ ମନ୍ଦିର, ବିରନିଆ",
@@ -351,17 +351,17 @@ const translations = {
     heroSub: "ଶ୍ରୀ ଦୁର୍ଗା ଆମ୍ମା ଦେବୀଙ୍କ ଦିବ୍ୟ ମନ୍ଦିର ପୁନର୍ନିର୍ମାଣର ପବିତ୍ର ମିଶନରେ ଆମ ସହ ଯୋଗ ଦିଅନ୍ତୁ। ପ୍ରତ୍ୟେକ ଅବଦାନ ଆସନ୍ତା ପିଢ଼ି ପାଇଁ ଏକ ମହିମାନ୍ବିତ ଆଧ୍ୟାତ୍ମିକ ଅଭୟାରଣ୍ୟ ସୃଷ୍ଟି କରିବାକୁ ଆମକୁ ନିକଟତର କରେ।",
     donateNow: "ବର୍ତ୍ତମାନ ଦାନ କରନ୍ତୁ",
     viewDonors: "ଦାତାମାନଙ୍କୁ ଦେଖନ୍ତୁ",
-    aboutTitle: "ପୁନରୁଦ୍ଧାର (Renovation) ବିଷୟରେ",
-    aboutP1: "ଶତାବ୍ଦୀ ଧରି, ଜୟ ମା କାଳୀ ମନ୍ଦିର ଆଧ୍ୟାତ୍ମିକ ଆଲୋକ ଏବଂ ଭକ୍ତିର ପ୍ରତୀକ। ୨୦୦ ବର୍ଷରୁ ଅଧିକ ପୂର୍ବେ ନିର୍ମିତ ଏହି ମନ୍ଦିର ଲକ୍ଷ ଲକ୍ଷ ଭକ୍ତଙ୍କ ପବିତ୍ର ଆଶ୍ରୟସ୍ଥଳ।",
-    aboutP2: "ପ୍ରାକୃତିକ କ୍ଷୟ ଏବଂ ସମୟ ଯୋଗୁଁ, ମନ୍ଦିର ସଂରଚନାର ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ସଂସ୍କାର ଆବଶ୍ୟକ।",
-    aboutP3: "ପୁନର୍ନିର୍ମାଣ ପ୍ରକଳ୍ପରେ ମୁଖ୍ୟ ଗର୍ଭଗୃହ ପୁନରୁଦ୍ଧାର, ନୂଆ ପ୍ରାର୍ଥନା ହଲ ନିର୍ମାଣ ଏବଂ ଆଧୁନିକ ସୁବିଧା ସ୍ଥାପନ ଅନ୍ତର୍ଭୁକ୍ତ।",
+    aboutTitle: "ଜୟ ମା କାଳୀ 🙏",
+    aboutP1: "ମା କାଳୀଙ୍କ ଏହି ପବିତ୍ର ସ୍ଥାନ ପ୍ରାୟ ୮୦+ ବର୍ଷ ପୁରୁଣା। ସମୟ ସମୟରେ ଗ୍ରାମବାସୀଙ୍କ ଦ୍ୱାରା ମନ୍ଦିରର ନିର୍ମାଣ ଏବଂ ପୁନର୍ନିର୍ମାଣ ହୋଇ ଆସିଛି। ବର୍ତ୍ତମାନ ରାସ୍ତାର ସ୍ତର ମନ୍ଦିରଠାରୁ ପ୍ରାୟ ୧.୫–୨ ଫୁଟ ଉଚ୍ଚ ହୋଇଯିବା କାରଣରୁ ବର୍ଷାସମୟରେ ପାଣି ମନ୍ଦିରରେ ପ୍ରବେଶ କରେ, ଯାହା ଭକ୍ତಮାନଙ୍କୁ ବହୁତ ଅସୁବିଧାର ସମ୍ମୁଖୀନ କରାଏ।",
+    aboutP2: "ଏହି ସମସ୍ୟାକୁ ଧ୍ୟାନରେ ରଖି ନିଷ୍ପତ୍ତି ନିଆଯାଇଛି ଯେ ମନ୍ଦିରକୁ ରାସ୍ତା ସ୍ତରରୁ ଉପରକୁ ଉଠାଇ ନୂଆ ରୂପରେ ପୁନର୍ନିର୍ମାଣ କରାଯିବ। ମନ୍ଦିର ନିର୍ମାଣ କାର୍ଯ୍ୟର ଶୁଭ ମୁହୂର୍ତ୍ତ ୨୦ ଏପ୍ରିଲ ୨୦୨୬ ନିର୍ଧାରିତ ହୋଇଛି ଏବଂ ସେହି ଦିନଠାରୁ ନିର୍ମାଣ କାର୍ଯ୍ୟ ଆରମ୍ଭ ହେବ।",
+    aboutP3: "ଏହି ପୁଣ୍ୟ କାର୍ଯ୍ୟରେ ଆପଣଙ୍କ ସହଯୋଗ ଅତ୍ୟନ୍ତ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ। ସମସ୍ତଙ୍କୁ ବିନମ୍ର ଅନୁରୋଧ — ଆପଣଙ୍କ ଶ୍ରଦ୍ଧା ଅନୁସାରେ ମା କାଳୀଙ୍କ ନାಮରେ ଦାନ ଦେଇ ଏହି କାର୍ଯ୍ୟରେ ଅଂଶୀଦାର ହୁଅନ୍ତୁ। ସମସ୍ତ ଗ୍ରାମବାସୀ ଆପଣଙ୍କ ଏହି ଅମୂଲ୍ୟ ସହଯୋଗ ପାଇଁ ସଦାସର୍ବଦା କୃତଜ୍ଞ ରହିବେ। ଜୟ ମା କାଳୀ 🙏",
     oldTemple: "ବର୍ତ୍ତମାନର ମନ୍ଦିର",
     oldTempleDesc: "ସମୟ ସହ ଜୀର୍ଣ୍ଣ ମନ୍ଦିର, ଏହାର ପବିତ୍ର ଐତିହ୍ୟ ସଂରକ୍ଷଣ ପାଇଁ ତୁରନ୍ତ ସଂସ୍କାର ଆବଶ୍ୟକ।",
     newTemple: "ପ୍ରସ୍ତାବିତ ନୂଆ ମନ୍ଦିର",
     newTempleDesc: "କଳ୍ପିତ ମହିମାନ୍ବିତ ପୁନର୍ନିର୍ମିତ ମନ୍ଦିର — ପ୍ରାଚୀନ ସ୍ଥାପତ୍ୟ ଏବଂ ଆଧୁନିକ ସୁବିଧାର ଦିବ୍ୟ ମିଶ୍ରଣ।",
     donateTitle: "ପବିତ୍ର ଅର୍ପଣ କରନ୍ତୁ",
     donateSub: "ଆପଣଙ୍କ ଦିବ୍ୟ ଅବଦାନ ଦେବା ପାଇଁ ତଳେ QR କୋଡ୍ ସ୍କାନ କରନ୍ତୁ।",
-    scanQR: "ଦାନ ପାଇଁ ସ୍କାନ କରନ୍ତୁ",
+    scanQR: "Aravind Kumar Singh",
     qrNote: "ଯେକୌଣସି UPI ଆପ୍ ସହ ଏହି QR କୋଡ୍ ସ୍କାନ କରନ୍ତୁ",
     afterPayment: "ଦାନ କରିବା ପରେ (ଜୟ ମା କାଳୀ ମନ୍ଦିର, ବିରନିଆ)",
     afterPaymentDesc: "ଦାନ ସମ୍ପୂର୍ଣ୍ଣ କରିବା ପରେ, ଦୟାକରି ପେମେଣ୍ଟ ନିଶ୍ଚିତକରଣର ସ୍କ୍ରିନସଟ ଆପଣଙ୍କ ସମ୍ପୂର୍ଣ୍ଣ ନାମ, ଫୋନ ନମ୍ବର ଏବଂ ଠିକଣା ସହ ତଳେ ନମ୍ବରରେ WhatsApp କରନ୍ତୁ:",
@@ -402,13 +402,13 @@ const translations = {
     amountLabel: "Amount",
     noDonors: "No confirmed donors yet.",
     noPending: "No pending entries.",
-    popupTitle: "ଜୟ ମା କାଳୀ 🙏\nଜୟ ମା କାଳୀ ମନ୍ଦିର ନବୀକରଣ",
-    popupLine1: "ହାତ ଯୋଡ଼ି ଏବଂ ଭକ୍ତିରେ ପୂର୍ଣ ହୃଦୟ ନେଇ, ଆମେ ମା କାଳୀଙ୍କ ଦିବ୍ୟ ଚରଣରେ ନମ୍ରଭାବରେ ପ୍ରଣାମ କରୁ — ଶାଶ୍ୱତ ମା, ଅନ୍ଧକାରର ସଂହାରିଣୀ, ସମସ୍ତ ସୃଷ୍ଟିର ଉତ୍ସ।",
-    popupLine2: "ତାଙ୍କ ପବିତ୍ର ଧାମ ପୁନରୁଦ୍ଧାରର ପ୍ରତୀକ୍ଷାରେ ଅଛି। ଏହା କେବଳ ନିର୍ମାଣ ନୁହେଁ — ଏହା ବିଶ୍ୱାସର କାର୍ଯ୍ୟ, ସାମୂହିକ ପ୍ରାର୍ଥନା, ଆମ ସକଳଙ୍କୁ ଆଶ୍ରୟ ଦେଇଥିବା ମାଙ୍କ ପ୍ରତି ଭଲପାଇବାର ଅର୍ପଣ।",
-    popupDate: "🗓️ ସଂଗ୍ରହ ଆରମ୍ଭ: ୨୬ ମାର୍ଚ୍ଚ ୨୦୨୬",
-    popupLine3: "ତାଙ୍କ ମନ୍ଦିରର ପ୍ରତ୍ୟେକ ଇଟା ଆପଣଙ୍କ ଆଶୀର୍ବାଦରେ ପବିତ୍ର ନ ହେବା ପର୍ଯ୍ୟନ୍ତ ଦାନର ଦ୍ୱାର ଖୋଲା ରହିବ। ଏହି ପୁଣ୍ୟ ସେବାରେ ଆଗେ ଆସୁଥିବା ପ୍ରତ୍ୟେକ ଆତ୍ମାକୁ ମା କାଳୀଙ୍କ କୃପା ଆଲୋକିତ କରୁ।",
-    popupQuote: "\"ଧନ ନୁହେଁ, ଭକ୍ତି ଦ୍ୱାରା ମା ସନ୍ତୁଷ୍ଟ ହୁଅନ୍ତି।\"",
-    popupQuoteEn: "It is not wealth, but devotion that pleases the Mother.",
+    popupTitle: "🪔 ଜୟ ମା କାଳୀ 🙏\nଜୟ ମା କାଳୀ ମନ୍ଦିର ଜୀର୍ଣୋଦ୍ଧାର",
+    popupLine1: "ଭକ୍ତି ଭାବରେ ଆମେ ମା କାଳୀଙ୍କ ଚରଣରେ ନମନ କରୁ। ମନ୍ଦିରର ପୁନର୍ନିର୍ମାଣ ଏକ ସାମୂହିକ ଶ୍ରଦ୍ଧାର କାର୍ଯ୍ୟ।",
+    popupLine2: "ଆପଣଙ୍କ ଛୋଟ ସହଯୋଗ ମଧ୍ୟ ଏହି ପୁଣ୍ୟ କାର୍ଯ୍ୟରେ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ। ସମସ୍ତ ଗ୍ରାମବାସୀ ଆପଣଙ୍କ ଏହି ଅମୂଲ୍ୟ ସହଯୋଗ ପାଇଁ ସଦାସର୍ବଦା କୃତଜ୍ଞ ରହିବେ।",
+    popupDate: "📅 ସଂଗ୍ରହ ଆରମ୍ଭ: ୨୬ ମାର୍ଚ୍ଚ ୨୦୨୬",
+    popupLine3: "ମା କାଳୀ ସମସ୍ତଙ୍କ ଉପରେ ନିଜ କୃପା ବଜାୟ ରଖନ୍ତୁ।",
+    popupQuote: "\"ମା ଧନରେ ନୁହେଁ, ଶ୍ରଦ୍ଧାରେ ସନ୍ତୁଷ୍ଟ ହୁଅନ୍ତି।\"",
+    popupQuoteEn: "",
     popupBtn: "🙏 ଜୟ ମା କାଳୀ",
   },
 };
@@ -1463,7 +1463,7 @@ export default function TempleDonation() {
       border-radius: 20px;
       max-width: 520px;
       width: 100%;
-      padding: 44px 40px 36px;
+      padding: 36px 32px 28px;
       text-align: center;
       position: relative;
       box-shadow: 0 0 60px rgba(196,146,42,0.25), 0 0 120px rgba(139,26,26,0.15), inset 0 1px 0 rgba(196,146,42,0.2);
@@ -1556,30 +1556,36 @@ export default function TempleDonation() {
     }
     .welcome-popup-close {
       position: absolute;
-      top: 14px;
-      right: 16px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.45);
+      top: 10px;
+      right: 10px;
+      background: rgba(255,255,255,0.18);
+      border: 2px solid rgba(255,255,255,0.7);
       color: #ffffff;
       border-radius: 50%;
-      width: 34px;
-      height: 34px;
-      font-size: 1.1rem;
+      width: 32px;
+      height: 32px;
+      font-size: 1.2rem;
+      font-weight: bold;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: background 0.2s, transform 0.2s;
       line-height: 1;
+      z-index: 10;
     }
     .welcome-popup-close:hover {
-      background: rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.35);
       transform: scale(1.1);
     }
     @media (max-width: 480px) {
-      .welcome-popup { padding: 32px 22px 28px; }
-      .welcome-popup-title { font-size: 0.95rem; }
-      .welcome-popup-message { font-size: 0.97rem; }
+      .welcome-popup { padding: 24px 16px 20px; max-height: 85vh; overflow-y: auto; }
+      .welcome-popup-close { top: 8px; right: 8px; width: 28px; height: 28px; font-size: 1rem; border-width: 2px; }
+      .welcome-popup-title { font-size: 0.9rem; }
+      .welcome-popup-message { font-size: 0.9rem; margin: 6px 0; }
+      .welcome-popup-diya { font-size: 1.8rem !important; }
+      .welcome-popup-om { font-size: 1.5rem !important; }
+      .welcome-popup-btn { padding: 10px 28px; font-size: 0.95rem; }
     }
   `;
 
@@ -1599,7 +1605,7 @@ export default function TempleDonation() {
       {showWelcomePopup && (
         <div className="welcome-overlay" onClick={() => setShowWelcomePopup(false)}>
           <div className="welcome-popup" onClick={e => e.stopPropagation()}>
-            <button className="welcome-popup-close" onClick={() => setShowWelcomePopup(false)} aria-label="Close">✕</button>
+            <button className="welcome-popup-close" onClick={() => setShowWelcomePopup(false)} aria-label="Close">×</button>
             <span className="welcome-popup-diya">🪔</span>
             <span className="welcome-popup-om">ॐ</span>
             <div className="welcome-popup-title">
