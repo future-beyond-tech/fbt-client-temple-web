@@ -17,7 +17,7 @@ import { langNames, translations } from "./translations";
 import { parseAmount, parseSheetCSV } from "./utils/sheetParser";
 
 const SHEET_ID = "1NYPlaHIUdomegVHvgGYnESoEU0JQf7tZ2i8N2LyNetQ";
-const TOTAL_FUND_SHEET = { gid: "1116878055", range: "B5" };
+const TOTAL_FUND_SHEET = { gid: "1116878055", range: "B6" };
 const TOTAL_RAISED_REFRESH_MS = 60000;
 const PROGRESS_PERCENT = "42.6%";
 const INITIAL_TOTAL_RAISED = 10000;
