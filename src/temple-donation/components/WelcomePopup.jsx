@@ -26,6 +26,16 @@ export default function WelcomePopup({ show, t, onClose }) {
         <p className="welcome-popup-message">{t.popupLine1}</p>
         <p className="welcome-popup-message">{t.popupLine2}</p>
         <div className="welcome-popup-date">{t.popupDate}</div>
+        <div className="welcome-popup-events">
+          <div className="welcome-popup-event">
+            <span className="welcome-popup-event-date">{t.popupEvent1Date}</span>
+            {t.popupEvent1Text}
+          </div>
+          <div className="welcome-popup-event">
+            <span className="welcome-popup-event-date">{t.popupEvent2Date}</span>
+            {t.popupEvent2Text}
+          </div>
+        </div>
         <p className="welcome-popup-message">{t.popupLine3}</p>
         <p className="welcome-popup-footer">
           {t.popupQuote}
