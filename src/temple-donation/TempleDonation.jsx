@@ -49,6 +49,7 @@ export default function TempleDonation() {
   const [loadingFund, setLoadingFund] = useState(false);
   const [fundError, setFundError] = useState("");
   const [totalRaisedValue, setTotalRaisedValue] = useState(INITIAL_TOTAL_RAISED);
+  const [loadingTotalRaised, setLoadingTotalRaised] = useState(true);
   const [particles] = useState(createParticles);
 
   const t = translations[lang] ?? translations.hi;
@@ -130,8 +131,10 @@ export default function TempleDonation() {
         if (cancelled) return;
 
         applyTotalFundValue(value, { syncModalValue: showFundModal });
+        setLoadingTotalRaised(false);
       } catch {
         // Keep the initial fallback value if the sheet cannot be reached.
+        if (!cancelled) setLoadingTotalRaised(false);
       }
     };
 
@@ -242,7 +245,11 @@ export default function TempleDonation() {
           <div className="stats-grid">
             <div className="stat-card">
               <div className="stat-number">
-                <Counter end={totalRaisedValue} prefix="₹" />
+                {loadingTotalRaised ? (
+                  <span className="stat-loading-shimmer">Loading…</span>
+                ) : (
+                  <Counter end={totalRaisedValue} prefix="₹" />
+                )}
               </div>
               <div className="stat-label">{t.totalRaised}</div>
             </div>
@@ -405,18 +412,6 @@ export default function TempleDonation() {
         <p className="section-sub">{t.donorsSub}</p>
 
         <div className="donors-actions">
-          <a
-            href={SPREADSHEET_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="excel-btn"
-          >
-            <span className="excel-icon">
-              <ChartIcon size={24} />
-            </span>
-            {t.viewSheet}
-          </a>
-          <br />
           <button
             type="button"
             className="donor-list-btn"
