@@ -1,4 +1,4 @@
-import constructionImage from "../../../Construction.jpeg";
+import constructionImage from "../../../NewImage.jpeg";
 
 export default function WelcomePopup({ show, t, onClose }) {
   if (!show) return null;

@@ -14,13 +14,13 @@ import Navigation from "./components/Navigation";
 import WelcomePopup from "./components/WelcomePopup";
 import "./temple-donation.css";
 import { langNames, translations } from "./translations";
-import { parseAmount, parseSheetCSV } from "./utils/sheetParser";
+import { parseSheetCSV } from "./utils/sheetParser";
 
 const SHEET_ID = "1NYPlaHIUdomegVHvgGYnESoEU0JQf7tZ2i8N2LyNetQ";
 const TOTAL_FUND_SHEET = { gid: "1116878055", range: "B6" };
-const TOTAL_RAISED_REFRESH_MS = 60000;
 const PROGRESS_PERCENT = "42.6%";
-const INITIAL_TOTAL_RAISED = 10000;
+// "Total Raised" shown on the page. Set manually in code — update this value as donations grow.
+const TOTAL_RAISED = 377695;
 const SPREADSHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/edit?usp=sharing`;
 const WHATSAPP_URL = `https://wa.me/919911414416?text=${encodeURIComponent(
   "Jai Maa Kali! I have made a donation to Jai Maa Kali Mandir Renovation Trust. Attaching my payment screenshot."
@@ -48,18 +48,9 @@ export default function TempleDonation() {
   const [totalFundReceived, setTotalFundReceived] = useState("");
   const [loadingFund, setLoadingFund] = useState(false);
   const [fundError, setFundError] = useState("");
-  const [totalRaisedValue, setTotalRaisedValue] = useState(INITIAL_TOTAL_RAISED);
-  const [loadingTotalRaised, setLoadingTotalRaised] = useState(true);
   const [particles] = useState(createParticles);
 
   const t = translations[lang] ?? translations.hi;
-
-  const applyTotalFundValue = (value, { syncModalValue = false } = {}) => {
-    if (syncModalValue) setTotalFundReceived(value);
-
-    const numeric = parseAmount(value);
-    if (numeric && numeric > 0) setTotalRaisedValue(numeric);
-  };
 
   const fetchCellValue = async ({ gid, range }) => {
     const baseUrl = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}&range=${encodeURIComponent(range)}`;
@@ -88,7 +79,7 @@ export default function TempleDonation() {
 
     try {
       const value = await fetchCellValue(TOTAL_FUND_SHEET);
-      applyTotalFundValue(value, { syncModalValue: true });
+      setTotalFundReceived(value);
     } catch {
       setFundError(
         t.fetchError || "Could not load data. Please open the spreadsheet directly."
@@ -121,34 +112,6 @@ export default function TempleDonation() {
       setLoadingDonors(false);
     }
   };
-
-  useEffect(() => {
-    let cancelled = false;
-
-    const refreshTotalRaised = async () => {
-      try {
-        const value = await fetchCellValue(TOTAL_FUND_SHEET);
-        if (cancelled) return;
-
-        applyTotalFundValue(value, { syncModalValue: showFundModal });
-        setLoadingTotalRaised(false);
-      } catch {
-        // Keep the initial fallback value if the sheet cannot be reached.
-        if (!cancelled) setLoadingTotalRaised(false);
-      }
-    };
-
-    refreshTotalRaised();
-    const intervalId = window.setInterval(
-      refreshTotalRaised,
-      TOTAL_RAISED_REFRESH_MS
-    );
-
-    return () => {
-      cancelled = true;
-      window.clearInterval(intervalId);
-    };
-  }, [showFundModal]);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -245,11 +208,7 @@ export default function TempleDonation() {
           <div className="stats-grid">
             <div className="stat-card">
               <div className="stat-number">
-                {loadingTotalRaised ? (
-                  <span className="stat-loading-shimmer">Loading…</span>
-                ) : (
-                  <Counter end={totalRaisedValue} prefix="₹" />
-                )}
+                <Counter end={TOTAL_RAISED} prefix="₹" />
               </div>
               <div className="stat-label">{t.totalRaised}</div>
             </div>

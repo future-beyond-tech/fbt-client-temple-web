@@ -1,230 +1,194 @@
-# Jai Maa Kali Mandir Donation SPA
+# Jai Maa Kali Mandir Donation
 
-A beautiful, responsive Single Page Application (SPA) for the Jai Maa Kali Mandir renovation donation campaign. Built with React, Vite, and modern web technologies.
+A responsive, multi-language Single Page Application (SPA) for the **Jai Maa Kali Mandir Renovation Trust** donation campaign. Built with React 19 and Vite.
+
+> Repository: `fbt-client-temple-web` (by [Future Beyond Tech](https://github.com/future-beyond-tech)) · package name: `temple-donation`
 
 ![Temple Donation SPA](public/icon-192.png)
 
 ## 🙏 Overview
 
-This SPA serves as the official donation platform for the **Jai Maa Kali Mandir Renovation Trust** located in Birnia, Post–Jotha, Dhoraiya, Banka, Bihar - 813109. The temple, originally built over 200 years ago, requires significant restoration and renovation to preserve its sacred heritage.
+This SPA is the public donation page for the **Jai Maa Kali Mandir** in Birnia (Post–Jotha, Dhoraiya, Banka, Bihar – 813109). The temple is roughly 80+ years old; rising road levels now cause rainwater to flood the temple during monsoon, so the committee is raising the structure and rebuilding it. Construction is scheduled to begin **April 20, 2026**.
+
+The page lets devotees donate via UPI, bank transfer, or WhatsApp confirmation, and pulls a **live donation total and donor list directly from Google Sheets** so the campaign stays transparent.
 
 ## ✨ Features
 
-### Multi-Language Support
-- 🇬🇧 English
-- 🇮🇳 हिन्दी (Hindi)
-- 🇮🇳 తెలుగు (Telugu)
-- 🇮🇳 मराठी (Marathi)
-- 🇮🇳 বাংলা (Bengali)
-- 🇮🇳 ଓଡ଼ିଆ (Odia)
+### Multi-language support
+Six languages, selectable from the navigation bar (default: **Hindi**):
 
-### Donation Methods
-- **UPI QR Code Scan** - Quick and easy mobile payments
-- **Bank Transfer** - Traditional NEFT/RTGS/IMPS
-- **WhatsApp Confirmation** - Send payment screenshot for verification
+- 🇬🇧 English (`en`)
+- 🇮🇳 हिन्दी / Hindi (`hi`)
+- 🇮🇳 తెలుగు / Telugu (`te`)
+- 🇮🇳 मराठी / Marathi (`mr`)
+- 🇮🇳 বাংলা / Bengali (`bn`)
+- 🇮🇳 ଓଡ଼ିଆ / Odia (`od`)
 
-### Transparency Features
-- Real-time donation progress tracking
-- Public donor records via Google Sheets integration
-- Excel export functionality
-- Categorized donor lists (Confirmed/Pending)
+### Donation methods
+- **UPI QR scan** (`QR.jpeg`) — works with Google Pay, PhonePe, Paytm, etc.
+- **Receipt reference** (`Receipt.jpeg`) — sample donation receipt
+- **WhatsApp confirmation** — pre-filled message to **+91 99114 14416** for sending a payment screenshot
 
-### User Experience
-- Smooth scroll navigation
-- Animated counters for statistics
-- Responsive design for all devices
-- PWA (Progressive Web App) support
-- Traditional Indian temple aesthetics
+### Live transparency (Google Sheets)
+- **Total raised** auto-refreshes from a sheet cell every 60 seconds.
+- **Donor list** modal fetches the full sheet and splits donors into *Deposited* and *Pending*.
+- Includes a fallback proxy (`r.jina.ai`) if the direct Google Sheets fetch is blocked.
+
+### Experience
+- Welcome popup with a construction-progress graphic (`NewImage.jpeg`)
+- Animated stat counters that fire when scrolled into view (Intersection Observer)
+- Donation progress bar, smooth-scroll navigation, scroll-down helper
+- Floating "diya" particle animations and traditional temple aesthetics
+- **PWA** support (installable, with manifest and icons)
+- Vercel Analytics for page insights
 
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |
 |------------|---------|
-| **React 19** | UI Library |
-| **Vite** | Build Tool & Dev Server |
-| **@vitejs/plugin-react-swc** | Fast React compilation |
-| **CSS-in-JS** | Styling (inline styles + CSS template literals) |
-| **Google Sheets API** | Donor data management |
+| **React 19** | UI library |
+| **Vite 7** | Build tool & dev server |
+| **@vitejs/plugin-react-swc** | Fast React compilation (SWC) |
+| **@vercel/analytics** | Privacy-friendly page analytics |
+| **Plain CSS** | Single stylesheet with CSS custom properties |
+| **Google Sheets (CSV/GViz export)** | Live donor & fund data — no backend |
+
+There is **no server-side component** — the app is a fully static SPA that reads public Google Sheets exports at runtime.
 
 ## 📁 Project Structure
 
 ```
-Temple/
-├── index.html                 # Entry HTML with PWA manifest
-├── package.json               # Dependencies & scripts
-├── vite.config.mts           # Vite configuration
-├── temple-donation.jsx       # Main React component (all UI logic)
-├── QR.jpeg                   # UPI QR code for donations
-├── Receipt.jpeg              # Sample donation receipt
-├── src/
-│   └── main.jsx              # React application entry point
+fbt-client-temple-web/
+├── index.html                      # HTML entry + PWA meta tags
+├── package.json                    # Dependencies & scripts
+├── vite.config.mts                 # Vite config (dev server on :5173)
+├── temple-donation.jsx             # Thin re-export of the main component
+├── QR.jpeg                         # UPI QR code
+├── Receipt.jpeg                    # Sample donation receipt
+├── NewImage.jpeg                   # Before/During/After graphic shown in the welcome popup
+├── Construction.jpeg               # Earlier construction photo (no longer used in the popup)
+├── README.md
+├── TECHNICAL.md                    # Deeper architecture / implementation notes
+├── CHANGELOG.md
 ├── public/
-│   ├── favicon.svg           # Site favicon
-│   ├── apple-touch-icon.png  # iOS icon
-│   ├── icon-192.png          # PWA icon (192x192)
-│   ├── icon-512.png          # PWA icon (512x512)
-│   └── site.webmanifest      # PWA manifest
-└── dist/                     # Build output (generated)
+│   ├── favicon.svg
+│   ├── apple-touch-icon.png
+│   ├── icon-192.png                # PWA icon (192×192)
+│   ├── icon-512.png                # PWA icon (512×512)
+│   └── site.webmanifest            # PWA manifest
+└── src/
+    ├── main.jsx                    # React entry; mounts <TempleDonation /> + Analytics
+    └── temple-donation/
+        ├── TempleDonation.jsx      # Main component: state, layout & all sections
+        ├── temple-donation.css     # All styles + design tokens
+        ├── translations.js         # 6-language content + langNames map
+        ├── components/
+        │   ├── Counter.jsx         # Intersection-Observer animated number
+        │   ├── DonorModal.jsx      # Donor list modal + FundModal (total raised)
+        │   ├── Icons.jsx           # Inline SVG icons + Divider
+        │   ├── Navigation.jsx      # Top nav bar + language dropdown
+        │   └── WelcomePopup.jsx    # Intro popup with construction image
+        └── utils/
+            └── sheetParser.js      # parseAmount() + parseSheetCSV()
 ```
+
+> **Note:** the root `temple-donation.jsx` simply re-exports `src/temple-donation/TempleDonation.jsx`. The real entry point is `src/main.jsx`, which `index.html` loads.
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 18+ installed
-- npm or yarn package manager
+- Node.js 18+ and npm
 
-### Installation
-
-1. Clone or navigate to the project directory:
-```bash
-cd Temple
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Start the development server:
-```bash
-npm run dev
-```
-
-4. Open your browser at `http://localhost:5173`
-
-### Build for Production
+### Install & run
 
 ```bash
-npm run build
+npm install      # install dependencies
+npm run dev      # start the dev server at http://localhost:5173
 ```
 
-This creates an optimized production build in the `dist/` folder.
-
-### Preview Production Build
+### Build & preview
 
 ```bash
-npm run preview
+npm run build    # production build into dist/
+npm run preview  # serve the built dist/ locally
 ```
-
-## ⚙️ Configuration
-
-### Google Sheets Integration
-
-The SPA fetches donor data from a public Google Sheet. To configure:
-
-1. Create a Google Sheet with columns: `Name`, `Amount`, `Status`
-2. Publish the sheet to web: **File → Share → Publish to web**
-3. Update the `SHEET_ID` constant in `temple-donation.jsx`:
-
-```javascript
-const SHEET_ID = "YOUR_SHEET_ID_HERE";
-```
-
-### Customizing Content
-
-All translatable content is in the `translations` object within `temple-donation.jsx`. Modify the values for each language key:
-
-```javascript
-const translations = {
-  en: { /* English content */ },
-  hi: { /* Hindi content */ },
-  // ... other languages
-};
-```
-
-### Updating Payment Details
-
-- **QR Code**: Replace `QR.jpeg` with your UPI QR code
-- **Bank Details**: Edit the translation strings for `bankName`, `accName`, `accNo`, `ifsc`
-- **WhatsApp Number**: Update `whatsappNumber` in translations
-
-## 🎨 Design System
-
-### Color Palette
-| Variable | Value | Usage |
-|----------|-------|-------|
-| `--gold` | `#C4922A` | Primary accents, headings |
-| `--gold-light` | `#E8C56D` | Highlights, gradients |
-| `--gold-dark` | `#8B6914` | Shadows, borders |
-| `--crimson` | `#8B1A1A` | Secondary backgrounds |
-| `--crimson-deep` | `#5C0E0E` | Deep backgrounds |
-| `--saffron` | `#FF6F00` | CTAs, accents |
-| `--cream` | `#FFF8E7` | Text color |
-| `--dark` | `#1A0A0A` | Main background |
-| `--dark-warm` | `#2D1410` | Card backgrounds |
-
-### Typography
-- **Headings**: Cinzel Decorative (serif, decorative)
-- **Body**: Cormorant Garamond (serif, readable)
-- **Indian Languages**: Noto Sans Devanagari, Telugu, Bengali, Oriya
-
-## 📱 Responsive Breakpoints
-
-| Breakpoint | Width | Adjustments |
-|------------|-------|-------------|
-| Desktop | > 1024px | Full layout |
-| Tablet | 768px - 1024px | Reduced padding |
-| Mobile | < 768px | Single column, stacked buttons |
-| Small Mobile | < 480px | Compact typography |
-
-## 🔒 Security Considerations
-
-- The Google Sheet ID is public (required for client-side fetching)
-- No sensitive data is stored in the frontend
-- WhatsApp number is hardcoded for the specific campaign
-- No server-side components - purely static SPA
-
-## 🌐 Deployment
-
-This SPA can be deployed to any static hosting service:
-
-### Netlify
-```bash
-npm run build
-# Drag 'dist/' folder to Netlify
-```
-
-### Vercel
-```bash
-vercel --prod
-```
-
-### GitHub Pages
-```bash
-npm run build
-# Copy dist/ contents to gh-pages branch
-```
-
-### Traditional Hosting
-Upload the contents of `dist/` to your web server after running `npm run build`.
-
-## 📋 Scripts Reference
 
 | Script | Command | Description |
 |--------|---------|-------------|
-| `dev` | `vite` | Start development server |
-| `build` | `vite build` | Create production build |
-| `preview` | `vite preview` | Preview production build locally |
+| `dev` | `vite` | Start the development server |
+| `build` | `vite build` | Create a production build in `dist/` |
+| `preview` | `vite preview` | Preview the production build locally |
+
+## ⚙️ Configuration
+
+Campaign settings live as constants at the top of **`src/temple-donation/TempleDonation.jsx`**:
+
+```javascript
+const SHEET_ID = "…";                                  // Google Sheet ID
+const TOTAL_FUND_SHEET = { gid: "1116878055", range: "B6" }; // cell holding the running total
+const TOTAL_RAISED_REFRESH_MS = 60000;                 // auto-refresh interval (ms)
+const PROGRESS_PERCENT = "42.6%";                       // progress bar fill
+const INITIAL_TOTAL_RAISED = 10000;                     // fallback before the sheet loads
+const WHATSAPP_URL = "https://wa.me/919911414416?text=…"; // confirmation link
+```
+
+### Google Sheets integration
+The app reads two things from one public Google Sheet:
+
+1. **Total raised** — a single cell (`gid` + `range`, e.g. `B6`) via the CSV `export` endpoint, refreshed on an interval.
+2. **Donor list** — the whole sheet via the GViz endpoint (`/gviz/tq?tqx=out:csv`), parsed by `parseSheetCSV()`.
+
+`parseSheetCSV()` (in `src/temple-donation/utils/sheetParser.js`) expects the **name in the 3rd column** and the **amount in the 6th column**, and detects payment status from any header containing `status`, `paid`, `payment`, `deposited`, or `स्थिति`. A donor counts as *deposited* when the status cell contains `paid`, `yes`, `confirmed`, `deposited`, `done`, `हाँ`, or `जमा`; otherwise they're listed as *pending*. To use a different sheet, publish it to the web and update `SHEET_ID`.
+
+### Editing content
+- **Text & translations:** `src/temple-donation/translations.js` — edit the keys under each language (`en`, `hi`, `te`, `mr`, `bn`, `od`); `langNames` controls the labels in the language dropdown.
+- **Images:** replace `QR.jpeg`, `Receipt.jpeg`, or `NewImage.jpeg` (the welcome-popup graphic) in the project root.
+- **WhatsApp number / payee details:** update `WHATSAPP_URL` in `TempleDonation.jsx` and the relevant translation strings.
+
+## 🎨 Design System
+
+Styling lives entirely in `src/temple-donation/temple-donation.css` and is driven by CSS custom properties:
+
+| Variable | Value | Variable | Value |
+|----------|-------|----------|-------|
+| `--gold` | `#C4922A` | `--crimson-deep` | `#5C0E0E` |
+| `--gold-light` | `#E8C56D` | `--saffron` | `#FF6F00` |
+| `--gold-dark` | `#8B6914` | `--cream` | `#FFF8E7` |
+| `--crimson` | `#8B1A1A` | `--dark` | `#1A0A0A` |
+| `--vermillion` | `#E23D28` | `--dark-warm` | `#2D1410` |
+
+**Typography** (Google Fonts): *Cinzel Decorative* for headings, *Cormorant Garamond* for body text, and the *Noto Sans* families (Devanagari, Telugu, Bengali, Oriya) for Indian-language scripts.
+
+See **[TECHNICAL.md](TECHNICAL.md)** for the component hierarchy, state model, data-flow diagrams, animation keyframes, and responsive breakpoints.
+
+## 🌐 Deployment
+
+The build output in `dist/` is fully static and can be hosted anywhere (Vercel, Netlify, GitHub Pages, or any web server). The project already includes `@vercel/analytics`, so **Vercel** is the natural target:
+
+```bash
+npm run build
+vercel --prod      # or drag dist/ to Netlify, or push dist/ to a gh-pages branch
+```
+
+## 🔒 Notes on Security & Privacy
+
+- The Google Sheet ID is public by necessity (client-side read access).
+- No personal data is stored in the frontend; no cookies, no `localStorage`.
+- The only outbound calls are to Google Sheets (and the `r.jina.ai` fallback proxy).
 
 ## 🤝 Contributing
 
-This is a religious/community project. For contributions:
-
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request with clear description
-4. Respect the spiritual nature of the content
+This is a community / devotional project. Please fork, branch, and open a pull request with a clear description, and keep the spiritual tone of the content intact.
 
 ## 📄 License
 
-This project is built with devotion for the Jai Maa Kali Mandir. All rights reserved by the Temple Trust.
+Built with devotion for the Jai Maa Kali Mandir. All rights reserved by the Temple Trust.
 
 ## 🙏 Acknowledgments
 
-- **Temple Committee** - For their guidance and approval
-- **Shri Arvind Singh** - Temple Treasurer (कोषाध्यक्ष)
-- **Villagers of Birnia** - For their support and blessings
-- **Maa Kali** - For the divine inspiration
+- **Temple Committee**, Birnia — guidance and approval
+- **Shri Arvind Singh** — Temple Treasurer (कोषाध्यक्ष)
+- **Villagers of Birnia** — support and blessings
 
 ---
 
