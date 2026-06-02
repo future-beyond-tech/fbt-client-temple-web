@@ -222,7 +222,7 @@ export default function TempleDonation() {
 
             <div className="stat-card">
               <div className="stat-number">
-                <Counter end={15} />
+                <Counter end={102} />
               </div>
               <div className="stat-label">{t.totalDonors}</div>
             </div>
