@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import qrImage from "../../QR.jpeg";
+import qrImage from "../../NewQR.jpeg";
 import receiptImage from "../../Receipt.jpeg";
 import Counter from "./components/Counter";
 import DonorModal, { FundModal } from "./components/DonorModal";
